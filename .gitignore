@@ -1,0 +1,19 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies (if you later add a build)
+node_modules/
+dist/
+.next/
+
+# Local env
+.env
+.env.local
+
+# Compiler-generated design-system artifacts are safe to commit,
+# but uncomment to exclude if you regenerate them in CI:
+# _ds_bundle.js
+# _ds_manifest.json
+# _adherence.oxlintrc.json
