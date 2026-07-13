@@ -1,0 +1,441 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/content/**",
+              "components/core/**",
+              "components/feedback/**",
+              "components/navigation/**",
+              "components/widgets/**",
+              "ui_kits/admin/**",
+              "ui_kits/app/**",
+              "ui_kits/web/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Anek Latin|Anek Telugu|Anek Tamil|Anek Kannada|Anek Malayalam|Anek Devanagari|Noto Sans|Noto Sans Telugu|Noto Sans Tamil|Noto Sans Kannada|Noto Sans Malayalam|Noto Sans Devanagari|IBM Plex Mono))/i]",
+        "message": "Font not provided by the design system. Available: Anek Latin, Anek Telugu, Anek Tamil, Anek Kannada, Anek Malayalam, Anek Devanagari, Noto Sans, Noto Sans Telugu, Noto Sans Tamil, Noto Sans Kannada, Noto Sans Malayalam, Noto Sans Devanagari, IBM Plex Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|live|children|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: tone, live, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:breaking|live|exclusive|gold|count|success)$/]",
+        "message": "<Badge> tone must be one of 'breaking' | 'live' | 'exclusive' | 'gold' | 'count' | 'success'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BreakingTicker'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|items|style|key|ref|className|style|children)$/]",
+        "message": "<BreakingTicker> doesn't accept that prop. Declared props: label, items, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|icon|iconRight|block|disabled|children|style|onClick|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, icon, iconRight, block, disabled, children, style, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost|soft|inverse)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost' | 'soft' | 'inverse'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CategoryChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:category|label|active|solid|size|style|onClick|key|ref|className|style|children)$/]",
+        "message": "<CategoryChip> doesn't accept that prop. Declared props: category, label, active, solid, size, style, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CategoryChip'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md)$/]",
+        "message": "<CategoryChip> size must be one of 'sm' | 'md'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DataTile'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|label|value|unit|sub|delta|style|key|ref|className|style|children)$/]",
+        "message": "<DataTile> doesn't accept that prop. Declared props: kind, label, value, unit, sub, delta, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DataTile'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:gold|market|weather|cricket)$/]",
+        "message": "<DataTile> kind must be one of 'gold' | 'market' | 'weather' | 'cricket'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LanguagePill'] > JSXAttribute > JSXIdentifier[name!=/^(?:code|native|glyph|active|style|onClick|key|ref|className|style|children)$/]",
+        "message": "<LanguagePill> doesn't accept that prop. Declared props: code, native, glyph, active, style, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LanguagePill'] > JSXAttribute[name.name='code'] > Literal[value!=/^(?:te|ta|kn|ml|hi|en)$/]",
+        "message": "<LanguagePill> code must be one of 'te' | 'ta' | 'kn' | 'ml' | 'hi' | 'en'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NewsCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:headline|summary|category|source|time|location|image|layout|breaking|verified|aiRewritten|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<NewsCard> doesn't accept that prop. Declared props: headline, summary, category, source, time, location, image, layout, breaking, verified, aiRewritten, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NewsCard'] > JSXAttribute[name.name='layout'] > Literal[value!=/^(?:row|hero|compact)$/]",
+        "message": "<NewsCard> layout must be one of 'row' | 'hero' | 'compact'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionTabs'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|value|onChange|style|key|ref|className|style|children)$/]",
+        "message": "<SectionTabs> doesn't accept that prop. Declared props: items, value, onChange, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SourceStamp'] > JSXAttribute > JSXIdentifier[name!=/^(?:source|time|location|verified|aiRewritten|style|key|ref|className|style|children)$/]",
+        "message": "<SourceStamp> doesn't accept that prop. Declared props: source, time, location, verified, aiRewritten, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "BreakingTicker": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "CategoryChip": {
+        "replaces": []
+      },
+      "DataTile": {
+        "replaces": []
+      },
+      "LanguagePill": {
+        "replaces": []
+      },
+      "NewsCard": {
+        "replaces": []
+      },
+      "SectionTabs": {
+        "replaces": []
+      },
+      "SourceStamp": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--bg-app",
+      "--border-hairline",
+      "--border-strong",
+      "--brand",
+      "--brand-deep",
+      "--brand-strong",
+      "--card-pad",
+      "--cat-astrology",
+      "--cat-breaking",
+      "--cat-business",
+      "--cat-cinema",
+      "--cat-crime",
+      "--cat-education",
+      "--cat-gold",
+      "--cat-health",
+      "--cat-jobs",
+      "--cat-national",
+      "--cat-politics",
+      "--cat-sports",
+      "--cat-tech",
+      "--cat-weather",
+      "--danger",
+      "--danger-soft",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-emphasis",
+      "--ease-out",
+      "--ease-standard",
+      "--focus-ring",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--fs-body",
+      "--fs-body-lg",
+      "--fs-body-sm",
+      "--fs-caption",
+      "--fs-display",
+      "--fs-display-lg",
+      "--fs-eyebrow",
+      "--fs-headline",
+      "--fs-headline-lg",
+      "--fs-headline-sm",
+      "--fs-title",
+      "--fw-black",
+      "--fw-bold",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--gold-100",
+      "--gold-300",
+      "--gold-500",
+      "--gold-600",
+      "--gold-700",
+      "--gutter",
+      "--info",
+      "--info-soft",
+      "--ink-100",
+      "--ink-200",
+      "--ink-300",
+      "--ink-400",
+      "--ink-50",
+      "--ink-500",
+      "--ink-600",
+      "--ink-700",
+      "--ink-800",
+      "--ink-900",
+      "--ink-950",
+      "--lh-normal",
+      "--lh-relaxed",
+      "--lh-snug",
+      "--lh-tight",
+      "--live",
+      "--max-read",
+      "--paper",
+      "--paper-sunk",
+      "--press-scale",
+      "--r-card",
+      "--r-chip",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-thumb",
+      "--r-xl",
+      "--r-xs",
+      "--red-100",
+      "--red-200",
+      "--red-300",
+      "--red-400",
+      "--red-50",
+      "--red-500",
+      "--red-600",
+      "--red-700",
+      "--red-800",
+      "--red-900",
+      "--shadow-brand",
+      "--shadow-card",
+      "--shadow-hairline",
+      "--shadow-inset",
+      "--shadow-none",
+      "--shadow-pop",
+      "--shadow-raised",
+      "--sp-0",
+      "--sp-1",
+      "--sp-10",
+      "--sp-12",
+      "--sp-16",
+      "--sp-2",
+      "--sp-20",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-8",
+      "--stack-gap",
+      "--success",
+      "--success-soft",
+      "--surface-card",
+      "--surface-inverse",
+      "--surface-sunk",
+      "--text-body",
+      "--text-faint",
+      "--text-link",
+      "--text-muted",
+      "--text-on-brand",
+      "--text-strong",
+      "--ticker-speed",
+      "--tracking-eyebrow",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--warning",
+      "--warning-soft",
+      "--white"
+    ],
+    "tokenKinds": {
+      "--red-50": "color",
+      "--red-100": "color",
+      "--red-200": "color",
+      "--red-300": "color",
+      "--red-400": "color",
+      "--red-500": "color",
+      "--red-600": "color",
+      "--red-700": "color",
+      "--red-800": "color",
+      "--red-900": "color",
+      "--brand": "color",
+      "--brand-strong": "color",
+      "--brand-deep": "color",
+      "--ink-950": "color",
+      "--ink-900": "color",
+      "--ink-800": "color",
+      "--ink-700": "color",
+      "--ink-600": "color",
+      "--ink-500": "color",
+      "--ink-400": "color",
+      "--ink-300": "color",
+      "--ink-200": "color",
+      "--ink-100": "color",
+      "--ink-50": "color",
+      "--paper": "color",
+      "--paper-sunk": "color",
+      "--white": "color",
+      "--gold-100": "color",
+      "--gold-300": "color",
+      "--gold-500": "color",
+      "--gold-600": "color",
+      "--gold-700": "color",
+      "--cat-breaking": "color",
+      "--cat-politics": "color",
+      "--cat-crime": "color",
+      "--cat-cinema": "color",
+      "--cat-sports": "color",
+      "--cat-business": "color",
+      "--cat-jobs": "color",
+      "--cat-weather": "color",
+      "--cat-astrology": "color",
+      "--cat-gold": "color",
+      "--cat-education": "color",
+      "--cat-health": "color",
+      "--cat-tech": "color",
+      "--cat-national": "color",
+      "--success": "color",
+      "--success-soft": "color",
+      "--warning": "color",
+      "--warning-soft": "color",
+      "--danger": "color",
+      "--danger-soft": "color",
+      "--info": "color",
+      "--info-soft": "color",
+      "--live": "color",
+      "--bg-app": "color",
+      "--surface-card": "color",
+      "--surface-sunk": "color",
+      "--surface-inverse": "color",
+      "--border-hairline": "color",
+      "--border-strong": "color",
+      "--text-strong": "font",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-faint": "font",
+      "--text-on-brand": "font",
+      "--text-link": "font",
+      "--focus-ring": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--fs-eyebrow": "spacing",
+      "--fs-caption": "spacing",
+      "--fs-body-sm": "spacing",
+      "--fs-body": "spacing",
+      "--fs-body-lg": "spacing",
+      "--fs-headline-sm": "spacing",
+      "--fs-headline": "spacing",
+      "--fs-headline-lg": "spacing",
+      "--fs-title": "spacing",
+      "--fs-display": "spacing",
+      "--fs-display-lg": "spacing",
+      "--lh-tight": "other",
+      "--lh-snug": "other",
+      "--lh-normal": "other",
+      "--lh-relaxed": "other",
+      "--fw-regular": "other",
+      "--fw-medium": "other",
+      "--fw-semibold": "other",
+      "--fw-bold": "other",
+      "--fw-black": "other",
+      "--tracking-eyebrow": "other",
+      "--tracking-tight": "other",
+      "--tracking-normal": "other",
+      "--sp-0": "spacing",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-8": "spacing",
+      "--sp-10": "spacing",
+      "--sp-12": "spacing",
+      "--sp-16": "spacing",
+      "--sp-20": "spacing",
+      "--gutter": "spacing",
+      "--card-pad": "spacing",
+      "--stack-gap": "spacing",
+      "--max-read": "spacing",
+      "--r-xs": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--r-card": "spacing",
+      "--r-chip": "spacing",
+      "--r-thumb": "spacing",
+      "--shadow-none": "shadow",
+      "--shadow-hairline": "shadow",
+      "--shadow-card": "shadow",
+      "--shadow-raised": "shadow",
+      "--shadow-pop": "shadow",
+      "--shadow-brand": "shadow",
+      "--shadow-inset": "shadow",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other",
+      "--ease-standard": "other",
+      "--ease-out": "other",
+      "--ease-emphasis": "other",
+      "--ticker-speed": "other",
+      "--press-scale": "other"
+    },
+    "fontFamilies": [
+      "Anek Devanagari",
+      "Anek Kannada",
+      "Anek Latin",
+      "Anek Malayalam",
+      "Anek Tamil",
+      "Anek Telugu",
+      "IBM Plex Mono",
+      "Noto Sans",
+      "Noto Sans Devanagari",
+      "Noto Sans Kannada",
+      "Noto Sans Malayalam",
+      "Noto Sans Tamil",
+      "Noto Sans Telugu"
+    ]
+  }
+}
