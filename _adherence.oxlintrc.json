@@ -22,6 +22,7 @@
               "components/navigation/**",
               "components/widgets/**",
               "ui_kits/admin/**",
+              "ui_kits/admin_v2/**",
               "ui_kits/app/**",
               "ui_kits/web/**"
             ],
@@ -77,12 +78,16 @@
         "message": "<CategoryChip> size must be one of 'sm' | 'md'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='DataTile'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|label|value|unit|sub|delta|style|key|ref|className|style|children)$/]",
-        "message": "<DataTile> doesn't accept that prop. Declared props: kind, label, value, unit, sub, delta, style."
+        "selector": "JSXOpeningElement[name.name='DataTile'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|label|value|unit|sub|delta|icon|style|key|ref|className|style|children)$/]",
+        "message": "<DataTile> doesn't accept that prop. Declared props: kind, label, value, unit, sub, delta, icon, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='DataTile'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:gold|market|weather|cricket)$/]",
         "message": "<DataTile> kind must be one of 'gold' | 'market' | 'weather' | 'cricket'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FeaturedItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:headline|region|time|read|image|category|key|ref|className|style|children)$/]",
+        "message": "<FeaturedItem> doesn't accept that prop. Declared props: headline, region, time, read, image, category."
       },
       {
         "selector": "JSXOpeningElement[name.name='LanguagePill'] > JSXAttribute > JSXIdentifier[name!=/^(?:code|native|glyph|active|style|onClick|key|ref|className|style|children)$/]",
@@ -137,6 +142,9 @@
       "DataTile": {
         "replaces": []
       },
+      "FeaturedItem": {
+        "replaces": []
+      },
       "LanguagePill": {
         "replaces": []
       },
@@ -158,19 +166,37 @@
       "--brand-deep",
       "--brand-strong",
       "--card-pad",
+      "--cat-agriculture",
       "--cat-astrology",
+      "--cat-automobile",
       "--cat-breaking",
       "--cat-business",
+      "--cat-celebrity",
       "--cat-cinema",
+      "--cat-cooking",
+      "--cat-cricket",
       "--cat-crime",
+      "--cat-district",
       "--cat-education",
+      "--cat-factcheck",
+      "--cat-finance",
       "--cat-gold",
       "--cat-health",
+      "--cat-international",
       "--cat-jobs",
+      "--cat-lifestyle",
+      "--cat-mynews",
       "--cat-national",
+      "--cat-opinion",
+      "--cat-ott",
       "--cat-politics",
+      "--cat-religion",
+      "--cat-shorts",
       "--cat-sports",
+      "--cat-state",
       "--cat-tech",
+      "--cat-technology",
+      "--cat-travel",
       "--cat-weather",
       "--danger",
       "--danger-soft",
@@ -333,6 +359,24 @@
       "--cat-health": "color",
       "--cat-tech": "color",
       "--cat-national": "color",
+      "--cat-mynews": "color",
+      "--cat-finance": "color",
+      "--cat-cooking": "color",
+      "--cat-shorts": "color",
+      "--cat-district": "color",
+      "--cat-state": "color",
+      "--cat-international": "color",
+      "--cat-technology": "color",
+      "--cat-ott": "color",
+      "--cat-celebrity": "color",
+      "--cat-cricket": "color",
+      "--cat-religion": "color",
+      "--cat-lifestyle": "color",
+      "--cat-automobile": "color",
+      "--cat-travel": "color",
+      "--cat-agriculture": "color",
+      "--cat-factcheck": "color",
+      "--cat-opinion": "color",
       "--success": "color",
       "--success-soft": "color",
       "--warning": "color",

@@ -1,0 +1,56 @@
+/* tap2news — Color system
+   Base palette + semantic aliases. "Vermillion" red is the brand's news-urgency core;
+   warm paper background keeps long multilingual reading comfortable. */
+:root{
+  /* ── Brand: Vermillion red (kumkum-warm, urgent, editorial) ── */
+  --red-50:#FEF1F0; --red-100:#FCDCDA; --red-200:#F7ADA9; --red-300:#F17D77;
+  --red-400:#EC5049; --red-500:#E11B22; --red-600:#C4141C; --red-700:#9E0F17;
+  --red-800:#780B11; --red-900:#520709;
+  --brand:var(--red-500); --brand-strong:var(--red-600); --brand-deep:var(--red-700);
+
+  /* ── Ink: cool navy neutrals for text & structure ── */
+  --ink-950:#0C1424; --ink-900:#14203A; --ink-800:#1E2C49; --ink-700:#334155;
+  --ink-600:#4A566B; --ink-500:#64708A; --ink-400:#8C97AC; --ink-300:#B4BCCB;
+  --ink-200:#D6DBE4; --ink-100:#E9ECF2; --ink-50:#F4F6FA;
+
+  /* ── Paper: warm off-white surfaces ── */
+  --paper:#FAF7F2; --paper-sunk:#F1ECE3; --white:#FFFFFF;
+
+  /* ── Gold / amber accent: gold rates, premium, highlights ── */
+  --gold-100:#FBEFD3; --gold-300:#F3CE83; --gold-500:#E8A020; --gold-600:#C9861A; --gold-700:#9E680F;
+
+  /* ── Category color coding (feed & chips) ── */
+  --cat-breaking:#E11B22; --cat-politics:#3A4CB5; --cat-crime:#3F4756;
+  --cat-cinema:#D6338A;   --cat-sports:#1E9E62;   --cat-business:#0E8F8A;
+  --cat-jobs:#2477C9;     --cat-weather:#2E9BD6;   --cat-astrology:#EE7A1E;
+  --cat-gold:#E8A020;     --cat-education:#7A4FD0;  --cat-health:#22A06B;
+  --cat-tech:#5A5FD6;     --cat-national:#C4141C;
+  --cat-mynews:#E11B22;   --cat-finance:#128A4B;   --cat-cooking:#C2410C;   --cat-shorts:#F0286A;
+  /* production categories (match backend gemini.ts enum) */
+  --cat-district:#6B7280; --cat-state:#475569;     --cat-international:#0E7490; --cat-technology:#5A5FD6;
+  --cat-ott:#7C3AED;      --cat-celebrity:#DB2777;  --cat-cricket:#15803D;   --cat-religion:#B45309;
+  --cat-lifestyle:#C026D3; --cat-automobile:#0F766E; --cat-travel:#0891B2;    --cat-agriculture:#4D7C0F;
+  --cat-factcheck:#1D4ED8; --cat-opinion:#6D28D9;
+
+  /* ── Semantic status ── */
+  --success:#1E9E62; --success-soft:#E4F4EC;
+  --warning:#E8A020; --warning-soft:#FBEFD3;
+  --danger:#D5231F;  --danger-soft:#FCE4E3;
+  --info:#2477C9;    --info-soft:#E3F0FB;
+  --live:#E11B22;    /* pulsing live/breaking dot */
+
+  /* ── Semantic surface / text aliases ── */
+  --bg-app:var(--paper);
+  --surface-card:var(--white);
+  --surface-sunk:var(--paper-sunk);
+  --surface-inverse:var(--ink-900);
+  --border-hairline:var(--ink-100);
+  --border-strong:var(--ink-200);
+  --text-strong:var(--ink-900);
+  --text-body:var(--ink-800);
+  --text-muted:var(--ink-500);
+  --text-faint:var(--ink-400);
+  --text-on-brand:var(--white);
+  --text-link:var(--red-600);
+  --focus-ring:var(--red-400);
+}

@@ -1,0 +1,26 @@
+<!-- @dsCard group="Components" viewport="700x860" name="Content — News Cards & Carousel" subtitle="Feed story cards + featured gallery" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--paper);font-family:var(--font-body);padding:18px;max-width:460px}.stack{display:flex;flex-direction:column;gap:10px}.lbl{font-family:var(--font-display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);margin:14px 0 2px}.lbl:first-child{margin-top:0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { NewsCard, FeaturedCarousel } = window.Ds2daynewsDesignSystem_0b44f3;
+ReactDOM.createRoot(document.getElementById('root')).render(<div className="stack">
+  <p className="lbl">Featured carousel</p>
+  <FeaturedCarousel autoPlay items={[
+    { region: 'Telangana', category: 'crime', headline: 'Gooty: సైబర్ క్రైమ్స్‌పై స్టూడెంట్స్‌కు పోలీస్ క్లాస్!', time: '11:37 PM', read: '1 min read' },
+    { region: 'Andhra Pradesh', category: 'politics', headline: 'పోలవరం ప్రాజెక్టును సందర్శించిన సీఎం చంద్రబాబు', time: '9:50 PM', read: '2 min read' },
+    { region: 'Tollywood', category: 'cinema', headline: 'సంక్రాంతికి భారీ పోటీ — మూడు పెద్ద సినిమాలు', time: '6:40 PM', read: '1 min read' },
+  ]} />
+  <p className="lbl">Hero layout · breaking</p>
+  <NewsCard layout="hero" breaking headline="Heavy rain alert issued for coastal districts through weekend" summary="IMD warns of squally winds and localized flooding; fishermen advised not to venture into the sea." source="TV9" location="Vijayawada" time="8 min" verified/>
+  <p className="lbl">Row layout</p>
+  <NewsCard layout="row" category="cinema" headline="Tollywood star's next locked for Sankranti release" summary="Makers confirm a festival clash as the film wraps its final schedule in Hyderabad." source="Sakshi" location="Hyderabad" time="1 hr" aiRewritten/>
+  <NewsCard layout="row" category="sports" headline="India name squad for the home Test series" source="Cricbuzz" time="2 hr" verified/>
+  <p className="lbl">Compact layout</p>
+  <NewsCard layout="compact" category="jobs" headline="APPSC releases 1,200 Group-II vacancies; apply by month end" source="tap2news" location="AP" time="now"/>
+</div>);
+</script></body></html>

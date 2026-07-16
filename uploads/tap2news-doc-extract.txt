@@ -1,0 +1,2 @@
+This is the end-user UX slice. The other big pieces from your brief — admin dashboard, the AI ingestion pipeline diagram, DB/API architecture, monetization — are each their own deliverable. Tell me which to build next.
+Content is representative sample data; happy to expand categories (OTT, agriculture, fact-check), add the Shorts/Video tabs, or build the web/PWA responsive layout.

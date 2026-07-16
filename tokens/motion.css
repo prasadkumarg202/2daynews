@@ -1,0 +1,12 @@
+/* tap2news — Motion
+   Fast, functional. News scanning rewards snappy feedback, not showy easing. */
+:root{
+  --dur-fast:120ms; /* @kind other */
+  --dur-base:200ms; /* @kind other */
+  --dur-slow:320ms; /* @kind other */
+  --ease-standard:cubic-bezier(.2,0,0,1); /* @kind other */
+  --ease-out:cubic-bezier(0,0,.2,1); /* @kind other */
+  --ease-emphasis:cubic-bezier(.2,0,0,1.2); /* @kind other */
+  --ticker-speed:26s; /* @kind other */
+  --press-scale:.97; /* @kind other */
+}

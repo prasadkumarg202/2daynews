@@ -1,0 +1,79 @@
+<!-- @dsCard group="Admin Console" viewport="1280x800" name="tap2news Ops — Command Center v2" subtitle="Live command center: newsroom, AI/MCP infra, Redis, growth" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tap2news — Ops Command Center</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  html,body{margin:0;height:100%}
+  body{background:var(--bg-app);font-family:var(--font-body);color:var(--text-body);font-size:13px}
+  #root{height:100vh}
+  a{color:var(--text-link)}a:hover{color:var(--brand-deep)}
+  ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:var(--ink-200);border-radius:8px}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="data.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="Shell.jsx"></script>
+<script type="text/babel" src="CommandCenter.jsx"></script>
+<script type="text/babel" src="Newsroom.jsx"></script>
+<script type="text/babel" src="BreakingDesk.jsx"></script>
+<script type="text/babel" src="PollsAdmin.jsx"></script>
+<script type="text/babel" src="Infra.jsx"></script>
+<script type="text/babel" src="SourcesApis.jsx"></script>
+<script type="text/babel" src="Growth.jsx"></script>
+<script type="text/babel">
+const D = window.AD2;
+const META = {
+  command: { title: 'Command Center', crumbs: 'tap2news ops' },
+  newsroom: { title: 'Newsroom', crumbs: 'Command / Newsroom' },
+  infra: { title: 'Infra & AI', crumbs: 'Command / Infra & AI' },
+  sources: { title: 'Sources & APIs', crumbs: 'Command / Sources & APIs' },
+  growth: { title: 'Growth', crumbs: 'Command / Growth' },
+};
+function App() {
+  const [hub, setHub] = React.useState('command');
+  const [nrTab, setNrTab] = React.useState('queue'); // queue | breaking | polls
+  const m = META[hub];
+  let body;
+  if (hub === 'command') body = <CommandCenter d={D} drill={setHub} />;
+  else if (hub === 'newsroom') {
+    const tabs = [['queue', 'shield-check', 'Queue & Publish'], ['breaking', 'zap', 'Breaking desk'], ['polls', 'bar-chart-3', 'Polls & Quizzes']];
+    body = (
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+        <div style={{ display: 'flex', gap: 4, padding: '8px 16px 0', background: 'var(--surface-card)', borderBottom: '1px solid var(--border-hairline)', flex: '0 0 auto' }}>
+          {tabs.map(([id, ic, l]) => (
+            <button key={id} onClick={() => setNrTab(id)} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 14px', border: 'none', cursor: 'pointer', background: 'none', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 12.5, color: nrTab === id ? 'var(--brand-strong)' : 'var(--text-muted)', borderBottom: '2px solid ' + (nrTab === id ? 'var(--brand)' : 'transparent'), marginBottom: -1 }}>
+              <Icon name={ic} size={14} color={nrTab === id ? 'var(--brand-strong)' : 'var(--ink-400)'} />{l}
+            </button>
+          ))}
+        </div>
+        <div style={{ flex: 1, minHeight: 0, overflowY: nrTab === 'queue' ? 'hidden' : 'auto' }}>
+          {nrTab === 'queue' && <Newsroom d={D} />}
+          {nrTab === 'breaking' && <BreakingDesk d={D} />}
+          {nrTab === 'polls' && <PollsAdmin />}
+        </div>
+      </div>
+    );
+  }
+  else if (hub === 'infra') body = <Infra d={D} />;
+  else if (hub === 'sources') body = <SourcesApis />;
+  else body = <Growth d={D} />;
+  return (
+    <div style={{ display: 'flex', height: '100%' }}>
+      <Sidebar hubs={D.hubs} hub={hub} onHub={setHub} user={D.user} />
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+        <Topbar title={m.title} crumbs={m.crumbs} onBack={hub !== 'command' ? () => setHub('command') : null}
+          actions={<DS.Button variant="primary" size="sm" icon={<Icon name="zap" size={14} color="#fff" />} onClick={() => { setHub('newsroom'); setNrTab('breaking'); }}>Breaking</DS.Button>} />
+        <main style={{ flex: 1, overflowY: hub === 'newsroom' ? 'hidden' : 'auto', minHeight: 0 }}>{body}</main>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body></html>

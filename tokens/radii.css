@@ -1,0 +1,7 @@
+/* tap2news — Radii */
+:root{
+  --r-xs:4px; --r-sm:6px; --r-md:10px; --r-lg:14px; --r-xl:20px; --r-pill:999px;
+  --r-card:12px;   /* feed cards */
+  --r-chip:999px;  /* category chips, language pills */
+  --r-thumb:8px;   /* thumbnail images */
+}

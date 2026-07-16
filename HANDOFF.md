@@ -1,10 +1,10 @@
-# Handoff: 2daynews — Multilingual Hyperlocal News Platform
+# Handoff: tap2news — Multilingual Hyperlocal News Platform
 
 ## Overview
-This is the complete **2daynews design system** plus three high-fidelity product surfaces: a **mobile news app**, an **admin/newsroom console** (12 screens), and a **marketing landing site**. 2daynews is an AI-powered, multilingual, hyperlocal Indian news platform with language-based geo-fencing (Telugu → AP/Telangana, Tamil → TN, Hindi → GPS location, national news shared across all), plus daily utilities (gold rates, markets, weather/AQI, cricket, jobs, astrology).
+This is the complete **tap2news design system** plus three high-fidelity product surfaces: a **mobile news app**, an **admin/newsroom console** (12 screens), and a **marketing landing site**. tap2news is an AI-powered, multilingual, hyperlocal Indian news platform with language-based geo-fencing (Telugu → AP/Telangana, Tamil → TN, Hindi → GPS location, national news shared across all), plus daily utilities (gold rates, markets, weather/AQI, cricket, jobs, astrology).
 
 ## About the design files
-Everything in this bundle is a **design reference built in HTML/React-via-Babel** — prototypes that show the intended look, tokens, and behavior. They are **not production code to ship directly.** The task is to **recreate these designs in the target codebase's environment** using its established patterns. The stated stack for 2daynews is **Next.js + React + Tailwind (PWA) / NestJS + FastAPI backend** — implement there. If no codebase exists yet, scaffold Next.js + Tailwind and port the tokens below into `tailwind.config` + CSS variables.
+Everything in this bundle is a **design reference built in HTML/React-via-Babel** — prototypes that show the intended look, tokens, and behavior. They are **not production code to ship directly.** The task is to **recreate these designs in the target codebase's environment** using its established patterns. The stated stack for tap2news is **Next.js + React + Tailwind (PWA) / NestJS + FastAPI backend** — implement there. If no codebase exists yet, scaffold Next.js + Tailwind and port the tokens below into `tailwind.config` + CSS variables.
 
 ## Fidelity
 **High-fidelity.** Final colors, typography, spacing, radii, shadows, and interactions are all specified in real CSS custom properties. Recreate pixel-faithfully, mapping the design tokens (below) onto the codebase's styling layer.
@@ -74,11 +74,11 @@ Layout: 244px dark ink sidebar (`--ink-950`) + topbar + scrollable content. All 
 - **Spacing**: 4px base (`--sp-*`); app gutter 16, card padding 14, feed stack gap 10.
 
 ## Assets & substitutions (IMPORTANT)
-- **No logo** — a type-only wordmark is used everywhere ("2day" in `--brand` + "news" in `--ink-900`). Replace with the real mark when available.
+- **No logo** — a type-only wordmark is used everywhere ("tap2" in `--brand` + "news" in `--ink-900`). Replace with the real mark when available.
 - **Fonts are Google Fonts substitutions** (Anek, Noto Sans, IBM Plex Mono) — no brand fonts were supplied. Loaded via CDN `@import` in `tokens/fonts.css`.
 - **Icons: Lucide** (line, 2px stroke) via CDN — substitution; no brand icon set was supplied. Swap for a real set if one exists.
-- **No imagery** — `NewsCard` shows a "2N" monogram/gradient placeholder; wire real image URLs into its `image` prop.
-- The source GitHub repo (`github.com/prasadkumarg202/2daynews`) was **empty** — all visual decisions are an original, defensible starting point, not the real brand.
+- **No imagery** — `NewsCard` shows a "T2" monogram/gradient placeholder; wire real image URLs into its `image` prop.
+- The source GitHub repo (`github.com/prasadkumarg202/tap2news`) was **empty** — all visual decisions are an original, defensible starting point, not the real brand.
 
 ## Files
 - Design system: `styles.css`, `tokens/*.css`, `components/**`, `readme.md`, `SKILL.md`.

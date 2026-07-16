@@ -1,0 +1,33 @@
+/* tap2news — Typography scale
+   Anek (display/headlines, Indic-native), Noto Sans (multilingual body), IBM Plex Mono (data). */
+:root{
+  --font-display:'Anek Latin','Anek Telugu','Anek Tamil','Anek Kannada','Anek Malayalam','Anek Devanagari',system-ui,sans-serif;
+  --font-body:'Noto Sans','Noto Sans Telugu','Noto Sans Tamil','Noto Sans Kannada','Noto Sans Malayalam','Noto Sans Devanagari',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+
+  /* Type scale — mobile-first news reading */
+  --fs-eyebrow:11px;  /* uppercase kicker / category label */
+  --fs-caption:12px;   /* time, source, meta */
+  --fs-body-sm:14px;
+  --fs-body:15px;      /* article body */
+  --fs-body-lg:17px;
+  --fs-headline-sm:18px;
+  --fs-headline:22px;  /* card headline */
+  --fs-headline-lg:26px;
+  --fs-title:32px;     /* article title */
+  --fs-display:40px;
+  --fs-display-lg:52px;
+
+  --lh-tight:1.12; /* @kind other */
+  --lh-snug:1.28; /* @kind other */
+  --lh-normal:1.5; /* @kind other */
+  --lh-relaxed:1.65; /* @kind other */
+  --fw-regular:400; /* @kind other */
+  --fw-medium:500; /* @kind other */
+  --fw-semibold:600; /* @kind other */
+  --fw-bold:700; /* @kind other */
+  --fw-black:800; /* @kind other */
+  --tracking-eyebrow:0.08em; /* @kind other */
+  --tracking-tight:-0.01em; /* @kind other */
+  --tracking-normal:0; /* @kind other */
+}

@@ -3,6 +3,11 @@
 Thumbs.db
 *.log
 
+# Historical design-system snapshots (~21MB). The unpacked current state
+# in components/, tokens/, and ui_kits/ supersedes these; git history is
+# the versioning mechanism now.
+*.zip
+
 # Dependencies (if you later add a build)
 node_modules/
 dist/

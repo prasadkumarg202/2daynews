@@ -1,0 +1,166 @@
+<!-- @dsCard group="tap2news App" viewport="430x780" name="tap2news mobile app" subtitle="Telugu-first hyperlocal news app — interactive" -->
+<!-- @startingPoint section="tap2news App" subtitle="Full mobile news app (feed → article)" viewport="430x780" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tap2news — App UI Kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;background:#e7e2d8;font-family:var(--font-body);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;box-sizing:border-box}
+  .phone{width:390px;height:760px;background:var(--bg-app);border-radius:44px;box-shadow:0 30px 70px rgba(12,20,36,.28),0 0 0 12px #11151c,0 0 0 13px #2a2f38;overflow:hidden;position:relative;display:flex;flex-direction:column}
+  .status{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 4px;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--ink-900);flex:0 0 auto}
+  .screen{flex:1;overflow-y:auto;scrollbar-width:none}.screen::-webkit-scrollbar{display:none}
+  @media (prefers-reduced-motion: no-preference){
+    .fx-card{animation:card-in .38s var(--ease-out) both}
+    @keyframes card-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  }
+  .screen article{transition:transform var(--dur-fast) var(--ease-standard), box-shadow var(--dur-fast)}
+  .screen article:active{transform:scale(.985)}
+  a{color:var(--text-link)}a:hover{color:var(--brand-deep)}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="data.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="AppShell.jsx"></script>
+<script type="text/babel" src="FeedScreen.jsx"></script>
+<script type="text/babel" src="ArticleScreen.jsx"></script>
+<script type="text/babel" src="ExploreScreen.jsx"></script>
+<script type="text/babel" src="UtilityScreen.jsx"></script>
+<script type="text/babel" src="SwipeReader.jsx"></script>
+<script type="text/babel" src="EngageCards.jsx"></script>
+<script type="text/babel">
+const DATA = window.DN_DATA;
+
+function LangSelect({ onPick }) {
+  const langs = ['te','ta','kn','ml','hi','en'];
+  const [sel, setSel] = React.useState('te');
+  return (
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '40px 24px', background: 'var(--surface-card)' }}>
+      <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 34, letterSpacing: '-0.02em', color: 'var(--ink-900)' }}>
+        <span style={{ color: 'var(--brand)' }}>tap2</span>news
+      </span>
+      <p style={{ margin: '10px 0 28px', fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--text-muted)', lineHeight: 1.5 }}>Pick your language. Your entire feed — politics, cinema, jobs, weather — follows it.</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {langs.map((c) => <DS.LanguagePill key={c} code={c} active={sel === c} onClick={() => setSel(c)} style={{ justifyContent: 'flex-start', width: '100%' }} />)}
+      </div>
+      <div style={{ flex: 1 }} />
+      <DS.Button variant="primary" size="lg" block onClick={() => onPick(sel)}>Continue</DS.Button>
+    </div>
+  );
+}
+
+function LocationSheet({ lang, onEnable, onSkip }) {
+  const hindi = lang === 'hi';
+  return (
+    <div style={{ position: 'absolute', inset: 0, zIndex: 40, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', background: 'rgba(12,20,36,.5)', backdropFilter: 'blur(2px)' }}>
+      {/* faux OS permission banner — shows WHERE the real prompt appears */}
+      <div style={{ position: 'absolute', top: 12, left: 12, right: 12, background: 'var(--white)', borderRadius: 'var(--r-md)', boxShadow: 'var(--shadow-pop)', padding: '12px 14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+          <span style={{ width: 30, height: 30, borderRadius: 8, background: 'var(--red-50)', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 auto' }}><Icon name="map-pin" size={17} color="var(--brand)" /></span>
+          <div style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, color: 'var(--ink-800)', lineHeight: 1.35 }}>Allow <b>tap2news</b> to access this device’s location?</div>
+        </div>
+        <div style={{ display: 'flex', gap: 8, marginTop: 10, justifyContent: 'flex-end' }}>
+          <button onClick={onSkip} style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 13, color: 'var(--ink-500)', padding: '6px 10px' }}>Block</button>
+          <button onClick={onEnable} style={{ background: 'var(--red-50)', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 13, color: 'var(--brand-strong)', padding: '6px 12px', borderRadius: 'var(--r-pill)' }}>Allow</button>
+        </div>
+        <div style={{ position: 'absolute', bottom: -6, left: 24, width: 12, height: 12, background: 'var(--white)', transform: 'rotate(45deg)' }} />
+      </div>
+
+      {/* bottom sheet */}
+      <div style={{ background: 'var(--surface-card)', borderRadius: '20px 20px 0 0', padding: '22px 20px calc(20px + env(safe-area-inset-bottom))', boxShadow: '0 -8px 30px rgba(12,20,36,.18)' }}>
+        <div style={{ width: 38, height: 4, borderRadius: 999, background: 'var(--ink-200)', margin: '0 auto 16px' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+          <span style={{ width: 48, height: 48, borderRadius: 14, background: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 auto', boxShadow: 'var(--shadow-brand)' }}><Icon name="map-pin" size={24} color="#fff" /></span>
+          <div>
+            <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, letterSpacing: '-0.01em', color: 'var(--text-strong)' }}>Turn on location</h2>
+            <p style={{ margin: '2px 0 0', fontFamily: 'var(--font-body)', fontSize: 12.5, color: 'var(--text-muted)' }}>{hindi ? 'Hindi feed is district-based' : 'For nearby news & alerts'}</p>
+          </div>
+        </div>
+        <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-body)' }}>
+          {hindi
+            ? 'Your Hindi feed changes with your city — UP, Delhi-NCR, MP and more. Enable location for district politics, jobs, weather and breaking alerts near you.'
+            : 'మీ జిల్లా వార్తలు, ఉద్యోగాలు, వాతావరణం మరియు అలర్ట్స్ కోసం లొకేషన్ ఆన్ చేయండి.'}
+        </p>
+        <div style={{ display: 'flex', gap: 9, padding: '11px 12px', background: 'var(--surface-sunk)', borderRadius: 'var(--r-md)', marginBottom: 16 }}>
+          <Icon name="info" size={15} color="var(--text-faint)" style={{ flex: '0 0 auto', marginTop: 1 }} />
+          <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 12, lineHeight: 1.5, color: 'var(--text-muted)' }}>Already blocked? Enable it at <b style={{ color: 'var(--ink-700)' }}>Settings › Apps › tap2news › Permissions › Location › Allow</b>.</p>
+        </div>
+        <DS.Button variant="primary" size="lg" block icon={<Icon name="navigation" size={17} />} onClick={onEnable}>Enable location</DS.Button>
+        <button onClick={onSkip} style={{ display: 'block', width: '100%', marginTop: 10, background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 14, color: 'var(--text-muted)', padding: '8px' }}>Not now</button>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [started, setStarted] = React.useState(false);
+  const [lang, setLang] = React.useState('te');
+  const [locState, setLocState] = React.useState('checking'); // checking | ask | on | off
+  const [place, setPlace] = React.useState(null);
+  const [tab, setTab] = React.useState('feed');
+  const [article, setArticle] = React.useState(null);
+  const [reader, setReader] = React.useState(false);
+
+  // Real detection: is geolocation permission granted / denied / promptable?
+  const detect = React.useCallback(() => {
+    if (!('geolocation' in navigator)) { setLocState('off'); return; }
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'geolocation' }).then((p) => {
+        setLocState(p.state === 'granted' ? 'on' : p.state === 'denied' ? 'off' : 'ask');
+        if (p.state === 'granted') requestPos();
+        p.onchange = () => setLocState(p.state === 'granted' ? 'on' : p.state === 'denied' ? 'off' : 'ask');
+      }).catch(() => setLocState('ask'));
+    } else { setLocState('ask'); }
+  }, []);
+
+  const requestPos = () => {
+    if (!('geolocation' in navigator)) { setLocState('off'); return; }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocState('on');
+        const { latitude, longitude } = pos.coords;
+        setPlace(latitude.toFixed(2) + ', ' + longitude.toFixed(2));
+        // Reverse geocode to a city/district name (free, keyless endpoint)
+        fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
+          .then((r) => r.json())
+          .then((g) => { const p = g.city || g.locality || g.principalSubdivision; if (p) setPlace(p + (g.principalSubdivisionCode ? ', ' + g.principalSubdivisionCode.split('-')[1] : '')); })
+          .catch(() => {});
+      },
+      () => setLocState('off'),
+      { timeout: 8000 }
+    );
+  };
+
+  React.useEffect(() => { if (started) detect(); }, [started, detect]);
+
+  const headerLoc = locState === 'on'
+    ? (place || DATA.language.location)
+    : (lang === 'hi' ? 'Set location' : DATA.language.location);
+
+  let body;
+  if (!started) body = <LangSelect onPick={(l) => { setLang(l); setStarted(true); }} />;
+  else if (article) body = <ArticleScreen story={article} onBack={() => setArticle(null)} />;
+  else if (tab === 'feed') body = <FeedScreen data={DATA} onOpen={setArticle} onQuickRead={() => setReader(true)} loc={{ on: locState === 'on', place: place || DATA.language.location }} />;
+  else if (tab === 'explore') body = <ExploreScreen data={DATA} />;
+  else if (tab === 'utility') body = <UtilityScreen data={DATA} />;
+  else body = <div style={{ padding: 40, textAlign: 'center', color: 'var(--text-muted)', fontFamily: 'var(--font-body)' }}>No saved stories yet.</div>;
+
+  const showChrome = started && !article;
+  return (
+    <div className="phone">
+      <div className="status"><span>9:41</span><span style={{ display: 'flex', gap: 6 }}><Icon name="signal" size={15} color="var(--ink-900)" /><Icon name="wifi" size={15} color="var(--ink-900)" /><Icon name="battery-full" size={15} color="var(--ink-900)" /></span></div>
+      {showChrome && <AppHeader lang={{ ...DATA.language, location: headerLoc }} onLangTap={() => setStarted(false)} onLocTap={() => { if (locState !== 'on') setLocState('ask'); }} />}
+      <div className="screen">{body}</div>
+      {showChrome && <BottomNav tab={tab} onTab={(t) => { setTab(t); setArticle(null); }} onQuickRead={() => setReader(true)} />}
+      {started && !article && locState === 'ask' && <LocationSheet lang={lang} onEnable={requestPos} onSkip={() => setLocState('off')} />}
+      {started && reader && <SwipeReader stories={DATA.stories} onClose={() => setReader(false)} onOpenFull={(s) => { setReader(false); setArticle(s); }} />}
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body></html>

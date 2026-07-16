@@ -1,0 +1,11 @@
+/* tap2news — Shadows & elevation
+   Restrained: news UIs read as crisp paper cards, not floating glass. */
+:root{
+  --shadow-none:none;
+  --shadow-hairline:0 0 0 1px var(--border-hairline);
+  --shadow-card:0 1px 2px rgba(12,20,36,.06), 0 1px 3px rgba(12,20,36,.05);
+  --shadow-raised:0 2px 6px rgba(12,20,36,.08), 0 6px 16px rgba(12,20,36,.06);
+  --shadow-pop:0 8px 24px rgba(12,20,36,.14);
+  --shadow-brand:0 4px 14px rgba(225,27,34,.28);
+  --shadow-inset:inset 0 1px 2px rgba(12,20,36,.06);
+}

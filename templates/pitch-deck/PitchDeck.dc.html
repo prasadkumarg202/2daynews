@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Investor Pitch Deck" description="tap2news investor deck — vision, market, competition, moat, tech, monetization" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Cover" style="background:var(--ink-950);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:100px;box-sizing:border-box">
+<div style="height:4px;width:180px;background:linear-gradient(90deg,var(--brand),var(--gold-500));border-radius:99px;margin-bottom:56px"></div>
+<div style="font-family:var(--font-display);font-weight:800;font-size:120px;letter-spacing:-0.03em;line-height:1"><span style="color:var(--red-400)">tap2</span><span style="color:#fff">news</span></div>
+<p style="font-family:var(--font-display);font-weight:600;font-size:44px;color:#c8cfdd;margin:40px 0 0;max-width:1200px;line-height:1.25">The news of your district, in your language — powered by AI, priced to win.</p>
+<p style="font-family:var(--font-body);font-size:28px;color:var(--ink-400);margin:80px 0 0">Investor pitch · 2026</p>
+</section>
+
+<section data-label="Problem" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">The problem</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 64px;max-width:1500px;line-height:1.1">Vernacular India gets diluted national feeds, not its own news</h1>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:44px;box-shadow:var(--shadow-card)"><div style="font-family:var(--font-display);font-weight:800;font-size:72px;color:var(--brand);line-height:1">90%</div><p style="font-family:var(--font-body);font-size:30px;color:var(--ink-700);margin:20px 0 0;line-height:1.4">of new internet users prefer an Indian language over English</p></div>
+<div style="flex:1;background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:44px;box-shadow:var(--shadow-card)"><div style="font-family:var(--font-display);font-weight:800;font-size:72px;color:var(--brand);line-height:1">1 feed</div><p style="font-family:var(--font-body);font-size:30px;color:var(--ink-700);margin:20px 0 0;line-height:1.4">Aggregators mix Tamil politics into Telugu feeds — relevance breaks at the state border</p></div>
+<div style="flex:1;background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:44px;box-shadow:var(--shadow-card)"><div style="font-family:var(--font-display);font-weight:800;font-size:72px;color:var(--brand);line-height:1">₹100s Cr</div><p style="font-family:var(--font-body);font-size:30px;color:var(--ink-700);margin:20px 0 0;line-height:1.4">burned yearly on human curation and content licensing by incumbents</p></div>
+</div>
+</section>
+
+<section data-label="Market" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">The market</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 72px">Half a billion vernacular news readers</h1>
+<div style="display:flex;gap:80px;align-items:flex-start">
+<div style="flex:1"><div style="font-family:var(--font-display);font-weight:800;font-size:110px;color:var(--ink-900);letter-spacing:-0.03em;line-height:1">950M+</div><p style="font-family:var(--font-body);font-size:30px;color:var(--ink-600);margin:16px 0 0">Indian internet users, growing fastest in tier-2/3 towns</p></div>
+<div style="flex:1"><div style="font-family:var(--font-display);font-weight:800;font-size:110px;color:var(--brand);letter-spacing:-0.03em;line-height:1">~500M</div><p style="font-family:var(--font-body);font-size:30px;color:var(--ink-600);margin:16px 0 0">consume news digitally in Indian languages — our addressable base</p></div>
+<div style="flex:1"><div style="font-family:var(--font-display);font-weight:800;font-size:110px;color:var(--gold-600);letter-spacing:-0.03em;line-height:1">₹40K Cr</div><p style="font-family:var(--font-body);font-size:30px;color:var(--ink-600);margin:16px 0 0">Indian digital ad market, with vernacular the fastest-growing slice</p></div>
+</div>
+<p style="font-family:var(--font-body);font-size:26px;color:var(--ink-500);margin-top:auto">Dailyhunt alone reaches 300M+ MAU — the demand is proven; the economics are not.</p>
+</section>
+
+<section data-label="Competition" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">The competition</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 60px">Big revenues, bigger losses</h1>
+<div style="display:flex;flex-direction:column;gap:28px;flex:1">
+<div style="display:flex;align-items:center;gap:32px"><div style="width:340px;font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900)">VerSe <span style="font-size:24px;color:var(--ink-500);font-weight:500">(Dailyhunt + Josh)</span></div><div style="flex:1;height:56px;border-radius:10px;background:var(--ink-100);overflow:hidden"><div style="width:100%;height:100%;background:var(--ink-800);display:flex;align-items:center;padding-left:24px;box-sizing:border-box"><span style="font-family:var(--font-mono);font-weight:600;font-size:26px;color:#fff">₹1,930 Cr revenue · FY25</span></div></div><div style="width:360px;font-family:var(--font-mono);font-weight:600;font-size:28px;color:var(--danger)">–₹738 Cr EBITDA burn</div></div>
+<div style="display:flex;align-items:center;gap:32px"><div style="width:340px;font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900)">Inshorts</div><div style="flex:1;height:56px;border-radius:10px;background:var(--ink-100);overflow:hidden"><div style="width:14%;min-width:340px;height:100%;background:var(--ink-500);display:flex;align-items:center;padding-left:24px;box-sizing:border-box"><span style="font-family:var(--font-mono);font-weight:600;font-size:26px;color:#fff;white-space:nowrap">₹181 Cr · FY24</span></div></div><div style="width:360px;font-family:var(--font-mono);font-weight:600;font-size:28px;color:var(--danger)">–₹228 Cr net loss</div></div>
+<div style="display:flex;align-items:center;gap:32px"><div style="width:340px;font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900)">Way2News</div><div style="flex:1;height:56px;border-radius:10px;background:var(--ink-100);overflow:hidden"><div style="width:6%;min-width:320px;height:100%;background:var(--ink-400);display:flex;align-items:center;padding-left:24px;box-sizing:border-box"><span style="font-family:var(--font-mono);font-weight:600;font-size:26px;color:#fff;white-space:nowrap">₹40 Cr · FY24</span></div></div><div style="width:360px;font-family:var(--font-mono);font-weight:600;font-size:28px;color:var(--danger)">–₹57 Cr loss</div></div>
+</div>
+<p style="font-family:var(--font-body);font-size:24px;color:var(--ink-500);margin:40px 0 0">Public filings & press reports (Entrackr, Inc42), FY24–FY25. VerSe has raised over $2B to get here; Inshorts $165M+.</p>
+</section>
+
+<section data-label="The gap" style="background:var(--ink-950);color:#fff;display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--red-400);margin:0 0 20px">The gap</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:#fff;margin:0 0 64px;max-width:1500px">Why the incumbents lose money on every reader</h1>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:16px;padding:40px"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;margin:0 0 14px;color:#fff">Human curation at scale</h3><p style="font-family:var(--font-body);font-size:28px;color:var(--ink-300);margin:0;line-height:1.45">Thousands of editors and licensing deals — content cost grows with every language added.</p></div>
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:16px;padding:40px"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;margin:0 0 14px;color:#fff">Weak geo-relevance</h3><p style="font-family:var(--font-body);font-size:28px;color:var(--ink-300);margin:0;line-height:1.45">Language ≠ location in their feeds. A Lucknow reader and a Bhopal reader see the same Hindi feed.</p></div>
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:16px;padding:40px"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;margin:0 0 14px;color:#fff">News-only sessions</h3><p style="font-family:var(--font-body);font-size:28px;color:var(--ink-300);margin:0;line-height:1.45">One reason to open the app. No live utilities that pull users back five times a day.</p></div>
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:16px;padding:40px"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;margin:0 0 14px;color:#fff">Infra built pre-AI</h3><p style="font-family:var(--font-body);font-size:28px;color:var(--ink-300);margin:0;line-height:1.45">Heavy fixed-cost stacks. Ours was designed AI-first on serverless — cost follows usage.</p></div>
+</div>
+</section>
+
+<section data-label="Product" style="background:var(--paper);display:flex;padding:100px;box-sizing:border-box;gap:80px">
+<div style="flex:1.2;display:flex;flex-direction:column">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">The product</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 44px;line-height:1.1">One app, isolated language worlds, GPS-deep local</h1>
+<div style="display:flex;flex-direction:column;gap:26px;font-family:var(--font-body);font-size:30px;color:var(--ink-700)">
+<div style="display:flex;gap:18px;align-items:baseline"><span style="color:var(--brand);font-weight:700">01</span><span>Pick తెలుగు — the entire app becomes AP/Telangana: politics, Tollywood, district news, jobs</span></div>
+<div style="display:flex;gap:18px;align-items:baseline"><span style="color:var(--brand);font-weight:700">02</span><span>Hindi follows GPS: Lucknow → UP feed; Bhopal → MP feed. PostGIS point-in-polygon, 600+ districts</span></div>
+<div style="display:flex;gap:18px;align-items:baseline"><span style="color:var(--brand);font-weight:700">03</span><span>National news (PM, ISRO, budget) shared across all languages — nothing else leaks</span></div>
+<div style="display:flex;gap:18px;align-items:baseline"><span style="color:var(--brand);font-weight:700">04</span><span>60-word Quick Read swipe mode + voice summaries for commute-time reading</span></div>
+</div>
+</div>
+<div style="flex:0.8;display:flex;align-items:center;justify-content:center">
+<div style="width:400px;background:#fff;border-radius:36px;box-shadow:0 30px 70px rgba(12,20,36,.25),0 0 0 10px #11151c;padding:36px 30px;box-sizing:border-box">
+<div style="font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--ink-900);margin-bottom:24px"><span style="color:var(--brand)">tap2</span>news</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="background:var(--red-50);border-radius:12px;padding:16px 18px;font-family:var(--font-display);font-weight:700;font-size:24px;color:var(--brand-strong)">తెలుగు · Vijayawada</div>
+<div style="background:var(--paper-sunk);border-radius:12px;padding:16px 18px;font-family:var(--font-body);font-size:22px;color:var(--ink-700)">మీ వార్తలు · District · Cinema</div>
+<div style="background:var(--paper-sunk);border-radius:12px;padding:16px 18px;font-family:var(--font-body);font-size:22px;color:var(--ink-700)">Gold ₹71,240 · IND 286/4 · 34°</div>
+<div style="background:var(--ink-950);border-radius:12px;padding:16px 18px;font-family:var(--font-body);font-size:22px;color:#fff">⚡ క్విక్ రీడ్ — swipe news</div>
+</div>
+</div>
+</div>
+</section>
+
+<section data-label="Live utilities" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">The daily-habit moat</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 24px">Five live reasons to open us every day</h1>
+<p style="font-family:var(--font-body);font-size:30px;color:var(--ink-600);margin:0 0 56px;max-width:1400px">News alone is a 1-session habit. Live utilities make tap2news a 5-session habit — that's ad inventory incumbents don't have.</p>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px">
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:32px 28px;box-shadow:var(--shadow-card)"><div style="width:14px;height:14px;border-radius:50%;background:var(--cat-jobs);margin-bottom:18px"></div><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Live jobs</h3><p style="font-family:var(--font-body);font-size:24px;color:var(--ink-600);margin:0;line-height:1.4">Govt + private vacancies by district, deadline alerts</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:32px 28px;box-shadow:var(--shadow-card)"><div style="width:14px;height:14px;border-radius:50%;background:var(--cat-astrology);margin-bottom:18px"></div><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Live astrology</h3><p style="font-family:var(--font-body);font-size:24px;color:var(--ink-600);margin:0;line-height:1.4">Daily panchang, rahu kalam, horoscope — a morning ritual</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:32px 28px;box-shadow:var(--shadow-card)"><div style="width:14px;height:14px;border-radius:50%;background:var(--cat-sports);margin-bottom:18px"></div><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Live cricket</h3><p style="font-family:var(--font-body);font-size:24px;color:var(--ink-600);margin:0;line-height:1.4">Ball-by-ball scores, 8-second cache — IPL season = peak DAU</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:32px 28px;box-shadow:var(--shadow-card)"><div style="width:14px;height:14px;border-radius:50%;background:var(--cat-health);margin-bottom:18px"></div><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Health tips</h3><p style="font-family:var(--font-body);font-size:24px;color:var(--ink-600);margin:0;line-height:1.4">Daily quizzes + doctor-verified facts in local language</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:32px 28px;box-shadow:var(--shadow-card)"><div style="width:14px;height:14px;border-radius:50%;background:var(--cat-gold);margin-bottom:18px"></div><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Gold & markets</h3><p style="font-family:var(--font-body);font-size:24px;color:var(--ink-600);margin:0;line-height:1.4">22K/24K by city, Sensex/Nifty — checked before every purchase</p></div>
+</div>
+</section>
+
+<section data-label="Engagement" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">Engagement engine</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 64px">Every few cards, the feed asks the reader to act</h1>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:38px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900);margin:0 0 12px">Polls</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.45">One-tap votes on politics & cricket — 31K votes on a single match poll</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:38px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900);margin:0 0 12px">Quizzes</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.45">Health & cinema trivia with instant feedback — shareable results</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:38px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900);margin:0 0 12px">Quick Read</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.45">Swipeable 60-word stories — the snackable format that made Inshorts, in every language</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:38px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:34px;color:var(--ink-900);margin:0 0 12px">Citizen reports</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.45">District correspondents + reader tips, AI-moderated — hyperlocal coverage no wire service has</p></div>
+</div>
+<p style="font-family:var(--font-body);font-size:28px;color:var(--ink-500);margin:56px 0 0">Every like, vote and dwell feeds the recommendation engine — personalization compounds.</p>
+</section>
+
+<section data-label="AI pipeline" style="background:var(--ink-950);color:#fff;display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--red-400);margin:0 0 20px">The cost weapon</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:#fff;margin:0 0 24px">A newsroom that costs ₹0.09 per story</h1>
+<p style="font-family:var(--font-body);font-size:30px;color:var(--ink-300);margin:0 0 64px;max-width:1400px">One structured Gemini call rewrites, classifies, geo-tags, SEO-optimizes and safety-scores each story. Editors only touch what the fake-news gate flags.</p>
+<div style="display:flex;align-items:center;gap:20px;font-family:var(--font-display);font-weight:700;font-size:30px">
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:14px;padding:28px 36px">Collect<br><span style="font-size:24px;font-weight:500;color:var(--ink-400)">1,200+ free sources</span></div>
+<span style="color:var(--ink-600);font-size:40px">→</span>
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:14px;padding:28px 36px">Dedup<br><span style="font-size:24px;font-weight:500;color:var(--ink-400)">N publishers → 1 call</span></div>
+<span style="color:var(--ink-600);font-size:40px">→</span>
+<div style="background:var(--brand);border-radius:14px;padding:28px 36px">Gemini rewrite<br><span style="font-size:24px;font-weight:500;color:#ffd7d5">100% original, facts kept</span></div>
+<span style="color:var(--ink-600);font-size:40px">→</span>
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:14px;padding:28px 36px">Fake gate<br><span style="font-size:24px;font-weight:500;color:var(--ink-400)">&gt;0.5 → human review</span></div>
+<span style="color:var(--ink-600);font-size:40px">→</span>
+<div style="background:var(--ink-900);border:1px solid var(--ink-800);border-radius:14px;padding:28px 36px">Publish<br><span style="font-size:24px;font-weight:500;color:var(--ink-400)">+ push + social</span></div>
+</div>
+<div style="display:flex;gap:100px;margin-top:auto">
+<div><div style="font-family:var(--font-display);font-weight:800;font-size:80px;color:var(--red-400);line-height:1">16</div><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-400);margin:10px 0 0">pipeline stages, fully traced</p></div>
+<div><div style="font-family:var(--font-display);font-weight:800;font-size:80px;color:var(--red-400);line-height:1">~5 min</div><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-400);margin:10px 0 0">source-to-published latency</p></div>
+<div><div style="font-family:var(--font-display);font-weight:800;font-size:80px;color:var(--red-400);line-height:1">0</div><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-400);margin:10px 0 0">editors needed per new language</p></div>
+</div>
+</section>
+
+<section data-label="Technology" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">Technology</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 64px">Serverless stack that scales to 50M without a re-platform</h1>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-bottom:56px">
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:36px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Cloudflare</h3><p style="font-family:var(--font-body);font-size:25px;color:var(--ink-600);margin:0;line-height:1.45">Pages hosting, R2 media, edge cache — feed served from 300+ PoPs</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:36px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Supabase</h3><p style="font-family:var(--font-body);font-size:25px;color:var(--ink-600);margin:0;line-height:1.45">Postgres + PostGIS geo-fencing, RLS security, Edge Functions</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:36px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Redis + BullMQ</h3><p style="font-family:var(--font-body);font-size:25px;color:var(--ink-600);margin:0;line-height:1.45">94% cache hit on feeds, queued ingestion & push fan-out</p></div>
+<div style="background:#fff;border:1px solid var(--border-hairline);border-radius:16px;padding:36px;box-shadow:var(--shadow-card)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900);margin:0 0 10px">Gemini AI</h3><p style="font-family:var(--font-body);font-size:25px;color:var(--ink-600);margin:0;line-height:1.45">The entire editorial engine — rewrite, classify, verify, localize</p></div>
+</div>
+<div style="display:flex;gap:100px">
+<div><div style="font-family:var(--font-display);font-weight:800;font-size:72px;color:var(--ink-900);line-height:1">96 ms</div><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-500);margin:10px 0 0">feed p95 latency</p></div>
+<div><div style="font-family:var(--font-display);font-weight:800;font-size:72px;color:var(--ink-900);line-height:1">1000:1</div><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-500);margin:10px 0 0">read:write ratio — built for caching</p></div>
+<div><div style="font-family:var(--font-display);font-weight:800;font-size:72px;color:var(--ink-900);line-height:1">~₹0</div><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-500);margin:10px 0 0">fixed infra at launch — cost follows usage</p></div>
+</div>
+</section>
+
+<section data-label="Monetization" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">Monetization</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 64px">Five revenue streams from day one</h1>
+<div style="display:flex;flex-direction:column;gap:22px;max-width:1500px">
+<div style="display:flex;align-items:center;gap:28px"><span style="width:380px;font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900)">Programmatic ads</span><div style="flex:1;height:44px;background:var(--ink-100);border-radius:99px;overflow:hidden"><div style="width:46%;height:100%;background:var(--brand);border-radius:99px"></div></div><span style="width:400px;font-family:var(--font-body);font-size:26px;color:var(--ink-600)">AdSense/Ad Manager, feed + article slots</span></div>
+<div style="display:flex;align-items:center;gap:28px"><span style="width:380px;font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900)">Hyperlocal ads</span><div style="flex:1;height:44px;background:var(--ink-100);border-radius:99px;overflow:hidden"><div style="width:22%;height:100%;background:var(--cat-cinema);border-radius:99px"></div></div><span style="width:400px;font-family:var(--font-body);font-size:26px;color:var(--ink-600)">District businesses — inventory only we have</span></div>
+<div style="display:flex;align-items:center;gap:28px"><span style="width:380px;font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900)">tap2news Plus</span><div style="flex:1;height:44px;background:var(--ink-100);border-radius:99px;overflow:hidden"><div style="width:17%;height:100%;background:var(--gold-500);border-radius:99px"></div></div><span style="width:400px;font-family:var(--font-body);font-size:26px;color:var(--ink-600)">₹49/mo — ad-free, premium astrology & jobs alerts</span></div>
+<div style="display:flex;align-items:center;gap:28px"><span style="width:380px;font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900)">Sponsored stories</span><div style="flex:1;height:44px;background:var(--ink-100);border-radius:99px;overflow:hidden"><div style="width:9%;height:100%;background:var(--cat-jobs);border-radius:99px"></div></div><span style="width:400px;font-family:var(--font-body);font-size:26px;color:var(--ink-600)">Clearly-labelled native content</span></div>
+<div style="display:flex;align-items:center;gap:28px"><span style="width:380px;font-family:var(--font-display);font-weight:700;font-size:32px;color:var(--ink-900)">E-paper & listings</span><div style="flex:1;height:44px;background:var(--ink-100);border-radius:99px;overflow:hidden"><div style="width:6%;height:100%;background:var(--cat-business);border-radius:99px"></div></div><span style="width:400px;font-family:var(--font-body);font-size:26px;color:var(--ink-600)">Subscriptions + local business listings</span></div>
+</div>
+<p style="font-family:var(--font-body);font-size:28px;color:var(--ink-500);margin:auto 0 0">5-session daily habit × hyperlocal targeting = RPM incumbents can't match at our cost base.</p>
+</section>
+
+<section data-label="Why we win" style="background:var(--brand);color:#fff;display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:#ffd7d5;margin:0 0 20px">Why we win</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:#fff;margin:0 0 72px;max-width:1500px">Their content cost grows with scale. Ours doesn't.</h1>
+<div style="display:flex;gap:36px">
+<div style="flex:1;background:rgba(255,255,255,.12);border-radius:20px;padding:48px"><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;margin:0 0 20px;color:#fff">Incumbents</h3><div style="font-family:var(--font-body);font-size:28px;line-height:1.7;color:#ffe4e2">Editors per language<br>Licensing per publisher<br>Fixed infra per region<br>₹57–738 Cr annual losses</div></div>
+<div style="flex:1;background:#fff;border-radius:20px;padding:48px;box-shadow:0 20px 50px rgba(0,0,0,.2)"><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;margin:0 0 20px;color:var(--brand-strong)">tap2news</h3><div style="font-family:var(--font-body);font-size:28px;line-height:1.7;color:var(--ink-800)">₹0.09/story Gemini rewrite<br>Free RSS + GDELT + govt sources<br>Serverless — cost follows usage<br>New language = config, not headcount</div></div>
+<div style="flex:1;background:rgba(255,255,255,.12);border-radius:20px;padding:48px"><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;margin:0 0 20px;color:#fff">The result</h3><div style="font-family:var(--font-body);font-size:28px;line-height:1.7;color:#ffe4e2">Gross-margin positive per reader from early scale<br>Break-even at a fraction of their DAU<br>Every VC rupee buys growth, not payroll</div></div>
+</div>
+</section>
+
+<section data-label="Roadmap" style="background:var(--paper);display:flex;flex-direction:column;padding:100px;box-sizing:border-box">
+<p style="font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:0.08em;text-transform:uppercase;color:var(--brand-strong);margin:0 0 20px">Roadmap</p>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:64px;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 80px">Telugu first, then the map</h1>
+<div style="display:flex;gap:0;align-items:stretch">
+<div style="flex:1;border-left:6px solid var(--brand);padding:0 40px"><div style="font-family:var(--font-mono);font-weight:600;font-size:24px;color:var(--brand-strong);margin-bottom:14px">Q3 2026</div><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;color:var(--ink-900);margin:0 0 14px">Telugu launch</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.5">AP + Telangana, 26 districts, full utility suite. Target 1M MAU</p></div>
+<div style="flex:1;border-left:6px solid var(--ink-300);padding:0 40px"><div style="font-family:var(--font-mono);font-weight:600;font-size:24px;color:var(--ink-500);margin-bottom:14px">Q1 2027</div><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;color:var(--ink-900);margin:0 0 14px">4 languages</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.5">Tamil, Hindi (GPS), Kannada. Citizen-reporter network. 10M MAU</p></div>
+<div style="flex:1;border-left:6px solid var(--ink-300);padding:0 40px"><div style="font-family:var(--font-mono);font-weight:600;font-size:24px;color:var(--ink-500);margin-bottom:14px">Q4 2027</div><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;color:var(--ink-900);margin:0 0 14px">Monetization on</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.5">Plus tier, hyperlocal ad marketplace, e-paper. 25M MAU</p></div>
+<div style="flex:1;border-left:6px solid var(--ink-300);padding:0 40px"><div style="font-family:var(--font-mono);font-weight:600;font-size:24px;color:var(--ink-500);margin-bottom:14px">2028</div><h3 style="font-family:var(--font-display);font-weight:700;font-size:36px;color:var(--ink-900);margin:0 0 14px">50M readers</h3><p style="font-family:var(--font-body);font-size:26px;color:var(--ink-600);margin:0;line-height:1.5">8+ languages, video shorts, break-even economics</p></div>
+</div>
+</section>
+
+<section data-label="Ask" style="background:var(--ink-950);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:100px;box-sizing:border-box">
+<div style="font-family:var(--font-display);font-weight:800;font-size:56px;letter-spacing:-0.02em;line-height:1"><span style="color:var(--red-400)">tap2</span><span style="color:#fff">news</span></div>
+<h1 style="font-family:var(--font-display);font-weight:800;font-size:84px;letter-spacing:-0.02em;color:#fff;margin:48px 0 0;max-width:1500px;line-height:1.1">The next 500M readers won't read English. We're built for them.</h1>
+<p style="font-family:var(--font-body);font-size:32px;color:var(--ink-300);margin:48px 0 0;max-width:1200px;line-height:1.5">Raising seed to launch Telugu, prove the ₹0.09-per-story model, and reach the first million readers.</p>
+<p style="font-family:var(--font-body);font-size:28px;color:var(--ink-400);margin:72px 0 0">hello@tap2news.in</p>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

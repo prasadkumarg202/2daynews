@@ -1,0 +1,204 @@
+<!-- @dsCard group="Backend" viewport="1120x760" name="Telugu Ingestion Pipeline" subtitle="Production flow: 5-layer dedup, scoring, image pipeline, Gemini routing" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tap2news — Telugu News Ingestion Pipeline</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;background:var(--bg-app);font-family:var(--font-body);color:var(--text-body)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+  a{color:var(--text-link)} code,.mono{font-family:var(--font-mono)}
+  h2{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--ink-900);margin:0 0 4px}
+  .lede{font-size:15px;color:var(--text-muted);margin:0 0 22px;max-width:760px;line-height:1.55}
+  .sec{padding:40px 0;border-top:1px solid var(--border-hairline)}
+  .kicker{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand-strong);background:var(--red-50);padding:5px 11px;border-radius:999px;margin-bottom:14px}
+  .card{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--r-card);box-shadow:var(--shadow-card)}
+  .grid{display:grid;gap:14px}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g2{grid-template-columns:1fr 1fr}
+  .tier{padding:16px 18px}
+  .tier h3{margin:0 0 6px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:var(--text-strong);display:flex;align-items:center;gap:8px}
+  .tier p{margin:0;font-size:12.5px;line-height:1.5;color:var(--text-muted)}
+  .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+  .flow{display:flex;align-items:stretch;flex-wrap:wrap;gap:0}
+  .fbox{flex:1;min-width:130px;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--r-md);padding:11px 13px;box-shadow:var(--shadow-card)}
+  .fbox .t{font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--text-strong)}
+  .fbox .d{font-size:11.5px;color:var(--text-muted);margin-top:3px;line-height:1.4}
+  .arrow{display:flex;align-items:center;padding:0 7px;color:var(--ink-300);font-size:18px}
+  .stage{background:var(--surface-card);border:1px solid var(--border-hairline);border-left:3px solid var(--brand);border-radius:var(--r-md);padding:12px 14px;box-shadow:var(--shadow-card)}
+  .stage .num{font-family:var(--font-mono);font-size:10px;color:var(--brand-strong);font-weight:600}
+  .stage .nm{font-family:var(--font-display);font-weight:700;font-size:13.5px;color:var(--text-strong);margin-top:1px}
+  .stage .dd{font-size:11.5px;color:var(--text-muted);margin-top:3px;line-height:1.45}
+  pre{margin:0;padding:16px 18px;background:var(--ink-950);color:#e8ecf5;border-radius:var(--r-md);font-family:var(--font-mono);font-size:12px;line-height:1.6;overflow-x:auto;white-space:pre-wrap}
+  .route{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:var(--r-md);margin-bottom:8px}
+  .route .score{font-family:var(--font-mono);font-weight:600;font-size:13px;width:86px;flex:0 0 auto}
+  .route .lbl{font-family:var(--font-display);font-weight:700;font-size:13.5px;width:150px;flex:0 0 auto}
+  .route .desc{font-size:12.5px;color:var(--text-muted)}
+  .hero{padding:52px 0 8px}
+  .metrics{display:flex;gap:28px;margin-top:16px;flex-wrap:wrap}
+  .metric .v{font-family:var(--font-display);font-weight:800;font-size:24px;color:var(--ink-900);letter-spacing:-.02em}
+  .metric .l{font-size:12px;color:var(--text-faint)}
+</style></head>
+<body><div class="wrap">
+
+  <div class="hero">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink-900)"><span style="color:var(--brand)">tap2</span>news</span>
+      <span style="font-family:var(--font-display);font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-500);border:1px solid var(--border-strong);border-radius:5px;padding:3px 7px">Ingestion Pipeline · Production</span>
+    </div>
+    <h2 style="font-size:34px;line-height:1.1">Telugu-first news ingestion, end to end</h2>
+    <p class="lede" style="font-size:16px">The production flow (<code>ingest-telugu-news.ts</code> · <code>process-ai-queue.ts</code> · <code>cron-local.ts</code>): parse → language-filter → 5-layer dedup → importance scoring → tiered AI routing → image pipeline → 7 queue workers → distribution. AI spend only where a story earns it — and <b>only Telugu-Unicode articles ever reach the API</b>.</p>
+    <div class="metrics">
+      <div class="metric"><div class="v">50+</div><div class="l">RSS / direct feeds</div></div>
+      <div class="metric"><div class="v">5</div><div class="l">dedup layers</div></div>
+      <div class="metric"><div class="v">0–100</div><div class="l">importance score</div></div>
+      <div class="metric"><div class="v">60–80%</div><div class="l">image bandwidth saved (WebP)</div></div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <span class="kicker">01 · Ingest flow</span>
+    <h2>ingest-telugu-news.ts — run()</h2>
+    <p class="lede">Orchestrated by <code>cron-local.ts</code>, which self-tunes polling by category priority (P1 Politics/National → P4 Devotional/Astrology) — faster during breaking periods, slower in dead hours. The language gate (<code>/[\u0c00-\u0c7f]/</code>) strictly discards non-Telugu articles <b>before</b> any AI call.</p>
+    <div class="flow">
+      <div class="fbox"><div class="t">Parse feeds</div><div class="d">50+ RSS & direct URLs</div></div><div class="arrow">→</div>
+      <div class="fbox"><div class="t">Language filter</div><div class="d">keep only Telugu-Unicode articles</div></div><div class="arrow">→</div>
+      <div class="fbox"><div class="t">Slug + hash</div><div class="d">slugify title, SHA-256 body hash</div></div><div class="arrow">→</div>
+      <div class="fbox"><div class="t">Dedup ×5</div><div class="d">skip if any layer matches</div></div><div class="arrow">→</div>
+      <div class="fbox"><div class="t">Resolve URL</div><div class="d">Google-redirect → publisher URL</div></div><div class="arrow">→</div>
+      <div class="fbox"><div class="t">Image pipeline</div><div class="d">extract → WebP → CDN</div></div><div class="arrow">→</div>
+      <div class="fbox"><div class="t">Score & route</div><div class="d">insert into blog_posts + AI queue</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">02 · Deduplication</span>
+    <h2>Five independent checks — checkDuplicate()</h2>
+    <p class="lede">One story from N publishers becomes one row; spam never reaches the AI queue.</p>
+    <div class="grid g5">
+      <div class="stage"><div class="num">L1</div><div class="nm">Slug match</div><div class="dd">generated URL slug vs existing posts</div></div>
+      <div class="stage"><div class="num">L2</div><div class="nm">URL exact</div><div class="dd">RSS URL or resolved publisher URL exists</div></div>
+      <div class="stage"><div class="num">L3</div><div class="nm">Content hash</div><div class="dd">SHA-256 of RSS description</div></div>
+      <div class="stage"><div class="num">L4</div><div class="nm">Title trigrams</div><div class="dd"><code>find_similar_title</code> RPC · pg_trgm ≥ 0.72</div></div>
+      <div class="stage"><div class="num">L5</div><div class="nm">Publisher similarity</div><div class="dd">similar title, same category, last 6h</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">03 · Importance scoring & AI routing</span>
+    <h2>Spend Gemini tokens only on stories that matter</h2>
+    <p class="lede">Score (0–100) = category priority + freshness + syndication count + high-impact Telugu keywords (చంద్రబాబు, సీఎం, IPL…).</p>
+    <div class="route" style="background:var(--red-50)"><span class="score" style="color:var(--brand-strong)">≥ 70</span><span class="lbl" style="color:var(--brand-strong)">P1 · pending_ai</span><span class="desc">Breaking fast-track queue — rewritten immediately</span></div>
+    <div class="route" style="background:var(--warning-soft)"><span class="score" style="color:var(--gold-700)">40 – 69</span><span class="lbl" style="color:var(--gold-700)">batch_ai</span><span class="desc">Batched rewrite — full quality at off-peak token cost</span></div>
+    <div class="route" style="background:var(--ink-50)"><span class="score" style="color:var(--ink-600)">&lt; 40</span><span class="lbl" style="color:var(--ink-600)">completed</span><span class="desc">Published instantly as-is — zero AI cost</span></div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">04 · Image pipeline</span>
+    <h2>runImagePipeline() — candidates, Sharp, WebP, CDN</h2>
+    <div class="grid g2">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-jobs)"></span>Candidate priority</h3>
+        <p style="margin-bottom:8px">First valid candidate wins (MIME check, size &gt; 4KB):</p>
+        <p>1. RSS media enclosure URL<br>2. Meta tags — og:image / twitter:image / JSON-LD<br>3. First valid <code>&lt;img&gt;</code> src in article HTML<br>4. Wikimedia Commons search on title keywords (public domain)<br>5. Preset Unsplash category default (global fallback)</p>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-business)"></span>Optimize & store — uploadImageToStorage()</h3>
+        <p>Sharp resize to <b>900×500</b> (<code>fit: cover, position: attention</code>) → <b>WebP q82</b> — 60–80% smaller → upload to Supabase <code>news-images</code> bucket, <code>cache-control: 31536000</code> (1-year CDN) → store CDN URL as <code>thumbnail_url</code> / <code>featured_image_url</code>. On Sharp failure: keep original buffer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">05 · Model routing</span>
+    <h2>process-ai-queue.ts — Gemini first, graceful fallback</h2>
+    <div class="grid g3">
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-tech)"></span>gemini-2.5-flash</h3><p>Source ≥ 1,200 words — full reasoning for long-form rewrites.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-sports)"></span>gemini-2.5-flash-lite</h3><p>Source &lt; 1,200 words — max speed, minimum token cost.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--warning)"></span>Fallback chain (429/quota)</h3><p>OpenRouter <code>deepseek-chat</code> → OpenAI <code>gpt-4o-mini</code> → Anthropic <code>claude-3-5-haiku</code>.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">06 · Queue workers</span>
+    <h2>Seven independent workers on pipeline_jobs</h2>
+    <p class="lede">Ingestion never blocks on AI: raw items land in <code>blog_posts</code> immediately; job tickets go to <code>pipeline_jobs</code>. A continuous background process runs 7 workers.</p>
+    <div class="grid g2">
+      <div>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong);margin:0 0 8px">Worker A · AI rewrite — the master prompt</h3>
+        <pre>You are tap2news, a professional Telugu news editor. Rewrite the following into an original, SEO-optimized Telugu news article.
+Rules:
+- Completely rewrite in natural, professional Telugu. Do NOT copy source text.
+- Preserve facts, names, dates, places, and numbers accurately.
+- No fake statistics or invented details.
+- Use markdown with headings, short paragraphs, and bullet points only where useful.
+- Include a 3-question FAQ section at the end.
+- Title: max 12 Telugu words, compelling and factual.
+- Summary/excerpt: 50-70 words.
+- Content target: 450-550 words of rewritten Telugu content.
+- Return ONLY valid raw JSON (no markdown fences):
+{"title":"Telugu title","summary":"50-70 word excerpt","content":"Full markdown article body"}
+Source Article (${category}):
+${sourceText.slice(0, 3500)}</pre>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong);margin:14px 0 8px">Worker B · SEO metadata</h3>
+        <pre>Generate SEO metadata for a Telugu news article. Return ONLY raw JSON (no markdown):
+{"meta_title": "SEO title max 60 chars in Telugu", "meta_description": "Compelling meta description max 155 chars in Telugu", "slug_suggestion": "english-slug-for-url"}
+Article Title: ${post.title}
+Category: ${post.category}
+Content preview: ${(post.content || "").slice(0, 500)}</pre>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong);margin:14px 0 8px">Worker C · Tags & sentiment</h3>
+        <pre>Analyze this Telugu news article and return ONLY raw JSON (no markdown):
+{"tags": ["tag1","tag2","tag3","tag4","tag5"], "keywords": ["keyword1","keyword2","keyword3"], "sentiment": "positive|negative|neutral", "is_breaking": true|false}
+Rules:
+- tags: 5-8 Telugu or English tags relevant to the article
+- keywords: 3-5 SEO keywords in Telugu
+- sentiment: one of positive, negative, neutral
+- is_breaking: true only for major urgent news
+Title: ${post.title}
+Category: ${post.category}
+Content preview: ${(post.content || "").slice(0, 600)}</pre>
+      </div>
+      <div>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong);margin:0 0 8px">Worker D · Telugu summary</h3>
+        <pre>Summarize this Telugu news article in exactly 50-80 Telugu words. Professional, factual tone. Return ONLY raw JSON:
+{"summary": "50-80 word Telugu summary", "summary_short": "15-20 word quick headline summary"}
+Title: ${post.title}
+Content: ${(post.content || "").slice(0, 1200)}</pre>
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong);margin:14px 0 8px">Worker E · Social captions</h3>
+        <pre>Create a Telegram channel post for this Telugu news article. Return ONLY raw JSON:
+{"telegram": "Telegram message with emoji, headline, 2-3 sentence summary in Telugu, and article link placeholder [LINK]", "facebook": "Facebook post text in Telugu", "twitter": "Twitter/X post max 240 chars in Telugu with #hashtags"}
+Title: ${post.title}
+Summary: ${post.excerpt || (post.content || "").slice(0, 400)}
+Category: ${post.category}</pre>
+        <div class="card tier" style="margin-top:14px"><h3><span class="dot" style="background:var(--success)"></span>Worker F · Quality scorer (zero tokens)</h3><p>Rule-based scoring — word length, Telugu ratio, tithi/nakshatra elements, meta checks. No AI call, no API cost.</p></div>
+        <div class="card tier" style="margin-top:10px"><h3><span class="dot" style="background:var(--warning)"></span>Worker G · Dead-letter handler</h3><p>Detects dead jobs, logs to <code>pipeline_failures</code>, auto-publishes failed rewrites in raw form so ingestion never blocks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">07 · Distribution</span>
+    <h2>social-post-worker.ts & generate-sitemap.ts</h2>
+    <div class="grid g2">
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-jobs)"></span>Telegram auto-poster</h3><p>Posts WebP preview + generated caption for high-importance articles to the channel via Bot API, observing rate limits.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-business)"></span>SEO sitemap</h3><p>Recomputes <code>public/sitemap.xml</code> with Google News priority protocols; auto-pings Google & Bing indexers.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">08 · Cron scheduler</span>
+    <h2>cron-local.ts — self-tuning timings</h2>
+    <p class="lede">The main loop checks every 10s whether a category is due. Intervals adapt: articles found → ×0.72 (speed up, floor at min) · empty ×3 → ×1.3 (decay to max) · errors → ×1.6 exponential backoff.</p>
+    <div class="route" style="background:var(--red-50)"><span class="score" style="color:var(--brand-strong)">P1</span><span class="lbl" style="color:var(--brand-strong)">2 min · 1→5 min</span><span class="desc">politics · national</span></div>
+    <div class="route" style="background:var(--warning-soft)"><span class="score" style="color:var(--gold-700)">P2</span><span class="lbl" style="color:var(--gold-700)">5 min · 2→15 min</span><span class="desc">andhra-pradesh · telangana · cricket · business</span></div>
+    <div class="route" style="background:var(--info-soft)"><span class="score" style="color:var(--info)">P3</span><span class="lbl" style="color:var(--info)">20–30 min · 10→60</span><span class="desc">cinema · technology · jobs · health · education</span></div>
+    <div class="route" style="background:var(--ink-50)"><span class="score" style="color:var(--ink-600)">P4</span><span class="lbl" style="color:var(--ink-600)">45–60 min · 30→120</span><span class="desc">devotional · agriculture · astrology</span></div>
+    <div style="height:14px"></div>
+    <div class="grid g5">
+      <div class="stage"><div class="num">90s</div><div class="nm">AI queue</div><div class="dd">process-ai-queue.ts · concurrency-capped for free-tier quotas</div></div>
+      <div class="stage"><div class="num">5m</div><div class="nm">Social poster</div><div class="dd">social-post-worker.ts → Telegram</div></div>
+      <div class="stage"><div class="num">8m</div><div class="nm">Sitemap</div><div class="dd">generate-sitemap.ts · pings Google & Bing</div></div>
+      <div class="stage"><div class="num">30m</div><div class="nm">YouTube Shorts</div><div class="dd">ingest-youtube-shorts.ts → Viral Shorts grid</div></div>
+      <div class="stage"><div class="num">10m</div><div class="nm">Status log</div><div class="dd">uptime, cycle stats, pending queues</div></div>
+    </div>
+  </section>
+
+  <div style="padding:28px 0 56px;color:var(--text-faint);font-size:12px;text-align:center">tap2news ingestion pipeline · documented from the production codebase (ingest-telugu-news.ts, process-ai-queue.ts, cron-local.ts)</div>
+
+</div></body></html>

@@ -1,0 +1,84 @@
+<!-- @dsCard group="Admin Console" viewport="1280x800" name="tap2news Admin Console" subtitle="Newsroom dashboard — moderation, publish, sources, analytics" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tap2news — Admin Console</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  html,body{margin:0;height:100%}
+  body{background:var(--bg-app);font-family:var(--font-body);color:var(--text-body)}
+  #root{height:100vh}
+  a{color:var(--text-link)}a:hover{color:var(--brand-deep)}
+  ::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-thumb{background:var(--ink-200);border-radius:9px}
+  .placeholder{padding:60px;text-align:center;color:var(--text-muted);font-family:var(--font-body)}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="data.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="AdminShell.jsx"></script>
+<script type="text/babel" src="OverviewScreen.jsx"></script>
+<script type="text/babel" src="ModerationScreen.jsx"></script>
+<script type="text/babel" src="SourcesScreen.jsx"></script>
+<script type="text/babel" src="PublishScreen.jsx"></script>
+<script type="text/babel" src="AnalyticsScreen.jsx"></script>
+<script type="text/babel" src="PushScreen.jsx"></script>
+<script type="text/babel" src="ApiScreen.jsx"></script>
+<script type="text/babel" src="IngestionScreen.jsx"></script>
+<script type="text/babel" src="BackendScreen.jsx"></script>
+<script type="text/babel" src="SeoScreen.jsx"></script>
+<script type="text/babel" src="MonetizationScreen.jsx"></script>
+<script type="text/babel" src="UsersScreen.jsx"></script>
+<script type="text/babel">
+const DATA = window.ADMIN_DATA;
+const META = {
+  overview: { title: 'Overview', subtitle: 'Newsroom health · ' + new Date().toDateString() },
+  moderation: { title: 'Moderation queue', subtitle: 'Review AI-rewritten stories before they go live' },
+  publish: { title: 'Publish', subtitle: 'AI-assembled draft · edit and ship' },
+  sources: { title: 'Sources', subtitle: 'RSS, API & citizen ingest feeds' },
+  ingestion: { title: 'Ingestion flow', subtitle: 'The live AI pipeline, collect → publish' },
+  api: { title: 'API & Models', subtitle: 'AI providers, feed APIs & keys' },
+  backend: { title: 'Backend health', subtitle: 'Services, infra & stack' },
+  analytics: { title: 'Analytics', subtitle: 'Audience, traffic & engagement' },
+  push: { title: 'Push & Alerts', subtitle: 'Compose and schedule notifications' },
+  seo: { title: 'SEO', subtitle: 'Rankings, keywords & technical health' },
+  ads: { title: 'Monetization', subtitle: 'Revenue, ads & subscriptions' },
+  users: { title: 'Users & Roles', subtitle: 'Team, correspondents & permissions' },
+};
+
+function App() {
+  const [view, setView] = React.useState('overview');
+  const m = META[view] || { title: DATA.nav.find((n) => n.id === view)?.label || '', subtitle: 'Coming soon in this kit' };
+  let body;
+  if (view === 'overview') body = <OverviewScreen data={DATA} />;
+  else if (view === 'moderation') body = <ModerationScreen data={DATA} />;
+  else if (view === 'sources') body = <SourcesScreen data={DATA} />;
+  else if (view === 'publish') body = <PublishScreen data={DATA} />;
+  else if (view === 'analytics') body = <AnalyticsScreen data={DATA} />;
+  else if (view === 'push') body = <PushScreen data={DATA} />;
+  else if (view === 'api') body = <ApiScreen data={DATA} />;
+  else if (view === 'ingestion') body = <IngestionScreen data={DATA} />;
+  else if (view === 'backend') body = <BackendScreen data={DATA} />;
+  else if (view === 'seo') body = <SeoScreen data={DATA} />;
+  else if (view === 'ads') body = <MonetizationScreen data={DATA} />;
+  else if (view === 'users') body = <UsersScreen data={DATA} />;
+  else body = <div className="placeholder"><p style={{fontFamily:'var(--font-display)',fontWeight:700,fontSize:18,color:'var(--text-strong)'}}>{m.title}</p><p>This surface is stubbed in the kit.</p></div>;
+
+  const actions = <DS.Button variant="primary" size="sm" icon={<Icon name="zap" size={15} />}>Breaking</DS.Button>;
+  const scroll = view === 'moderation' || view === 'publish';
+  return (
+    <div style={{ display: 'flex', height: '100%' }}>
+      <Sidebar data={DATA} view={view} onView={setView} />
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+        <Topbar title={m.title} subtitle={m.subtitle} actions={actions} />
+        <main style={{ flex: 1, overflowY: scroll ? 'hidden' : 'auto', minHeight: 0 }}>{body}</main>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body></html>

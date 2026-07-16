@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wordmark options</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;background:var(--bg-app);font-family:var(--font-body);color:var(--text-body);padding:40px 24px}
+  .wrap{max-width:1080px;margin:0 auto}
+  h1{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--ink-900);margin:0 0 4px}
+  .sub{font-family:var(--font-body);font-size:14px;color:var(--text-muted);margin:0 0 28px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--r-card);box-shadow:var(--shadow-card);overflow:hidden}
+  .head{display:flex;align-items:center;gap:8px;padding:12px 18px;border-bottom:1px solid var(--border-hairline)}
+  .rank{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--text-faint)}
+  .name{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong)}
+  .stage{padding:34px 22px;display:flex;flex-direction:column;gap:26px}
+  .row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .bg-paper{background:var(--paper)} .bg-ink{background:var(--ink-950)} .bg-red{background:var(--brand)}
+  .swatchset{display:flex;gap:0}
+  .lockup{display:inline-flex;align-items:center;gap:14px}
+  .appicon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;box-shadow:var(--shadow-raised)}
+  .note{font-family:var(--font-body);font-size:12.5px;line-height:1.55;color:var(--text-muted);padding:0 18px 18px}
+  .plate{border-radius:var(--r-md);padding:22px;display:flex;align-items:center;justify-content:center}
+  /* wordmarks */
+  .wm{font-family:var(--font-display);font-weight:800;letter-spacing:-.03em;line-height:1;font-size:44px}
+  .wm-sm{font-size:30px}
+  .tag{font-family:var(--font-body);font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--text-faint);margin-top:8px}
+  .tag-on-dark{color:rgba(255,255,255,.6)}
+</style></head>
+<body><div class="wrap">
+<h1>Wordmark comparison</h1>
+<p class="sub">Both drawn in the tap2news visual language — Anek display, vermillion brand, ink neutrals, warm paper.</p>
+<div class="grid">
+
+  <!-- TAP2NEWS -->
+  <div class="card">
+    <div class="head"><span class="rank">🥇 OPTION A</span><span class="name">Tap2News · clear, action-oriented</span></div>
+    <div class="stage">
+      <div class="plate bg-paper"><span class="wm" style="color:var(--ink-900)"><span style="color:var(--brand)">tap</span><span style="color:var(--brand);font-weight:800">2</span>news</span></div>
+      <div class="plate bg-ink"><div style="text-align:center"><span class="wm" style="color:#fff"><span style="color:var(--red-400)">tap</span><span style="color:var(--red-400)">2</span>news</span><div class="tag tag-on-dark">tap · read · know</div></div></div>
+      <div class="row">
+        <span class="appicon" style="background:var(--brand);color:#fff">t2</span>
+        <span class="appicon" style="background:var(--ink-950);color:#fff"><span style="color:var(--red-400)">t</span>2</span>
+        <span class="appicon" style="background:var(--paper);color:var(--ink-900);box-shadow:var(--shadow-hairline),var(--shadow-raised)"><span style="color:var(--brand)">t</span>2</span>
+        <span class="wm-sm wm" style="color:var(--ink-900)"><span style="color:var(--brand)">tap</span>2news</span>
+      </div>
+    </div>
+    <p class="note"><b>Reads instantly</b> as "tap to news." Best for app-store discovery + paid growth. The "2" doubles as the icon glyph (t2). Weaker phonetics for vernacular word-of-mouth.</p>
+  </div>
+
+  <!-- VYORA -->
+  <div class="card">
+    <div class="head"><span class="rank">🥈 OPTION B</span><span class="name">Vyora · premium, coined, ownable</span></div>
+    <div class="stage">
+      <div class="plate bg-paper"><div style="text-align:center"><span class="wm" style="color:var(--ink-900)">Vyora<span style="color:var(--brand)">.</span></span><div class="tag">news, the moment it breaks</div></div></div>
+      <div class="plate bg-ink"><div style="text-align:center"><span class="wm" style="color:#fff">Vyora<span style="color:var(--red-400)">.</span></span><div class="tag tag-on-dark">news, the moment it breaks</div></div></div>
+      <div class="row">
+        <span class="appicon" style="background:var(--brand);color:#fff">V</span>
+        <span class="appicon" style="background:var(--ink-950);color:#fff">V<span style="color:var(--red-400)">.</span></span>
+        <span class="appicon" style="background:var(--paper);color:var(--ink-900);box-shadow:var(--shadow-hairline),var(--shadow-raised)">V<span style="color:var(--brand)">.</span></span>
+        <span class="wm-sm wm" style="color:var(--ink-900)">Vyora<span style="color:var(--brand)">.</span></span>
+      </div>
+    </div>
+    <p class="note"><b>Strongest brand + trademark.</b> Coined, premium, scales past news into a media super-app. The vermillion dot is the ownable device. Costs marketing to teach meaning — pair with a clarity tagline.</p>
+  </div>
+
+</div>
+</div></body></html>

@@ -1,6 +1,6 @@
 ---
-name: 2daynews-design
-description: Use this skill to generate well-branded interfaces and assets for 2daynews (an AI-powered multilingual hyperlocal Indian news platform), either for production or throwaway prototypes/mocks/etc. Contains essential design guidelines, colors, type, fonts, assets, and UI kit components for prototyping.
+name: tap2news-design
+description: Use this skill to generate well-branded interfaces and assets for tap2news (an AI-powered multilingual hyperlocal Indian news platform), either for production or throwaway prototypes/mocks/etc. Contains essential design guidelines, colors, type, fonts, assets, and UI kit components for prototyping.
 user-invocable: true
 ---
 
@@ -15,4 +15,4 @@ Quick map:
 - `guidelines/` — foundation specimen cards.
 - `ui_kits/app/` — interactive mobile-app recreation to crib layouts from.
 
-Key brand rules: sentence-case headlines, no emoji, colored-dot category coding, always show source + AI-rewrite transparency marks, Indian numbering/currency, multilingual (Indic-script) type. Icons = Lucide (line, 2px). No real logo — use the type wordmark (`2day` in vermillion + `news` in ink).
+Key brand rules: sentence-case headlines, no emoji, colored-dot category coding, always show source + AI-rewrite transparency marks, Indian numbering/currency, multilingual (Indic-script) type. Icons = Lucide (line, 2px). No real logo — use the type wordmark (`tap2` in vermillion + `news` in ink).

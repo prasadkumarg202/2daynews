@@ -1,0 +1,354 @@
+<!-- @dsCard group="Backend" viewport="1120x760" name="tap2news — Backend Architecture" subtitle="System design, AI pipeline, schema, APIs, scale" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tap2news — Backend Architecture</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;background:var(--bg-app);font-family:var(--font-body);color:var(--text-body);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+  a{color:var(--text-link)}
+  code,.mono{font-family:var(--font-mono)}
+  h2{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--ink-900);margin:0 0 4px}
+  .lede{font-family:var(--font-body);font-size:15px;color:var(--text-muted);margin:0 0 22px;max-width:720px;line-height:1.55}
+  .sec{padding:44px 0;border-top:1px solid var(--border-hairline)}
+  .kicker{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand-strong);background:var(--red-50);padding:5px 11px;border-radius:999px;margin-bottom:14px}
+  .card{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--r-card);box-shadow:var(--shadow-card)}
+  .grid{display:grid;gap:14px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  .tier{padding:16px 18px}
+  .tier h3{margin:0 0 4px;font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--text-strong);display:flex;align-items:center;gap:8px}
+  .tier p{margin:0;font-size:13px;line-height:1.5;color:var(--text-muted)}
+  .tier .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .chip{font-family:var(--font-mono);font-size:11px;font-weight:500;padding:3px 8px;border-radius:6px;background:var(--ink-100);color:var(--ink-700)}
+  .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+  /* flow */
+  .flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+  .fbox{flex:1;min-width:150px;background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--r-md);padding:12px 14px;box-shadow:var(--shadow-card)}
+  .fbox .n{font-family:var(--font-mono);font-size:10px;color:var(--text-faint)}
+  .fbox .t{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--text-strong);margin-top:2px}
+  .fbox .d{font-size:12px;color:var(--text-muted);margin-top:3px;line-height:1.4}
+  .arrow{display:flex;align-items:center;padding:0 8px;color:var(--ink-300);font-size:20px}
+  /* pipeline stages */
+  .stages{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .stage{background:var(--surface-card);border:1px solid var(--border-hairline);border-left:3px solid var(--brand);border-radius:var(--r-md);padding:11px 13px;box-shadow:var(--shadow-card)}
+  .stage .num{font-family:var(--font-mono);font-size:10px;color:var(--brand-strong);font-weight:600}
+  .stage .nm{font-family:var(--font-display);font-weight:700;font-size:13.5px;color:var(--text-strong);margin-top:1px}
+  .stage .dd{font-size:11.5px;color:var(--text-muted);margin-top:3px;line-height:1.4}
+  /* schema table cards */
+  .tbl{overflow:hidden}
+  .tbl .th{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--ink-950);color:#fff;font-family:var(--font-mono);font-size:13px;font-weight:600}
+  .tbl .th .pill{margin-left:auto;font-family:var(--font-display);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.14);padding:2px 7px;border-radius:5px}
+  .tbl ul{list-style:none;margin:0;padding:8px 0}
+  .tbl li{display:flex;gap:8px;padding:5px 14px;font-family:var(--font-mono);font-size:12px;color:var(--ink-700)}
+  .tbl li b{color:var(--ink-900);font-weight:600}
+  .tbl li .ty{margin-left:auto;color:var(--text-faint);font-size:11px}
+  .key{color:var(--gold-700)!important}
+  .fk{color:var(--info)!important}
+  /* api rows */
+  .api{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border-hairline);font-family:var(--font-mono);font-size:13px}
+  .api:last-child{border-bottom:none}
+  .verb{font-weight:700;font-size:11px;padding:3px 8px;border-radius:5px;flex:0 0 auto;width:52px;text-align:center}
+  .get{background:var(--info-soft);color:var(--info)} .post{background:var(--success-soft);color:var(--success)} .rpc{background:var(--warning-soft);color:var(--gold-700)}
+  .api .path{color:var(--ink-900);font-weight:600} .api .desc{margin-left:auto;font-family:var(--font-body);font-size:12.5px;color:var(--text-muted)}
+  pre{margin:0;padding:16px 18px;background:var(--ink-950);color:#e8ecf5;border-radius:var(--r-md);font-family:var(--font-mono);font-size:12.5px;line-height:1.6;overflow-x:auto}
+  pre .c{color:#8c97ac} pre .k{color:#f17d77} pre .s{color:#f3ce83} pre .fn{color:#7fd1c4}
+  .note{display:flex;gap:10px;padding:14px 16px;background:var(--warning-soft);border-radius:var(--r-md);font-size:13px;line-height:1.5;color:var(--ink-800)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+  .list{margin:0;padding-left:0;list-style:none}
+  .list li{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border-hairline);font-size:13.5px;line-height:1.5;color:var(--text-body)}
+  .list li:last-child{border-bottom:none}
+  .list b{color:var(--ink-900)}
+  .hero{padding:56px 0 8px}
+  .wm{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink-900)}
+  .metrics{display:flex;gap:28px;margin-top:18px;flex-wrap:wrap}
+  .metric .v{font-family:var(--font-display);font-weight:800;font-size:24px;color:var(--ink-900);letter-spacing:-.02em}
+  .metric .l{font-size:12px;color:var(--text-faint)}
+  @media print{.sec{break-inside:avoid}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span class="wm"><span style="color:var(--brand)">tap2</span>news</span>
+      <span style="font-family:var(--font-display);font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-500);border:1px solid var(--border-strong);border-radius:5px;padding:3px 7px">Backend Architecture</span>
+    </div>
+    <h2 style="font-size:38px;line-height:1.08">A geo-fenced, AI-first news backend for 50M readers</h2>
+    <p class="lede" style="font-size:17px">Cloudflare-hosted, Supabase-native architecture: RSS/API ingestion → 16-stage AI pipeline (<b>Gemini</b> rewrite + fact/fake checks) → PostGIS geo-fencing → Cloudflare-cached feed API. Free connectors first; paid APIs only where they earn their cost.</p>
+    <div class="metrics">
+      <div class="metric"><div class="v">16</div><div class="l">pipeline stages</div></div>
+      <div class="metric"><div class="v">4→∞</div><div class="l">languages (te/ta/hi/kn live)</div></div>
+      <div class="metric"><div class="v">600+</div><div class="l">districts geo-fenced</div></div>
+      <div class="metric"><div class="v">~5 min</div><div class="l">ingest cadence (pg_cron)</div></div>
+    </div>
+  </div>
+
+  <!-- SYSTEM ARCH -->
+  <section class="sec">
+    <span class="kicker">01 · System architecture</span>
+    <h2>Four tiers, one Supabase project</h2>
+    <p class="lede">Everything the browser can't do safely runs server-side in Supabase Edge Functions; secrets (Gemini key, service role) never leave the backend.</p>
+    <div class="grid g4">
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-jobs)"></span>Clients · Cloudflare</h3><p>PWA (Next.js) on <b>Cloudflare Pages</b>, Android & iOS. Images/media on <b>R2</b>; feed cached at the Cloudflare edge.</p><div class="chips"><span class="chip">CF Pages</span><span class="chip">R2</span><span class="chip">Edge cache</span></div></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-sports)"></span>Edge / API</h3><p>Supabase REST + RPC, Edge Functions (Deno) for ingestion, push, payments webhooks.</p><div class="chips"><span class="chip">PostgREST</span><span class="chip">Deno</span><span class="chip">RLS</span></div></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-politics)"></span>Data</h3><p>PostgreSQL + PostGIS (geo) + pg_trgm (dedup). Row-level security per user.</p><div class="chips"><span class="chip">Postgres</span><span class="chip">PostGIS</span><span class="chip">pg_cron</span></div></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-tech)"></span>AI · Gemini</h3><p><b>Gemini is the rewrite engine</b> — one structured call per story (rewrite + classify + fake-score). Key lives only in Supabase secrets.</p><div class="chips"><span class="chip">Gemini</span><span class="chip">RSS</span><span class="chip">GDELT</span></div></div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="flow">
+      <div class="fbox"><div class="n">SOURCES</div><div class="t">Free + paid feeds</div><div class="d">RSS · Google News · GDELT · govt RSS · citizen uploads</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="n">EDGE FN</div><div class="t">ingest (Deno)</div><div class="d">poll → dedup → AI → insert, every 5 min via pg_cron</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="n">POSTGRES</div><div class="t">articles</div><div class="d">geo-tagged, status=published, RLS-guarded</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="n">RPC + CDN</div><div class="t">get_feed()</div><div class="d">geo-fenced, cached, served to clients</div></div>
+    </div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section class="sec">
+    <span class="kicker">02 · The AI ingestion pipeline</span>
+    <h2>16 stages: collect → publish</h2>
+    <p class="lede">Each raw item is traced through <code>ingest_jobs</code> (the admin "live queue" reads this). One structured Gemini call performs rewrite + classify + safety together to keep per-article cost low.</p>
+    <div class="stages">
+      <div class="stage"><div class="num">01</div><div class="nm">Collect</div><div class="dd">Poll active sources (RSS/API)</div></div>
+      <div class="stage"><div class="num">02</div><div class="nm">Dedup</div><div class="dd">simhash key merges publishers</div></div>
+      <div class="stage"><div class="num">03</div><div class="nm">Fact verify</div><div class="dd">weighted by source trust_score</div></div>
+      <div class="stage"><div class="num">04</div><div class="nm">Fake detect</div><div class="dd">fake_score &gt; 0.5 → human review</div></div>
+      <div class="stage"><div class="num">05</div><div class="nm">Lang detect</div><div class="dd">Gemini confirms language_code</div></div>
+      <div class="stage"><div class="num">06</div><div class="nm">Geo detect</div><div class="dd">region via point-in-polygon</div></div>
+      <div class="stage"><div class="num">07</div><div class="nm">Category</div><div class="dd">26-value enum classify</div></div>
+      <div class="stage"><div class="num">08</div><div class="nm">Priority</div><div class="dd">breaking → priority 10</div></div>
+      <div class="stage"><div class="num">09</div><div class="nm">SEO</div><div class="dd">title, meta_desc, slug</div></div>
+      <div class="stage"><div class="num">10</div><div class="nm">Rewrite</div><div class="dd">100% rewrite, facts kept</div></div>
+      <div class="stage"><div class="num">11</div><div class="nm">Headline</div><div class="dd">headline + short_headline</div></div>
+      <div class="stage"><div class="num">12</div><div class="nm">Thumbnail</div><div class="dd">image_prompt generated</div></div>
+      <div class="stage"><div class="num">13</div><div class="nm">Push</div><div class="dd">alert copy for breaking</div></div>
+      <div class="stage"><div class="num">14</div><div class="nm">Publish</div><div class="dd">status=published, published_at</div></div>
+      <div class="stage"><div class="num">15</div><div class="nm">Social</div><div class="dd">syndicate to channels</div></div>
+      <div class="stage"><div class="num">16</div><div class="nm">Archive</div><div class="dd">cold storage after window</div></div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="note"><span style="font-weight:700;color:var(--gold-700)">Safety gate</span><span>Stages 03–04 are the trust firewall. <code>fake_score &gt; 0.5</code> routes a story to <code>status='review'</code> — it never auto-publishes. Editors clear it from the admin Moderation queue.</span></div>
+  </section>
+
+  <!-- SCHEMA -->
+  <section class="sec">
+    <span class="kicker">03 · Database schema</span>
+    <h2>Core tables</h2>
+    <p class="lede">PostgreSQL with three extensions: <code>postgis</code> (district polygons), <code>pg_trgm</code> (fuzzy dedup/search), <code>uuid-ossp</code>. Feed reads hit one composite index.</p>
+    <div class="grid g3">
+      <div class="card tbl">
+        <div class="th">articles <span class="pill">core</span></div>
+        <ul>
+          <li><b class="key">id</b><span class="ty">uuid</span></li>
+          <li><b class="fk">language_id</b><span class="ty">→ languages</span></li>
+          <li><b class="fk">region_id</b><span class="ty">→ regions</span></li>
+          <li><b>category</b><span class="ty">text</span></li>
+          <li><b>is_national</b><span class="ty">bool</span></li>
+          <li><b>is_breaking</b><span class="ty">bool</span></li>
+          <li><b>headline</b><span class="ty">text</span></li>
+          <li><b>summary·body</b><span class="ty">text</span></li>
+          <li><b>seo_title·slug</b><span class="ty">text</span></li>
+          <li><b>fake_score</b><span class="ty">real</span></li>
+          <li><b>dedup_hash</b><span class="ty">text</span></li>
+          <li><b>status</b><span class="ty">enum</span></li>
+        </ul>
+      </div>
+      <div class="card tbl">
+        <div class="th">regions <span class="pill">geo</span></div>
+        <ul>
+          <li><b class="key">id</b><span class="ty">uuid</span></li>
+          <li><b class="fk">language_id</b><span class="ty">→ languages</span></li>
+          <li><b>state</b><span class="ty">text</span></li>
+          <li><b>district</b><span class="ty">text</span></li>
+          <li><b>geom</b><span class="ty">geography</span></li>
+          <li><b>centroid</b><span class="ty">point</span></li>
+          <li><b>is_metro</b><span class="ty">bool</span></li>
+        </ul>
+        <div class="th" style="margin-top:2px">sources <span class="pill">ingest</span></div>
+        <ul>
+          <li><b class="key">id</b><span class="ty">uuid</span></li>
+          <li><b>type</b><span class="ty">enum</span></li>
+          <li><b>trust_score</b><span class="ty">real</span></li>
+          <li><b>poll_seconds</b><span class="ty">int</span></li>
+        </ul>
+      </div>
+      <div class="card tbl">
+        <div class="th">users <span class="pill">people</span></div>
+        <ul>
+          <li><b class="key">id</b><span class="ty">uuid</span></li>
+          <li><b>phone</b><span class="ty">text</span></li>
+          <li><b class="fk">language_id</b><span class="ty">→ languages</span></li>
+          <li><b>location</b><span class="ty">point</span></li>
+          <li><b class="fk">region_id</b><span class="ty">→ regions</span></li>
+          <li><b>tier</b><span class="ty">enum</span></li>
+        </ul>
+        <div class="th" style="margin-top:2px">engagement · follows <span class="pill">reco</span></div>
+        <ul>
+          <li><b>type</b><span class="ty">view·read·share</span></li>
+          <li><b>dwell_ms</b><span class="ty">int</span></li>
+          <li><b>topic</b><span class="ty">follows</span></li>
+          <li><b>bookmarks</b><span class="ty">m:n</span></li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-family:var(--font-body);font-size:12.5px;color:var(--text-faint);margin-top:12px"><span style="color:var(--gold-700)">◆</span> primary key &nbsp; <span style="color:var(--info)">◆</span> foreign key &nbsp;·&nbsp; also: <code>ingest_jobs</code>, <code>article_sources</code>, <code>subscriptions</code>, <code>ad_placements</code>, <code>push_tokens</code></p>
+  </section>
+
+  <!-- GEO-FENCING -->
+  <section class="sec">
+    <span class="kicker">04 · Geo-fencing — the heart</span>
+    <h2>Language + region isolation, national shared</h2>
+    <div class="two">
+      <div>
+        <p class="lede" style="margin-bottom:14px">A GPS point resolves to a region via PostGIS point-in-polygon; the feed then returns local news for that language+region <b>plus</b> everything flagged national, and hides other states' local content.</p>
+        <ul class="list">
+          <li><b>Telugu →</b> AP + Telangana + Tollywood; hides TN/KA local.</li>
+          <li><b>Hindi →</b> follows GPS (Lucknow → UP; Bhopal → MP).</li>
+          <li><b>National →</b> PM, SC, ISRO, UPSC, budget — shown to all.</li>
+          <li><b>Metro tie-break →</b> <code>is_metro desc</code> when polygons overlap.</li>
+        </ul>
+      </div>
+      <div>
+        <pre><span class="c">-- resolve GPS → region</span>
+<span class="k">create function</span> <span class="fn">region_for_point</span>(lng, lat)
+<span class="k">returns</span> uuid <span class="k">as</span> $$
+  <span class="k">select</span> id <span class="k">from</span> regions
+  <span class="k">where</span> st_covers(geom,
+    st_makepoint(lng,lat))
+  <span class="k">order by</span> is_metro <span class="k">desc</span> <span class="k">limit</span> 1;
+$$;
+
+<span class="c">-- the feed (geo-fenced)</span>
+<span class="k">select</span> * <span class="k">from</span> articles a
+<span class="k">where</span> status=<span class="s">'published'</span> <span class="k">and</span> (
+  a.is_national                <span class="c">-- shared</span>
+  <span class="k">or</span> (a.language_id=$lang
+      <span class="k">and</span> a.region_id=$region))
+<span class="k">order by</span> is_breaking <span class="k">desc</span>,
+         priority <span class="k">desc</span>,
+         published_at <span class="k">desc</span>;</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- API -->
+  <section class="sec">
+    <span class="kicker">05 · API surface</span>
+    <h2>Thin, cached, RLS-guarded</h2>
+    <p class="lede">Clients touch only cached read RPCs with the anon key. All writes to <code>articles</code> are service-role (the pipeline); user writes are scoped by row-level security.</p>
+    <div class="card" style="overflow:hidden">
+      <div class="api"><span class="verb rpc">RPC</span><span class="path">/rpc/get_feed</span><span class="desc">geo-fenced feed · p_language, p_region, p_category</span></div>
+      <div class="api"><span class="verb rpc">RPC</span><span class="path">/rpc/region_for_point</span><span class="desc">GPS → region uuid (on location grant)</span></div>
+      <div class="api"><span class="verb get">GET</span><span class="path">/rest/v1/articles?slug=eq.…</span><span class="desc">single story (published, world-readable)</span></div>
+      <div class="api"><span class="verb post">POST</span><span class="path">/rest/v1/bookmarks</span><span class="desc">save story · RLS: auth.uid()=user_id</span></div>
+      <div class="api"><span class="verb post">POST</span><span class="path">/rest/v1/engagement</span><span class="desc">view/read/share signal → recommendations</span></div>
+      <div class="api"><span class="verb post">POST</span><span class="path">/functions/v1/ingest</span><span class="desc">pipeline trigger · service-role · pg_cron */5</span></div>
+      <div class="api"><span class="verb post">POST</span><span class="path">/functions/v1/push</span><span class="desc">breaking alert fan-out to push_tokens</span></div>
+      <div class="api"><span class="verb post">POST</span><span class="path">/functions/v1/breaking</span><span class="desc">manual breaking desk → same Gemini pipeline as RSS</span></div>
+      <div class="api"><span class="verb post">POST</span><span class="path">/rest/v1/poll_votes</span><span class="desc">one-tap poll vote · RLS: auth.uid()=user_id</span></div>
+      <div class="api"><span class="verb get">GET</span><span class="path">/rest/v1/polls?status=eq.live</span><span class="desc">live polls/quizzes interleaved into the feed</span></div>
+    </div>
+  </section>
+
+  <!-- CACHE + QUEUES + MODELS -->
+  <section class="sec">
+    <span class="kicker">06 · Cache, queues & model routing</span>
+    <h2>Redis in front, BullMQ behind, four models blended</h2>
+    <div class="grid g3">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-business)"></span>Redis cache</h3>
+        <p style="margin-bottom:8px">Feed responses cached per <code>feed:&lt;lang&gt;:&lt;region&gt;:&lt;section&gt;</code>.</p>
+        <ul class="list" style="font-size:12.5px">
+          <li>Feed keys 30–60s TTL · live cricket 8s · gold rates 9m</li>
+          <li>Target hit rate ≥ 94% — misses fall through to <code>get_feed</code></li>
+          <li>Publish event invalidates that lang+region key set</li>
+          <li>Also backs sessions, rate limits, poll-vote counters & BullMQ</li>
+        </ul>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-jobs)"></span>BullMQ job queues</h3>
+        <ul class="list" style="font-size:12.5px">
+          <li><code>ingest-rss</code> — poll & parse active sources</li>
+          <li><code>ai-rewrite</code> — model calls, retry w/ backoff</li>
+          <li><code>push-fanout</code> — breaking alerts to push_tokens</li>
+          <li><code>thumb-gen</code> · <code>social-syndicate</code></li>
+          <li>Failures → dead-letter + admin retry button</li>
+        </ul>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-tech)"></span>Model strategy</h3>
+        <p style="margin-bottom:8px"><b>Gemini-only today</b> — one structured call does rewrite + classify + fake-score (≈₹0.09/story).</p>
+        <ul class="list" style="font-size:12.5px">
+          <li><b>Gemini Flash</b> — all rewrite · classify · SEO · push copy</li>
+          <li>Dedup collapses N publishers → 1 Gemini call</li>
+          <li><i>Roadmap:</i> Claude fact-check tier, GPT/DeepSeek fallbacks</li>
+        </ul>
+      </div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="two">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--brand)"></span>Breaking desk — manual publish</h3>
+        <p>Editors paste a raw tip / wire copy / URL in admin. <code>POST /functions/v1/breaking</code> runs the <b>same pipeline as RSS</b>: dedup → fact-check → fake-score gate → Gemini rewrite → SEO + push copy → publish with <code>is_breaking=true, priority=10</code> → enqueue <code>push-fanout</code>. <code>fake_score &gt; 0.5</code> still routes to review — manual entry never bypasses the gate.</p>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-cinema)"></span>Engagement schema — polls, quizzes, reactions</h3>
+        <ul class="list" style="font-size:12.5px">
+          <li><code>polls</code> — kind (poll|quiz|survey), question, options jsonb, category, language_id, region_id, placement, status, closes_at</li>
+          <li><code>poll_votes</code> — poll_id, user_id, option_ix · RLS: own votes</li>
+          <li><code>reactions</code> — article_id, user_id, type (like|share|save)</li>
+          <li>Feed interleaves live polls by category + placement rule</li>
+          <li>Vote counts on Redis counters, flushed to Postgres async</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCALE + SECURITY + COST -->
+  <section class="sec">
+    <span class="kicker">07 · Scale, security & cost</span>
+    <h2>Built to reach 50M, priced to survive</h2>
+    <div class="grid g3">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-sports)"></span>Scale to 50M</h3>
+        <p style="margin-bottom:8px">Reads dominate 1000:1 — so cache hard and index for the feed.</p>
+        <ul class="list" style="font-size:12.5px">
+          <li>CDN-cache <code>get_feed</code> at <b>Cloudflare edge</b> per language+region (30–60s TTL)</li>
+          <li>Composite index on (language_id, region_id, category, published_at)</li>
+          <li>Read replicas for feed; primary for pipeline writes</li>
+          <li>Archive stage moves cold rows out of hot tables</li>
+        </ul>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-crime)"></span>Security</h3>
+        <ul class="list" style="font-size:12.5px">
+          <li>RLS on users/bookmarks/follows/engagement/subs</li>
+          <li>Published articles world-read; writes service-role only</li>
+          <li>Gemini + service keys in Supabase secrets, never client</li>
+          <li>Phone-OTP auth (Supabase Auth); anon key for reads</li>
+          <li>Fake-news gate before publish; source trust weighting</li>
+        </ul>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-finance)"></span>Cost strategy</h3>
+        <ul class="list" style="font-size:12.5px">
+          <li><b>Free:</b> Google News RSS, RSSHub, GDELT, govt RSS</li>
+          <li><b>Only per-article cost:</b> Gemini (one call/story)</li>
+          <li>Dedup collapses N publishers → 1 AI call</li>
+          <li><b>Paid later:</b> MediaStack/NewsAPI for latency-critical desks</li>
+          <li>Monetize: AdSense, sponsored, Plus tier, e-paper</li>
+        </ul>
+      </div>
+    </div>
+    <div style="height:16px"></div>
+    <div class="note" style="background:var(--info-soft);color:var(--ink-800)"><span style="font-weight:700;color:var(--info)">Roadmap</span><span>Recommendation engine on <code>engagement</code> dwell signals · voice summaries (<code>voice_url</code>) · WhatsApp/Telegram citizen ingestion · multi-model routing (Claude/GPT/DeepSeek) for cost + quality balancing · Meilisearch for full-text search.</span></div>
+  </section>
+
+  <div style="padding:30px 0 60px;color:var(--text-faint);font-family:var(--font-body);font-size:12px;text-align:center">
+    tap2news backend architecture · grounded in the Supabase schema, ingest Edge Function &amp; Gemini pipeline in <code>uploads/Multilingual hyperlocal news platform design/</code>
+  </div>
+
+</div>
+</body></html>

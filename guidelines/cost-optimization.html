@@ -1,0 +1,195 @@
+<!-- @dsCard group="Backend" viewport="1120x760" name="Zero-API Cost Architecture" subtitle="Local-data + MCP automation replacing paid APIs & human ops" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tap2news — Zero-API Cost Architecture</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;background:var(--bg-app);font-family:var(--font-body);color:var(--text-body)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+  a{color:var(--text-link)} code{font-family:var(--font-mono)}
+  h2{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--ink-900);margin:0 0 4px}
+  .lede{font-size:15px;color:var(--text-muted);margin:0 0 22px;max-width:760px;line-height:1.55}
+  .sec{padding:40px 0;border-top:1px solid var(--border-hairline)}
+  .kicker{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand-strong);background:var(--red-50);padding:5px 11px;border-radius:999px;margin-bottom:14px}
+  .card{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--r-card);box-shadow:var(--shadow-card)}
+  .grid{display:grid;gap:14px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr 1fr}
+  .tier{padding:16px 18px}
+  .tier h3{margin:0 0 6px;font-family:var(--font-display);font-weight:700;font-size:14.5px;color:var(--text-strong);display:flex;align-items:center;gap:8px}
+  .tier p{margin:0;font-size:12.5px;line-height:1.55;color:var(--text-muted)}
+  .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+  pre{margin:0;padding:14px 16px;background:var(--ink-950);color:#e8ecf5;border-radius:var(--r-md);font-family:var(--font-mono);font-size:12px;line-height:1.6;overflow-x:auto;white-space:pre-wrap}
+  table{width:100%;border-collapse:collapse}
+  th{font-family:var(--font-body);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text-faint);text-align:left;padding:8px 12px;background:var(--surface-sunk)}
+  td{font-size:13px;color:var(--ink-800);padding:10px 12px;border-top:1px solid var(--border-hairline)}
+  td.m{font-family:var(--font-mono);font-size:12px}
+  .before{color:var(--danger);font-weight:600}.after{color:var(--success);font-weight:600}
+  .hero{padding:52px 0 8px}
+</style></head>
+<body><div class="wrap">
+
+  <div class="hero">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+      <span style="font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink-900)"><span style="color:var(--brand)">tap2</span>news</span>
+      <span style="font-family:var(--font-display);font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-500);border:1px solid var(--border-strong);border-radius:5px;padding:3px 7px">Zero-API Cost Architecture</span>
+    </div>
+    <h2 style="font-size:34px;line-height:1.1">Own the data once, serve it forever</h2>
+    <p class="lede" style="font-size:16px">Every recurring per-request API is replaced by a one-time free-dataset import into Postgres, computed locally, or cached in Redis for all users. MCP agents replace the human ops loop. Gemini rewriting stays the only meaningful per-unit cost.</p>
+  </div>
+
+  <section class="sec">
+    <span class="kicker">01 · Places DB replaces Google Maps</span>
+    <h2>All Indian places, streets & pincodes — in your own Postgres</h2>
+    <p class="lede">One-time import of free, open datasets. Every lookup that would hit Google Places/Geocoding becomes a local indexed query — ₹0 per call, works offline, Telugu names included.</p>
+    <div class="grid g2">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-jobs)"></span>Free source datasets (import once)</h3>
+        <p>• <b>OpenStreetMap India extract</b> — streets, POIs, villages (ODbL, free)<br>• <b>Census towns & villages directory</b> — every village with district/mandal codes<br>• <b>India Post pincode directory</b> — open government data, all offices + lat/lng<br>• <b>Datameet district/state shapefiles</b> — polygons for PostGIS geo-fencing (already used by <code>region_for_point</code>)</p>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-business)"></span>Schema & lookup</h3>
+        <pre>places(id, name_en, name_te, kind,     -- village|town|street|poi
+  mandal, district, state, pincode,
+  location geography(point), tz text)
+-- autocomplete: pg_trgm index on (name_en, name_te)
+-- reverse geocode: PostGIS point-in-polygon
+-- birth-place picker: same table, kind='village|town'</pre>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--text-muted);margin-top:12px">Serving: autocomplete via <code>ilike/pg_trgm</code> (&lt;10ms), hot districts pinned in Redis. The app's location picker, hyperlocal "మీ దగ్గర" section, and citizen-report geotagging all read this table — no Maps SDK anywhere.</p>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">02 · Astrology computed locally</span>
+    <h2>Birth place from places DB, panchang from ephemeris math</h2>
+    <div class="grid g3">
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-astrology)"></span>Birth-place lookup</h3><p>User types their village → local <code>places</code> autocomplete returns lat/lng + timezone. No geocoding API. Works for 600K+ villages in Telugu script.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-astrology)"></span>Panchang engine</h3><p>Tithi, nakshatra, rahu kalam, muhurtham are <b>astronomy, not content</b> — computed with an ephemeris library (Swiss Ephemeris / astronomia) from lat/lng + date. Zero API, exact for any village.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-astrology)"></span>Serve & cache</h3><p>Daily panchang computed once per district at 4am → Redis (24h TTL). Horoscope text: one Gemini batch call for 12 rasis/day — 12 calls/day total, not per user.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">03 · Local image library replaces image APIs & AI generation</span>
+    <h2>Every politician, hero & city — tagged once, reused forever</h2>
+    <p class="lede">News thumbnails are mostly the same recurring entities. Instead of per-article image search or AI generation, build an <code>image_assets</code> library from free/openly-licensed sources and compose thumbnails locally with Sharp.</p>
+    <div class="grid g2">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-cinema)"></span>The library (one-time + drip updates)</h3>
+        <p>• <b>Politicians:</b> Modi, Amit Shah, Chandrababu Naidu, Pawan Kalyan, Stalin, KCR, Revanth Reddy…<br>• <b>Film stars:</b> Amitabh, Chiranjeevi, Vijay, Kamal Haasan, NTR, Allu Arjun…<br>• <b>Places:</b> Hyderabad, Vijayawada, Mumbai, Delhi landmarks, assembly buildings…<br>• <b>Stock scenes:</b> courts, rain/floods, cricket stadiums, gold, markets, exam halls<br>Sources: Wikimedia Commons (PD/CC — store license + attribution per asset), government press-photo releases, own correspondent photos. 2–3K curated assets cover ~80% of stories.</p>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-tech)"></span>Schema & matching</h3>
+        <pre>image_assets(id, entity,            -- 'modi', 'chiranjeevi', 'hyderabad'
+  kind,                -- person|place|scene
+  keywords text[],     -- ['మోదీ','PM','BJP','ప్రధాని']
+  variants jsonb,      -- portrait|waving|rally|closeup
+  url, license, attribution, last_used)</pre>
+        <p style="margin-top:8px">Worker C already extracts tags/keywords per story → match against <code>keywords[]</code> (Telugu + English) → pick least-recently-used variant so feeds don't repeat the same photo.</p>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--cat-business)"></span>Composition, not generation</h3>
+        <p>Sharp composes the thumbnail locally: entity photo + place/scene background + category color band + headline strip → 900×500 WebP q82 → <code>news-images</code> bucket. Two entities in one story (e.g. Modi + Chandrababu) = side-by-side composite. Cost: CPU only, ~₹0.</p>
+      </div>
+      <div class="card tier">
+        <h3><span class="dot" style="background:var(--warning)"></span>New fallback order</h3>
+        <p>1. Article's own image (RSS/og:image)<br>2. <b>Local <code>image_assets</code> match + compose</b><br>3. Wikimedia Commons live search<br>4. Unsplash category preset<br>5. AI generation — <b>last resort only</b>, and the output is saved back into <code>image_assets</code> so it's never generated twice.</p>
+      </div>
+    </div>
+    <div class="card tier" style="margin-top:14px">
+      <h3><span class="dot" style="background:var(--brand)"></span>One-line breaking flow</h3>
+      <p>Editor types one line in the Breaking desk ("విజయవాడలో అగ్నిప్రమాదం") → Fetch/Brave-Search MCP pulls 3–5 corroborating sources → Gemini rewrites with the standard master prompt + fact list → entities extracted → thumbnail composed from the local library → publish + push. Human effort: one sentence. API cost: one Gemini call.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">04 · Every utility, cached once for all users</span>
+    <h2>Fetch once per interval, serve millions from Redis</h2>
+    <table>
+      <tr><th>Utility</th><th>Source (free)</th><th>Refresh</th><th>Per-user cost</th></tr>
+      <tr><td>Weather + AQI</td><td class="m">Open-Meteo / IMD public feeds per district centroid</td><td class="m">30 min</td><td class="after">₹0</td></tr>
+      <tr><td>Gold / silver rates</td><td class="m">scrape 1 public source → district markup table</td><td class="m">60 min</td><td class="after">₹0</td></tr>
+      <tr><td>Cricket scores</td><td class="m">free scorecard feeds</td><td class="m">8 s shared key</td><td class="after">₹0</td></tr>
+      <tr><td>Markets (Sensex/Nifty)</td><td class="m">free exchange EOD + delayed feeds</td><td class="m">1–5 min</td><td class="after">₹0</td></tr>
+      <tr><td>Petrol/diesel prices</td><td class="m">state-wise public daily rates</td><td class="m">daily</td><td class="after">₹0</td></tr>
+      <tr><td>Panchang</td><td class="m">local ephemeris compute</td><td class="m">daily/district</td><td class="after">₹0</td></tr>
+    </table>
+    <p style="font-size:12.5px;color:var(--text-muted);margin-top:12px">Pattern: <b>never call an external API in a user request path.</b> Cron fetches → Redis key → every user reads the same cached value. 10M users cost the same as 10.</p>
+    <div style="height:16px"></div>
+    <h2 style="font-size:20px">Live cricket — recommended sourcing</h2>
+    <div class="grid g3" style="margin-top:12px">
+      <div class="card tier"><h3><span class="dot" style="background:var(--success)"></span>Primary · CricketData.org (CricAPI)</h3><p>Lifetime free tier (100 hits/day) to build on; paid from <b>$5.99/mo</b> (2K hits/day) to <b>$29.99/mo</b> (100K/day). Live scores, ball-by-ball, scorecards, player stats. Our 8s shared Redis key needs ~11K hits/match-day → the <b>$12.99 tier covers a full IPL day</b>.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--cat-sports)"></span>Commentary · Cricbuzz API (API.market)</h3><p>Real-time Cricbuzz data: commentary, news, ICC rankings, IPL fixtures. 7-day free trial, then <b>$19.99/mo</b> (30K units) / $59.99 (120K). Use for rich match pages + Telugu commentary rewrites, not the score ticker.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--warning)"></span>Scale-up · EntitySport / Roanuz</h3><p>Official-grade ball-by-ball push feeds when DAU justifies it ($150–210/mo). Skip until IPL traffic proves the need. Avoid unofficial "free Cricbuzz" scraper APIs in production — ToS + reliability risk.</p></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--text-muted);margin-top:12px">Serving: worker polls once per 8s per live match → Redis <code>cricket:live:&lt;match&gt;</code> → all users read the cache. Score widget, Quick Read cards, and push alerts (wickets, 50s, results) all consume the same key — API cost is per <i>match</i>, never per user.</p>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">05 · Live jobs ingestion</span>
+    <h2>Free feeds first, paid aggregators only for the gaps</h2>
+    <p class="lede">Jobs follow the same pipeline as news: cron pulls sources → dedup → geo/category tag → Gemini batch-translates titles to Telugu → <code>jobs</code> table → district-filtered feed + deadline push alerts.</p>
+    <table>
+      <tr><th>Source</th><th>Access</th><th>Cost</th><th>Notes</th></tr>
+      <tr><td>Government notifications — UPSC, SSC, RRB, IBPS, APPSC, TSPSC</td><td class="m">official sites RSS / notification pages + Employment News</td><td class="after">Free</td><td>Highest-value for our audience; PDF notifications parsed by Gemini into structured rows</td></tr>
+      <tr><td>Adzuna · Jooble · Careerjet</td><td class="m">official APIs (free tiers / partner keys)</td><td class="after">Free</td><td>Broad private-job coverage incl. India; dedup across the three</td></tr>
+      <tr><td>Remote — Remotive, RemoteOK, WeWorkRemotely</td><td class="m">free APIs / RSS</td><td class="after">Free</td><td>Powers the Remote tab</td></tr>
+      <tr><td>Freelancer.com</td><td class="m">official developer API</td><td class="after">Free</td><td>Gig/freelance section; OAuth key</td></tr>
+      <tr><td>Company career pages</td><td class="m">crawl schema.org JobPosting markup</td><td class="after">Free</td><td>Same structured data Google Jobs indexes — we index it ourselves for top AP/TS employers</td></tr>
+      <tr><td>Google Jobs results</td><td class="m">SerpAPI google_jobs endpoint</td><td class="before">Paid</td><td>Only where free coverage is thin; cached per query/district</td></tr>
+      <tr><td>Naukri · LinkedIn listings</td><td class="m">JSearch-style paid aggregator (no public APIs)</td><td class="before">Paid</td><td>Metered: fetch top-N per category/day, never per user request; respect source ToS</td></tr>
+    </table>
+    <p style="font-size:12.5px;color:var(--text-muted);margin-top:12px">Cost rules: paid calls run in cron (bounded per day), results cached in Redis + stored — a paid listing fetched once serves every user until expiry. Dedup by (title, company, location) hash so the same vacancy from 4 boards costs one row. Deadline field drives "last 3 days to apply" push alerts — an engagement hook no rewrite cost attached.</p>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">06 · Breaking-news sources beyond Google RSS</span>
+    <h2>Wire-speed options, free first</h2>
+    <table>
+      <tr><th>Source</th><th>Access</th><th>Cost</th><th>Why / when</th></tr>
+      <tr><td>Publisher direct RSS — Eenadu, Sakshi, TV9, ABN, NTV, Andhra Jyothi…</td><td class="m">native feeds, poll 1–2 min</td><td class="after">Free</td><td><b>Faster than Google News</b> (no aggregation lag) — make these the P1 backbone</td></tr>
+      <tr><td>PIB + state govt press releases</td><td class="m">RSS / pages</td><td class="after">Free</td><td>Official announcements before media writes them</td></tr>
+      <tr><td>GDELT 2.0</td><td class="m">15-min global event dumps + DOC API</td><td class="after">Free</td><td>International + national event detection, syndication counting</td></tr>
+      <tr><td>Telegram channels (publishers, police, collectors)</td><td class="m">Bot API / MTProto listener</td><td class="after">Free</td><td>Often the true first alert for district incidents; push not poll</td></tr>
+      <tr><td>YouTube live/uploads of TV channels</td><td class="m">YouTube Data API free quota</td><td class="after">Free</td><td>Breaking banners hit TV first; title stream = alert signal</td></tr>
+      <tr><td>RSSHub</td><td class="m">self-host on Cloudflare</td><td class="after">Free</td><td>Generates RSS for sites/X accounts that don't publish feeds</td></tr>
+      <tr><td>NewsData.io / Currents / Webz.io lite</td><td class="m">free-tier APIs</td><td class="after">Free tier</td><td>Backfill + coverage checks; Telugu language filters supported</td></tr>
+      <tr><td>SerpAPI google_news endpoint</td><td class="m">paid per search</td><td class="before">Paid</td><td>Targeted checks for the one-line Breaking desk flow</td></tr>
+      <tr><td>NewsAPI.org / MediaStack paid tiers</td><td class="m">REST</td><td class="before">Paid</td><td>SLA + volume when free tiers throttle</td></tr>
+      <tr><td>PTI · ANI · IANS wire subscription</td><td class="m">agency feed contract</td><td class="before">Paid (₹)</td><td>The real newsroom-grade breaking speed + legal syndication rights — budget for ONE agency once revenue starts</td></tr>
+    </table>
+    <p style="font-size:12.5px;color:var(--text-muted);margin-top:12px">Strategy: publisher RSS + Telegram listeners give near-wire speed at ₹0. The self-tuning cron already accelerates P1 categories to 1-min polls during activity spikes. Add one paid wire (PTI or ANI) later — it also de-risks copyright, since wire copy is licensed for rewrite.</p>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">07 · MCP agents replace human intervention</span>
+    <h2>The ops team is a Claude Code loop</h2>
+    <div class="grid g3">
+      <div class="card tier"><h3><span class="dot" style="background:var(--success)"></span>Supabase MCP · data ops</h3><p>Agent seeds/updates the places DB, runs migrations, fixes RLS, prunes archives — "import the new pincode file" is one prompt, not a DBA ticket.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--success)"></span>Fetch + Brave Search MCP · source ops</h3><p>Nightly agent validates all 50+ RSS feeds, finds replacement URLs for dead ones, and fact-checks stories the fake-score gate flagged — shrinking the human review queue.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--success)"></span>PostgreSQL MCP · perf ops</h3><p>Weekly agent reads slow-query stats, proposes/creates indexes, reports cache hit-rate drift before it becomes an outage.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--info)"></span>Filesystem + GitHub MCP · code ops</h3><p>Dead-letter queue errors → agent reads <code>pipeline_failures</code>, patches the parser, opens a PR with the fix and test.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--info)"></span>Playwright MCP · QA ops</h3><p>Every deploy: agent opens the app, switches languages, taps a story, votes a poll, screenshots — regressions caught without a QA engineer.</p></div>
+      <div class="card tier"><h3><span class="dot" style="background:var(--info)"></span>Context7 MCP · dev ops</h3><p>Agent codes against current Next.js/Supabase/Tailwind docs — fewer broken builds from stale API knowledge.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kicker">08 · Cost scoreboard</span>
+    <h2>What this architecture deletes</h2>
+    <table>
+      <tr><th>Line item</th><th>Typical approach</th><th>tap2news approach</th></tr>
+      <tr><td>Maps / geocoding / autocomplete</td><td class="before">Google Maps per-request billing</td><td class="after">Local places DB (OSM + Census + pincodes) — ₹0</td></tr>
+      <tr><td>Astrology content</td><td class="before">Paid astrology API per call</td><td class="after">Ephemeris math + 12 Gemini calls/day — ~₹0</td></tr>
+      <tr><td>Weather / gold / cricket / markets</td><td class="before">Per-user API calls</td><td class="after">Cron + Redis shared cache — ₹0 marginal</td></tr>
+      <tr><td>Editors & moderators</td><td class="before">Headcount per language</td><td class="after">Fake-score gate + MCP fact-check agent; humans only on flags</td></tr>
+      <tr><td>QA / DBA / source maintenance</td><td class="before">Ops staff</td><td class="after">Scheduled MCP agent runs (Playwright, PostgreSQL, Fetch)</td></tr>
+      <tr><td>Job listings</td><td class="before">Per-user job-board API calls</td><td class="after">Free feeds + metered paid aggregator in cron — one fetch serves all users</td></tr>
+      <tr><td>News thumbnails</td><td class="before">AI image generation / stock APIs per article</td><td class="after">Local image_assets library + Sharp composition — ₹0</td></tr>
+      <tr><td>Article rewriting</td><td class="before">—</td><td class="after">Gemini flash/flash-lite — the one cost that scales, ~₹0.09/story</td></tr>
+    </table>
+  </section>
+
+  <div style="padding:28px 0 56px;color:var(--text-faint);font-size:12px;text-align:center">tap2news zero-API cost architecture · companion to the Ingestion Pipeline and Backend Architecture blueprints</div>
+
+</div></body></html>

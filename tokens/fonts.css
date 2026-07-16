@@ -1,0 +1,7 @@
+/* tap2news webfonts — Google Fonts (SUBSTITUTIONS: no brand fonts were provided).
+   Anek superfamily = one coherent voice across Latin + all Indic scripts (display/headlines).
+   Noto Sans + per-script Noto = highly legible multilingual body text.
+   IBM Plex Mono = tabular data (gold rates, scores, markets). */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700;800&family=Anek+Telugu:wght@400;600;800&family=Anek+Tamil:wght@400;600;800&family=Anek+Kannada:wght@400;600;800&family=Anek+Malayalam:wght@400;600;800&family=Anek+Devanagari:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;700&family=Noto+Sans+Tamil:wght@400;500;700&family=Noto+Sans+Kannada:wght@400;500;700&family=Noto+Sans+Malayalam:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');

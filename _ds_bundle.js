@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"Ds2daynewsDesignSystem_0b44f3","components":[{"name":"NewsCard","sourcePath":"components/content/NewsCard.jsx"},{"name":"SourceStamp","sourcePath":"components/content/SourceStamp.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"CATEGORY_COLORS","sourcePath":"components/core/CategoryChip.jsx"},{"name":"CategoryChip","sourcePath":"components/core/CategoryChip.jsx"},{"name":"BreakingTicker","sourcePath":"components/feedback/BreakingTicker.jsx"},{"name":"LanguagePill","sourcePath":"components/navigation/LanguagePill.jsx"},{"name":"SectionTabs","sourcePath":"components/navigation/SectionTabs.jsx"},{"name":"DataTile","sourcePath":"components/widgets/DataTile.jsx"}],"sourceHashes":{"components/content/NewsCard.jsx":"68e842503326","components/content/SourceStamp.jsx":"dad8c47bed52","components/core/Badge.jsx":"93fd875aa7fa","components/core/Button.jsx":"cf2be1ade1c0","components/core/CategoryChip.jsx":"eee6d91756b4","components/feedback/BreakingTicker.jsx":"2e220a6fec15","components/navigation/LanguagePill.jsx":"8ea6e8ae54cc","components/navigation/SectionTabs.jsx":"6900be02aabd","components/widgets/DataTile.jsx":"58d05be4a14b","ui_kits/admin/AdminShell.jsx":"a5b81b7325cb","ui_kits/admin/AnalyticsScreen.jsx":"e35d4f0caa48","ui_kits/admin/ApiScreen.jsx":"9fb80eb25ab2","ui_kits/admin/BackendScreen.jsx":"080d7d9d61b9","ui_kits/admin/IngestionScreen.jsx":"32633871341a","ui_kits/admin/ModerationScreen.jsx":"ab1b648c69ac","ui_kits/admin/MonetizationScreen.jsx":"25636b088b96","ui_kits/admin/OverviewScreen.jsx":"e6c4535b25f5","ui_kits/admin/PublishScreen.jsx":"4cd88f3db6fd","ui_kits/admin/PushScreen.jsx":"aa1453f84b73","ui_kits/admin/SeoScreen.jsx":"53127b5324d9","ui_kits/admin/SourcesScreen.jsx":"e2a1781f4fd5","ui_kits/admin/UsersScreen.jsx":"a0bfae97eb46","ui_kits/admin/data.js":"da1715a79dfa","ui_kits/app/AppShell.jsx":"2baaff6bb9a4","ui_kits/app/ArticleScreen.jsx":"7f3231857f6d","ui_kits/app/ExploreScreen.jsx":"27053e8920ea","ui_kits/app/FeedScreen.jsx":"60b7f4ecc241","ui_kits/app/UtilityScreen.jsx":"e41e34d15010","ui_kits/app/data.js":"a4ee14eaf73d","ui_kits/web/Sections.jsx":"8a1f4c42e0d7","ui_kits/web/WebShell.jsx":"03505d350482","ui_kits/web/data.js":"85f389537ab4"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"Ds2daynewsDesignSystem_0b44f3","components":[{"name":"FeaturedCarousel","sourcePath":"components/content/FeaturedCarousel.jsx"},{"name":"NewsCard","sourcePath":"components/content/NewsCard.jsx"},{"name":"SourceStamp","sourcePath":"components/content/SourceStamp.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"CATEGORY_COLORS","sourcePath":"components/core/CategoryChip.jsx"},{"name":"CategoryChip","sourcePath":"components/core/CategoryChip.jsx"},{"name":"BreakingTicker","sourcePath":"components/feedback/BreakingTicker.jsx"},{"name":"LanguagePill","sourcePath":"components/navigation/LanguagePill.jsx"},{"name":"SectionTabs","sourcePath":"components/navigation/SectionTabs.jsx"},{"name":"DataTile","sourcePath":"components/widgets/DataTile.jsx"}],"sourceHashes":{"components/content/FeaturedCarousel.jsx":"e4ca8527e92b","components/content/NewsCard.jsx":"b0efeaeb6081","components/content/SourceStamp.jsx":"23bdbdb25b20","components/core/Badge.jsx":"93fd875aa7fa","components/core/Button.jsx":"cf2be1ade1c0","components/core/CategoryChip.jsx":"e55da882903a","components/feedback/BreakingTicker.jsx":"2e220a6fec15","components/navigation/LanguagePill.jsx":"f52855eebf43","components/navigation/SectionTabs.jsx":"6900be02aabd","components/widgets/DataTile.jsx":"88bdd13564be","ui_kits/admin/AdminShell.jsx":"08647ce78530","ui_kits/admin/AnalyticsScreen.jsx":"e35d4f0caa48","ui_kits/admin/ApiScreen.jsx":"9fb80eb25ab2","ui_kits/admin/BackendScreen.jsx":"080d7d9d61b9","ui_kits/admin/IngestionScreen.jsx":"32633871341a","ui_kits/admin/ModerationScreen.jsx":"ab1b648c69ac","ui_kits/admin/MonetizationScreen.jsx":"25636b088b96","ui_kits/admin/OverviewScreen.jsx":"e6c4535b25f5","ui_kits/admin/PublishScreen.jsx":"c54e0b58596f","ui_kits/admin/PushScreen.jsx":"177d07980ce8","ui_kits/admin/SeoScreen.jsx":"53127b5324d9","ui_kits/admin/SourcesScreen.jsx":"e2a1781f4fd5","ui_kits/admin/UsersScreen.jsx":"a0bfae97eb46","ui_kits/admin/data.js":"7f4fec5f53d0","ui_kits/admin_v2/BreakingDesk.jsx":"d6c9bf288425","ui_kits/admin_v2/CommandCenter.jsx":"43a3b6d45ca7","ui_kits/admin_v2/Growth.jsx":"8b88840e59d9","ui_kits/admin_v2/Infra.jsx":"adc6bed25718","ui_kits/admin_v2/Newsroom.jsx":"9d56725b4feb","ui_kits/admin_v2/PollsAdmin.jsx":"6cd76dc975e5","ui_kits/admin_v2/Shell.jsx":"6cac438e32cd","ui_kits/admin_v2/SourcesApis.jsx":"67e94fbfcf19","ui_kits/admin_v2/data.js":"3f0c0c5f0b03","ui_kits/app/AppShell.jsx":"721dc9d2aaa5","ui_kits/app/ArticleScreen.jsx":"c3bb65958f4d","ui_kits/app/EngageCards.jsx":"361c9ceebce6","ui_kits/app/ExploreScreen.jsx":"27053e8920ea","ui_kits/app/FeedScreen.jsx":"2bcdf9b75910","ui_kits/app/SwipeReader.jsx":"b539b73945a2","ui_kits/app/UtilityScreen.jsx":"e41e34d15010","ui_kits/app/data.js":"6e3f99db607d","ui_kits/web/Sections.jsx":"3840cd684669","ui_kits/web/WebShell.jsx":"aa5aadf45f24","ui_kits/web/data.js":"4bff78e4a50a"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -12,7 +12,7 @@ const __ds_scope = {};
 try { (() => {
 /** Source attribution + timestamp line under a headline. Reinforces trust & aggregation transparency. */
 function SourceStamp({
-  source = '2daynews',
+  source = 'tap2news',
   time = 'now',
   location,
   verified = false,
@@ -272,7 +272,25 @@ const CATEGORY_COLORS = {
   gold: 'var(--cat-gold)',
   education: 'var(--cat-education)',
   health: 'var(--cat-health)',
-  tech: 'var(--cat-tech)'
+  tech: 'var(--cat-tech)',
+  mynews: 'var(--cat-mynews)',
+  finance: 'var(--cat-finance)',
+  cooking: 'var(--cat-cooking)',
+  shorts: 'var(--cat-shorts)',
+  district: 'var(--cat-district)',
+  state: 'var(--cat-state)',
+  international: 'var(--cat-international)',
+  technology: 'var(--cat-technology)',
+  ott: 'var(--cat-ott)',
+  celebrity: 'var(--cat-celebrity)',
+  cricket: 'var(--cat-cricket)',
+  religion: 'var(--cat-religion)',
+  lifestyle: 'var(--cat-lifestyle)',
+  automobile: 'var(--cat-automobile)',
+  travel: 'var(--cat-travel)',
+  agriculture: 'var(--cat-agriculture)',
+  factcheck: 'var(--cat-factcheck)',
+  opinion: 'var(--cat-opinion)'
 };
 
 /** Colored category chip used across feed & section tabs. */
@@ -323,6 +341,170 @@ function CategoryChip({
 Object.assign(__ds_scope, { CATEGORY_COLORS, CategoryChip });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/CategoryChip.jsx", error: String((e && e.message) || e) }); }
 
+// components/content/FeaturedCarousel.jsx
+try { (() => {
+/** Swipeable featured-stories gallery. Full-bleed hero per slide with region tag,
+ *  counter, prev/next arrows, headline overlay and dot pagination. */
+function FeaturedCarousel({
+  items = [],
+  height = 230,
+  autoPlay = false,
+  interval = 5000,
+  onOpen = () => {},
+  style = {}
+}) {
+  const [i, setI] = React.useState(0);
+  const n = items.length || 1;
+  const go = d => setI(x => (x + d + n) % n);
+  React.useEffect(() => {
+    if (!autoPlay || n < 2) return;
+    const t = setInterval(() => setI(x => (x + 1) % n), interval);
+    return () => clearInterval(t);
+  }, [autoPlay, interval, n]);
+  const s = items[i] || {};
+  const color = __ds_scope.CATEGORY_COLORS[s.category] || 'var(--brand)';
+  const bg = s.image ? `url(${s.image})` : `linear-gradient(135deg, color-mix(in srgb, ${color} 42%, var(--ink-800)), var(--ink-900))`;
+  const arrow = dir => /*#__PURE__*/React.createElement("button", {
+    onClick: e => {
+      e.stopPropagation();
+      go(dir === 'left' ? -1 : 1);
+    },
+    style: {
+      position: 'absolute',
+      top: '50%',
+      [dir]: 10,
+      transform: 'translateY(-50%)',
+      width: 36,
+      height: 36,
+      borderRadius: '50%',
+      border: 'none',
+      cursor: 'pointer',
+      background: 'rgba(12,20,36,.45)',
+      color: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backdropFilter: 'blur(4px)',
+      fontSize: 18,
+      lineHeight: 1
+    }
+  }, dir === 'left' ? '‹' : '›');
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: () => onOpen(s, i),
+    style: {
+      position: 'relative',
+      height,
+      borderRadius: 'var(--r-card)',
+      overflow: 'hidden',
+      backgroundImage: bg,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      cursor: 'pointer',
+      boxShadow: 'var(--shadow-card)'
+    }
+  }, !s.image && /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      inset: 0,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'rgba(255,255,255,.16)',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 64
+    }
+  }, "T2"), s.region && /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      top: 12,
+      left: 12,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 10.5,
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase',
+      color: '#fff',
+      background: 'rgba(12,20,36,.5)',
+      backdropFilter: 'blur(4px)',
+      padding: '5px 10px',
+      borderRadius: 'var(--r-pill)'
+    }
+  }, s.region), /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      top: 12,
+      right: 12,
+      width: 34,
+      height: 34,
+      borderRadius: '50%',
+      background: 'rgba(12,20,36,.5)',
+      border: '2px solid ' + color,
+      backdropFilter: 'blur(4px)',
+      color: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11,
+      fontWeight: 600
+    }
+  }, i + 1, "/", n), n > 1 && arrow('left'), n > 1 && arrow('right'), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      bottom: 0,
+      padding: '48px 16px 16px',
+      background: 'linear-gradient(to top, rgba(8,12,22,.92), rgba(8,12,22,.55) 55%, transparent)'
+    }
+  }, /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 20,
+      lineHeight: 1.18,
+      letterSpacing: '-0.01em',
+      color: '#fff',
+      textWrap: 'balance'
+    }
+  }, s.headline), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 8,
+      fontFamily: 'var(--font-body)',
+      fontSize: 12.5,
+      color: 'rgba(255,255,255,.82)'
+    }
+  }, s.time, s.read ? ' · ' + s.read : ''))), n > 1 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 6,
+      justifyContent: 'center',
+      marginTop: 12
+    }
+  }, items.map((_, k) => /*#__PURE__*/React.createElement("button", {
+    key: k,
+    onClick: () => setI(k),
+    style: {
+      width: k === i ? 22 : 7,
+      height: 7,
+      borderRadius: 999,
+      border: 'none',
+      cursor: 'pointer',
+      padding: 0,
+      background: k === i ? 'var(--brand)' : 'var(--ink-200)',
+      transition: 'width var(--dur-base) var(--ease-standard)'
+    }
+  }))));
+}
+Object.assign(__ds_scope, { FeaturedCarousel });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/content/FeaturedCarousel.jsx", error: String((e && e.message) || e) }); }
+
 // components/content/NewsCard.jsx
 try { (() => {
 /** The workhorse feed card. Layouts: 'row' (thumb right), 'hero' (image top), 'compact' (text only). */
@@ -330,7 +512,7 @@ function NewsCard({
   headline = 'Headline goes here',
   summary,
   category = 'politics',
-  source = '2daynews',
+  source = 'tap2news',
   time = 'now',
   location,
   image,
@@ -362,7 +544,7 @@ function NewsCard({
       fontSize: 22,
       flex: '0 0 auto'
     }
-  }, "2N");
+  }, "T2");
   const meta = /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -543,7 +725,7 @@ Object.assign(__ds_scope, { BreakingTicker });
 // components/navigation/LanguagePill.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Language selector pill — shows script glyph + native name. Core to 2daynews geo-fencing. */
+/** Language selector pill — shows script glyph + native name. Core to tap2news geo-fencing. */
 function LanguagePill({
   code = 'te',
   native,
@@ -658,7 +840,8 @@ Object.assign(__ds_scope, { SectionTabs });
 
 // components/widgets/DataTile.jsx
 try { (() => {
-/** Utility data tile — gold rate, market index, weather, cricket score. Mono numerals, delta arrow. */
+/** Utility data tile — gold rate, market index, weather, cricket score. Mono numerals, delta arrow.
+ *  Pass `icon` (any node) to show a tinted icon disc like the reference design. */
 function DataTile({
   kind = 'gold',
   label,
@@ -666,6 +849,7 @@ function DataTile({
   unit,
   sub,
   delta,
+  icon,
   style = {}
 }) {
   const KINDS = {
@@ -691,26 +875,44 @@ function DataTile({
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      flexDirection: 'column',
-      gap: 6,
-      padding: 12,
-      minWidth: 130,
+      alignItems: 'center',
+      gap: 9,
+      padding: '9px 12px',
+      minWidth: 108,
       background: 'var(--surface-card)',
-      borderRadius: 'var(--r-md)',
+      borderRadius: 'var(--r-lg)',
       border: '1px solid var(--border-hairline)',
       boxShadow: 'var(--shadow-card)',
       ...style
+    }
+  }, icon && /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 34,
+      height: 34,
+      borderRadius: '50%',
+      flex: '0 0 auto',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: `color-mix(in srgb, ${k.color} 14%, transparent)`,
+      color: k.color
+    }
+  }, icon), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 3
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
-      gap: 6
+      gap: 5
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, !icon && /*#__PURE__*/React.createElement("span", {
     style: {
-      width: 7,
-      height: 7,
+      width: 6,
+      height: 6,
       borderRadius: '50%',
       background: k.color
     }
@@ -718,38 +920,39 @@ function DataTile({
     style: {
       fontFamily: 'var(--font-display)',
       fontWeight: 600,
-      fontSize: 11,
+      fontSize: 9.5,
       letterSpacing: 'var(--tracking-eyebrow)',
       textTransform: 'uppercase',
-      color: 'var(--text-muted)'
+      color: 'var(--text-muted)',
+      whiteSpace: 'nowrap'
     }
   }, label)), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'baseline',
-      gap: 4
+      gap: 3
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: 'var(--font-mono)',
       fontWeight: 600,
-      fontSize: 22,
+      fontSize: 16,
       color: 'var(--text-strong)',
       letterSpacing: '-0.02em'
     }
   }, value), unit && /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: 'var(--font-body)',
-      fontSize: 12,
+      fontSize: 11,
       color: 'var(--text-muted)'
     }
   }, unit)), (sub || delta != null) && /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
-      gap: 6,
+      gap: 5,
       fontFamily: 'var(--font-body)',
-      fontSize: 12
+      fontSize: 10.5
     }
   }, delta != null && /*#__PURE__*/React.createElement("span", {
     style: {
@@ -759,9 +962,10 @@ function DataTile({
     }
   }, up ? '▲' : '▼', " ", Math.abs(delta)), sub && /*#__PURE__*/React.createElement("span", {
     style: {
-      color: 'var(--text-faint)'
+      color: 'var(--text-faint)',
+      whiteSpace: 'nowrap'
     }
-  }, sub)));
+  }, sub))));
 }
 Object.assign(__ds_scope, { DataTile });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/widgets/DataTile.jsx", error: String((e && e.message) || e) }); }
@@ -837,7 +1041,7 @@ function Sidebar({
     style: {
       color: 'var(--red-400)'
     }
-  }, "2day"), "news"), /*#__PURE__*/React.createElement("span", {
+  }, "tap2"), "news"), /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: 'var(--font-display)',
       fontWeight: 700,
@@ -2870,14 +3074,14 @@ function PublishScreen({
       fontWeight: 800,
       fontSize: 13
     }
-  }, "2N"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, "T2"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--font-display)',
       fontWeight: 700,
       fontSize: 13,
       color: 'var(--text-strong)'
     }
-  }, "2daynews"), /*#__PURE__*/React.createElement("div", {
+  }, "tap2news"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--font-body)',
       fontSize: 12.5,
@@ -3044,7 +3248,7 @@ function PushScreen({
       fontSize: 12.5,
       color: 'var(--text-strong)'
     }
-  }, "2daynews"), /*#__PURE__*/React.createElement("div", {
+  }, "tap2news"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--font-body)',
       fontSize: 12.5,
@@ -3666,7 +3870,7 @@ window.UsersScreen = UsersScreen;
 
 // ui_kits/admin/data.js
 try { (() => {
-// Sample data for the 2daynews Admin Console.
+// Sample data for the tap2news Admin Console.
 window.ADMIN_DATA = {
   user: {
     name: 'Priya Rao',
@@ -3830,7 +4034,7 @@ window.ADMIN_DATA = {
     headline: 'APPSC Group-II notification: 1,200 vacancies, apply by month end',
     category: 'jobs',
     lang: 'English',
-    source: '2daynews desk',
+    source: 'tap2news desk',
     time: '14 min',
     confidence: 99,
     flags: ['Verified'],
@@ -3900,11 +4104,11 @@ window.ADMIN_DATA = {
     headline: 'తీర జిల్లాలకు భారీ వర్ష హెచ్చరిక; వారాంతంలో గాలివానలు',
     shortHeadline: 'తీర జిల్లాలకు వర్ష హెచ్చరిక',
     summary: 'IMD ప్రకారం రాబోయే 48 గంటల్లో బలమైన గాలులు, స్థానిక వరదల ముప్పు. మత్స్యకారులు సముద్రంలోకి వెళ్లవద్దని సూచన.',
-    seoTitle: 'AP coastal districts rain alert — IMD warning, weekend forecast | 2daynews',
+    seoTitle: 'AP coastal districts rain alert — IMD warning, weekend forecast | tap2news',
     slug: 'ap-coastal-rain-alert-weekend-imd',
     metaDescription: 'IMD issues heavy rain alert for Andhra Pradesh coastal districts. Squally winds, local flooding likely. Fishermen advised not to venture into the sea.',
     tags: ['Weather', 'IMD', 'Andhra Pradesh', 'Rain alert', 'Coastal'],
-    push: 'Heavy rain alert for coastal AP this weekend — stay updated on 2daynews',
+    push: 'Heavy rain alert for coastal AP this weekend — stay updated on tap2news',
     source: 'TV9',
     category: 'breaking',
     lang: 'Telugu'
@@ -4347,7 +4551,7 @@ window.ADMIN_DATA = {
     kpis: [['312', 'Team members'], ['6', 'Roles'], ['48', 'Correspondents'], ['9', 'Pending invites']],
     rows: [{
       name: 'Priya Rao',
-      email: 'priya@2daynews.in',
+      email: 'priya@tap2news.in',
       role: 'Editor',
       desk: 'Telugu',
       status: 'active',
@@ -4355,7 +4559,7 @@ window.ADMIN_DATA = {
       color: 'var(--brand)'
     }, {
       name: 'Arun Kumar',
-      email: 'arun@2daynews.in',
+      email: 'arun@tap2news.in',
       role: 'Admin',
       desk: 'All',
       status: 'active',
@@ -4363,7 +4567,7 @@ window.ADMIN_DATA = {
       color: 'var(--cat-politics)'
     }, {
       name: 'Meera Nair',
-      email: 'meera@2daynews.in',
+      email: 'meera@tap2news.in',
       role: 'Moderator',
       desk: 'Malayalam',
       status: 'active',
@@ -4371,7 +4575,7 @@ window.ADMIN_DATA = {
       color: 'var(--cat-sports)'
     }, {
       name: 'Ravi Teja',
-      email: 'ravi@2daynews.in',
+      email: 'ravi@tap2news.in',
       role: 'Correspondent',
       desk: 'Guntur dist.',
       status: 'active',
@@ -4379,7 +4583,7 @@ window.ADMIN_DATA = {
       color: 'var(--cat-jobs)'
     }, {
       name: 'Suresh B',
-      email: 'suresh@2daynews.in',
+      email: 'suresh@tap2news.in',
       role: 'SEO',
       desk: 'Growth',
       status: 'invited',
@@ -4387,7 +4591,7 @@ window.ADMIN_DATA = {
       color: 'var(--cat-cinema)'
     }, {
       name: 'Kavya S',
-      email: 'kavya@2daynews.in',
+      email: 'kavya@tap2news.in',
       role: 'Ad ops',
       desk: 'Monetization',
       status: 'active',
@@ -4398,6 +4602,3315 @@ window.ADMIN_DATA = {
   }
 };
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin/data.js", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/BreakingDesk.jsx
+try { (() => {
+// Breaking desk: manual breaking-news entry → Gemini rewrite → publish. Mirrors the RSS pipeline.
+function BreakingDesk({
+  d
+}) {
+  const [raw, setRaw] = React.useState('');
+  const [lang, setLang] = React.useState('te');
+  const [stage, setStage] = React.useState('idle'); // idle | ai | ready | published
+  const [ai, setAi] = React.useState(null);
+  const rewrite = () => {
+    setStage('ai');
+    setTimeout(() => {
+      setAi({
+        headline: 'విజయవాడలో భారీ అగ్నిప్రమాదం — ఆటోనగర్ గోదాములు దగ్ధం',
+        short: 'విజయవాడ ఆటోనగర్‌లో అగ్నిప్రమాదం',
+        summary: 'ఆటోనగర్ పారిశ్రామిక వాడలో తెల్లవారుజామున అగ్నిప్రమాదం; 12 గోదాములు దగ్ధం. ప్రాణనష్టం లేదు. 8 ఫైర్ ఇంజన్లు ఘటనా స్థలంలో.',
+        seoTitle: 'Vijayawada Autonagar fire: 12 godowns gutted, no casualties | tap2news',
+        slug: 'vijayawada-autonagar-fire-godowns',
+        push: 'విజయవాడ ఆటోనగర్‌లో భారీ అగ్నిప్రమాదం — ప్రాణనష్టం లేదు. తాజా వివరాలు tap2news లో.',
+        tags: ['Vijayawada', 'Fire', 'Autonagar', 'AP'],
+        fake: 0.04,
+        conf: 97,
+        national: false
+      });
+      setStage('ready');
+    }, 1800);
+  };
+  const inp = {
+    fontFamily: 'var(--font-body)',
+    fontSize: 13,
+    color: 'var(--text-body)',
+    background: 'var(--white)',
+    border: '1px solid var(--border-strong)',
+    borderRadius: 8,
+    padding: '9px 11px',
+    width: '100%',
+    boxSizing: 'border-box',
+    outline: 'none',
+    resize: 'vertical'
+  };
+  const lbl = {
+    fontFamily: 'var(--font-body)',
+    fontSize: 10,
+    fontWeight: 600,
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    color: 'var(--text-muted)',
+    display: 'block',
+    marginBottom: 4
+  };
+  const out = (label, value, mono) => /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, label, " ", /*#__PURE__*/React.createElement(Icon, {
+    name: "sparkles",
+    size: 10,
+    color: "var(--cat-tech)",
+    style: {
+      verticalAlign: '-1px'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: mono ? 'var(--font-mono)' : 'var(--font-body)',
+      fontSize: mono ? 11.5 : 13,
+      lineHeight: 1.5,
+      color: 'var(--text-body)',
+      background: 'var(--surface-sunk)',
+      borderRadius: 8,
+      padding: '8px 10px'
+    }
+  }, value));
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'minmax(340px,1fr) minmax(340px,1fr)',
+      gap: 14,
+      padding: 16,
+      height: '100%',
+      boxSizing: 'border-box',
+      overflowY: 'auto'
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Breaking desk \u2014 manual entry",
+    icon: "zap",
+    right: /*#__PURE__*/React.createElement(DS.Badge, {
+      tone: "breaking",
+      live: true
+    }, "Live desk")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Raw report \u2014 text, correspondent WhatsApp, or URL"), /*#__PURE__*/React.createElement("textarea", {
+    rows: 7,
+    value: raw,
+    onChange: e => setRaw(e.target.value),
+    placeholder: "Paste the raw tip / wire copy / URL here\u2026",
+    style: inp
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8,
+      alignItems: 'flex-end'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Language"), /*#__PURE__*/React.createElement("select", {
+    value: lang,
+    onChange: e => setLang(e.target.value),
+    style: {
+      ...inp,
+      padding: '8px 10px'
+    }
+  }, /*#__PURE__*/React.createElement("option", {
+    value: "te"
+  }, "\u0C24\u0C46\u0C32\u0C41\u0C17\u0C41"), /*#__PURE__*/React.createElement("option", {
+    value: "ta"
+  }, "\u0BA4\u0BAE\u0BBF\u0BB4\u0BCD"), /*#__PURE__*/React.createElement("option", {
+    value: "hi"
+  }, "\u0939\u093F\u0928\u094D\u0926\u0940"), /*#__PURE__*/React.createElement("option", {
+    value: "kn"
+  }, "\u0C95\u0CA8\u0CCD\u0CA8\u0CA1"), /*#__PURE__*/React.createElement("option", {
+    value: "en"
+  }, "English"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Region"), /*#__PURE__*/React.createElement("select", {
+    style: {
+      ...inp,
+      padding: '8px 10px'
+    }
+  }, /*#__PURE__*/React.createElement("option", null, "Vijayawada \xB7 AP"), /*#__PURE__*/React.createElement("option", null, "Hyderabad \xB7 TS"), /*#__PURE__*/React.createElement("option", null, "State-wide"), /*#__PURE__*/React.createElement("option", null, "National")))), /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "primary",
+    block: true,
+    disabled: stage === 'ai' || !raw.trim(),
+    onClick: rewrite,
+    icon: stage === 'ai' ? /*#__PURE__*/React.createElement(Icon, {
+      name: "loader-2",
+      size: 15,
+      color: "#fff",
+      style: {
+        animation: 'spin 1s linear infinite'
+      }
+    }) : /*#__PURE__*/React.createElement(Icon, {
+      name: "sparkles",
+      size: 15,
+      color: "#fff"
+    })
+  }, stage === 'ai' ? 'Gemini rewriting…' : 'Rewrite with Gemini'), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-faint)',
+      lineHeight: 1.5
+    }
+  }, "Same pipeline as RSS ingest: dedup \u2192 fact-check \u2192 fake-score gate \u2192 rewrite \u2192 SEO \u2192 push copy. fake_score > 0.5 routes to review, never auto-publishes."), /*#__PURE__*/React.createElement("style", null, '@keyframes spin{to{transform:rotate(360deg)}}'))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Gemini draft",
+    icon: "sparkles",
+    right: ai && /*#__PURE__*/React.createElement("span", {
+      style: {
+        display: 'inline-flex',
+        gap: 6
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        fontWeight: 600,
+        color: 'var(--success)'
+      }
+    }, "conf ", ai.conf, "%"), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        fontWeight: 600,
+        color: ai.fake < 0.5 ? 'var(--success)' : 'var(--danger)'
+      }
+    }, "fake ", ai.fake))
+  }, !ai && stage !== 'ai' && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '40px 20px',
+      textAlign: 'center',
+      color: 'var(--text-faint)',
+      fontFamily: 'var(--font-body)',
+      fontSize: 12.5
+    }
+  }, "Paste a raw report and hit ", /*#__PURE__*/React.createElement("b", null, "Rewrite with Gemini"), " \u2014 the structured draft (headline, summary, SEO, push) appears here."), stage === 'ai' && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '40px 20px',
+      textAlign: 'center',
+      color: 'var(--text-muted)',
+      fontFamily: 'var(--font-body)',
+      fontSize: 12.5
+    }
+  }, "Rewriting \xB7 classifying \xB7 fact-checking\u2026"), ai && stage !== 'ai' && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 9
+    }
+  }, out('Headline', ai.headline), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 9
+    }
+  }, out('Short headline', ai.short), out('Slug', ai.slug, true)), out('Summary', ai.summary), out('SEO title', ai.seoTitle), out('Push notification', ai.push), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 5,
+      flexWrap: 'wrap'
+    }
+  }, ai.tags.map(t => /*#__PURE__*/React.createElement("span", {
+    key: t,
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      background: 'var(--ink-100)',
+      color: 'var(--ink-700)',
+      padding: '3px 9px',
+      borderRadius: 999
+    }
+  }, t))), stage === 'published' ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      padding: '10px 12px',
+      background: 'var(--success-soft)',
+      borderRadius: 8,
+      color: 'var(--success)',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 13
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "check-circle-2",
+    size: 16,
+    color: "var(--success)"
+  }), "Published as BREAKING \xB7 push fan-out queued \xB7 ticker updated") : /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "primary",
+    size: "sm",
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: "zap",
+      size: 14,
+      color: "#fff"
+    }),
+    onClick: () => setStage('published')
+  }, "Publish breaking"), /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "secondary",
+    size: "sm",
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: "pen-line",
+      size: 14
+    })
+  }, "Edit draft"), /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "ghost",
+    size: "sm"
+  }, "Discard")))));
+}
+window.BreakingDesk = BreakingDesk;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/BreakingDesk.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/CommandCenter.jsx
+try { (() => {
+// Command Center — the single home. Every panel drills into its hub.
+function LiveKpi({
+  label,
+  base,
+  kind,
+  color = 'var(--brand)',
+  vol,
+  sub
+}) {
+  const [v, series] = useLive(base, vol || 0.02);
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-hairline)',
+      borderRadius: 'var(--r-md)',
+      boxShadow: 'var(--shadow-card)',
+      padding: '10px 12px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 4,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      color: 'var(--text-muted)',
+      whiteSpace: 'nowrap'
+    }
+  }, label), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      gap: 8,
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 21,
+      letterSpacing: '-0.02em',
+      color: 'var(--text-strong)',
+      lineHeight: 1
+    }
+  }, fmt(v, kind)), /*#__PURE__*/React.createElement(Spark, {
+    series: series,
+    color: color,
+    w: 78,
+    h: 24
+  })), sub && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10,
+      color: 'var(--text-faint)'
+    }
+  }, sub));
+}
+function CommandCenter({
+  d,
+  drill
+}) {
+  const th = {
+    fontFamily: 'var(--font-body)',
+    fontSize: 10,
+    fontWeight: 600,
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    color: 'var(--text-faint)',
+    textAlign: 'left',
+    padding: '2px 6px'
+  };
+  const td = {
+    fontFamily: 'var(--font-mono)',
+    fontSize: 11,
+    color: 'var(--ink-700)',
+    padding: '4px 6px'
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 14,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(6,1fr)',
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement(LiveKpi, {
+    label: "Live readers",
+    base: 48200,
+    kind: "k",
+    color: "var(--success)",
+    sub: "app + web"
+  }), /*#__PURE__*/React.createElement(LiveKpi, {
+    label: "Stories/hr",
+    base: 128,
+    kind: "int",
+    color: "var(--brand)",
+    vol: 0.05,
+    sub: "ingest \u2192 publish"
+  }), /*#__PURE__*/React.createElement(LiveKpi, {
+    label: "Feed p95",
+    base: 96,
+    kind: "ms",
+    color: "var(--info)",
+    vol: 0.06,
+    sub: "get_feed RPC"
+  }), /*#__PURE__*/React.createElement(LiveKpi, {
+    label: "Cache hit",
+    base: 94.2,
+    kind: "pct",
+    color: "var(--cat-business)",
+    vol: 0.004,
+    sub: "Redis + CDN"
+  }), /*#__PURE__*/React.createElement(LiveKpi, {
+    label: "AI cost/hr",
+    base: 31400,
+    kind: "inr",
+    color: "var(--gold-600)",
+    vol: 0.04,
+    sub: "4-model blend"
+  }), /*#__PURE__*/React.createElement(LiveKpi, {
+    label: "Push CTR",
+    base: 6.8,
+    kind: "pct",
+    color: "var(--cat-cinema)",
+    vol: 0.03,
+    sub: "last campaign"
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1.25fr 1fr 1fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Moderation queue",
+    icon: "shield-check",
+    onDrill: () => drill('newsroom'),
+    right: /*#__PURE__*/React.createElement(DS.Badge, {
+      tone: "count"
+    }, d.queue.length)
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 6
+    }
+  }, d.queue.slice(0, 4).map(q => /*#__PURE__*/React.createElement("div", {
+    key: q.id,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement(DS.CategoryChip, {
+    category: q.category,
+    size: "sm"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      minWidth: 0,
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      fontFamily: 'var(--font-body)',
+      fontSize: 12,
+      color: 'var(--text-strong)'
+    }
+  }, q.headline), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: q.conf < 80 ? 'var(--danger)' : 'var(--success)'
+    }
+  }, q.conf, "%"))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "AI model routing",
+    icon: "cpu",
+    onDrill: () => drill('infra')
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 7
+    }
+  }, d.models.map(m => /*#__PURE__*/React.createElement("div", {
+    key: m.name,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: m.ok
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--text-strong)',
+      whiteSpace: 'nowrap'
+    }
+  }, m.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 52,
+      height: 5,
+      background: 'var(--ink-100)',
+      borderRadius: 999
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: m.share + '%',
+      height: '100%',
+      background: 'var(--brand)',
+      borderRadius: 999
+    }
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)',
+      width: 30,
+      textAlign: 'right'
+    }
+  }, m.share, "%"))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Job queues \xB7 BullMQ",
+    icon: "layers",
+    onDrill: () => drill('infra')
+  }, /*#__PURE__*/React.createElement("table", {
+    style: {
+      width: '100%',
+      borderCollapse: 'collapse'
+    }
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    style: th
+  }, "queue"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "wait"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "act"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "fail"))), /*#__PURE__*/React.createElement("tbody", null, d.queues.slice(0, 4).map(q => /*#__PURE__*/React.createElement("tr", {
+    key: q.name
+  }, /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      fontWeight: 600,
+      color: 'var(--ink-900)'
+    }
+  }, q.name), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right'
+    }
+  }, q.waiting), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right',
+      color: 'var(--info)'
+    }
+  }, q.active), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right',
+      color: q.failed ? 'var(--danger)' : 'var(--text-faint)'
+    }
+  }, q.failed))))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1.25fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Redis cache",
+    icon: "database-zap",
+    onDrill: () => drill('infra'),
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--success)',
+        fontWeight: 600
+      }
+    }, "94.2% hit")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 5
+    }
+  }, d.redisKeys.slice(0, 4).map(k => /*#__PURE__*/React.createElement("div", {
+    key: k.key,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      color: 'var(--ink-800)',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  }, k.key), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--gold-700)'
+    }
+  }, k.ttl), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--text-muted)',
+      width: 52,
+      textAlign: 'right'
+    }
+  }, k.hits))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Postgres \xB7 Supabase",
+    icon: "database",
+    onDrill: () => drill('infra')
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 6
+    }
+  }, d.pg.slice(0, 6).map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.k,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 6
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: p.ok
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11,
+      fontWeight: 600,
+      color: 'var(--ink-900)'
+    }
+  }, p.v), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 9.5,
+      color: 'var(--text-faint)',
+      whiteSpace: 'nowrap'
+    }
+  }, p.k)))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Revenue today",
+    icon: "indian-rupee",
+    onDrill: () => drill('growth'),
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-display)',
+        fontWeight: 800,
+        fontSize: 13,
+        color: 'var(--text-strong)'
+      }
+    }, "\u20B910.03L")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      height: 10,
+      borderRadius: 999,
+      overflow: 'hidden',
+      marginBottom: 8
+    }
+  }, d.revenue.map((r, i) => /*#__PURE__*/React.createElement("span", {
+    key: r.src,
+    style: {
+      width: r.v + '%',
+      background: ['var(--brand)', 'var(--cat-cinema)', 'var(--gold-500)', 'var(--cat-jobs)', 'var(--cat-business)'][i]
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '4px 12px'
+    }
+  }, d.revenue.map((r, i) => /*#__PURE__*/React.createElement("span", {
+    key: r.src,
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 5,
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 7,
+      height: 7,
+      borderRadius: 2,
+      background: ['var(--brand)', 'var(--cat-cinema)', 'var(--gold-500)', 'var(--cat-jobs)', 'var(--cat-business)'][i]
+    }
+  }), r.src, " ", /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: 'var(--ink-800)',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10
+    }
+  }, r.amt)))))));
+}
+Object.assign(window, {
+  CommandCenter,
+  LiveKpi
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/CommandCenter.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/Growth.jsx
+try { (() => {
+// Growth hub: analytics + monetization (priority screens).
+function Growth({
+  d
+}) {
+  const [dau, dauS] = useLive(4200000, 0.01);
+  const [rpm, rpmS] = useLive(38.4, 0.02);
+  const [subs, subsS] = useLive(212000, 0.008);
+  const [ctr, ctrS] = useLive(6.8, 0.03);
+  const hours = ['6a', '8a', '10a', '12p', '2p', '4p', '6p', '8p', '10p'];
+  const bars = [42, 61, 78, 84, 70, 66, 88, 100, 74];
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 14,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 12,
+      overflowY: 'auto',
+      height: '100%',
+      boxSizing: 'border-box'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4,1fr)',
+      gap: 10
+    }
+  }, [['DAU', fmt(dau / 1000, 'int') + 'K', dauS, 'var(--brand)'], ['Ad RPM', '₹' + rpm.toFixed(1), rpmS, 'var(--gold-600)'], ['Plus subscribers', fmt(subs, 'k'), subsS, 'var(--cat-jobs)'], ['Push CTR', ctr.toFixed(1) + '%', ctrS, 'var(--cat-cinema)']].map(([l, v, s, c]) => /*#__PURE__*/React.createElement("div", {
+    key: l,
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-hairline)',
+      borderRadius: 'var(--r-md)',
+      boxShadow: 'var(--shadow-card)',
+      padding: '10px 12px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      color: 'var(--text-muted)'
+    }
+  }, l), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      justifyContent: 'space-between',
+      gap: 8,
+      marginTop: 3
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 21,
+      letterSpacing: '-0.02em',
+      color: 'var(--text-strong)',
+      lineHeight: 1
+    }
+  }, v), /*#__PURE__*/React.createElement(Spark, {
+    series: s,
+    color: c,
+    w: 84,
+    h: 24
+  }))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1.3fr 1fr 1fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Reads by hour \xB7 today",
+    icon: "bar-chart-3",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--text-muted)'
+      }
+    }, "peak 8p")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      gap: 7,
+      height: 110
+    }
+  }, bars.map((v, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      flex: 1,
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      gap: 4
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '100%',
+      height: v * 0.9 + 'px',
+      background: i === 7 ? 'var(--brand)' : 'var(--red-200)',
+      borderRadius: '3px 3px 0 0',
+      transition: 'height .4s var(--ease-out)'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 8.5,
+      color: 'var(--text-faint)'
+    }
+  }, hours[i]))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Readers by language",
+    icon: "languages"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
+  }, d.langSplit.map(l => /*#__PURE__*/React.createElement("div", {
+    key: l.l,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 52,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'var(--text-body)'
+    }
+  }, l.l), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      height: 6,
+      background: 'var(--ink-100)',
+      borderRadius: 999
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: l.pct + '%',
+      height: '100%',
+      background: l.c,
+      borderRadius: 999
+    }
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 30,
+      textAlign: 'right',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: 'var(--text-strong)'
+    }
+  }, l.pct, "%"))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Top stories \xB7 24h",
+    icon: "flame"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 7
+    }
+  }, d.topStories.map((s, i) => /*#__PURE__*/React.createElement("div", {
+    key: s.t,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10,
+      color: 'var(--text-faint)',
+      width: 12
+    }
+  }, i + 1), /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 7,
+      height: 7,
+      borderRadius: '50%',
+      background: DS.CATEGORY_COLORS[s.cat],
+      flex: '0 0 auto'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'var(--text-strong)',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  }, s.t), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: 'var(--ink-700)'
+    }
+  }, s.v)))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1.3fr 1fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Revenue mix \xB7 today",
+    icon: "indian-rupee",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-display)',
+        fontWeight: 800,
+        fontSize: 13,
+        color: 'var(--text-strong)'
+      }
+    }, "\u20B910.03L")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      height: 12,
+      borderRadius: 999,
+      overflow: 'hidden',
+      marginBottom: 10
+    }
+  }, d.revenue.map((r, i) => /*#__PURE__*/React.createElement("span", {
+    key: r.src,
+    style: {
+      width: r.v + '%',
+      background: ['var(--brand)', 'var(--cat-cinema)', 'var(--gold-500)', 'var(--cat-jobs)', 'var(--cat-business)'][i]
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 6
+    }
+  }, d.revenue.map((r, i) => /*#__PURE__*/React.createElement("div", {
+    key: r.src,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 8,
+      height: 8,
+      borderRadius: 2,
+      background: ['var(--brand)', 'var(--cat-cinema)', 'var(--gold-500)', 'var(--cat-jobs)', 'var(--cat-business)'][i]
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      fontFamily: 'var(--font-body)',
+      fontSize: 12,
+      color: 'var(--text-body)'
+    }
+  }, r.src), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11,
+      color: 'var(--text-muted)'
+    }
+  }, r.v, "%"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--ink-900)',
+      width: 56,
+      textAlign: 'right'
+    }
+  }, r.amt))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Plus plans",
+    icon: "gem"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
+  }, [['Plus monthly', '₹49/mo', '148K subs', true], ['Plus yearly', '₹399/yr', '52K subs', true], ['E-paper', '₹99/mo', '12K subs', false]].map(([n, p, s, hot]) => /*#__PURE__*/React.createElement("div", {
+    key: n,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 9,
+      padding: '9px 11px',
+      background: 'var(--surface-sunk)',
+      borderRadius: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 6,
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12.5,
+      color: 'var(--text-strong)'
+    }
+  }, n), hot && /*#__PURE__*/React.createElement(DS.Badge, {
+    tone: "gold"
+  }, "Popular")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)'
+    }
+  }, s)), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 600,
+      fontSize: 12.5,
+      color: 'var(--ink-900)'
+    }
+  }, p)))))));
+}
+window.Growth = Growth;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/Growth.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/Infra.jsx
+try { (() => {
+// Infra & AI hub: model routing, MCP servers, Redis, BullMQ, Postgres, CDN purge.
+function Infra({
+  d
+}) {
+  const [purged, setPurged] = React.useState({});
+  const [reqs] = useLive(212000, 0.03);
+  const th = {
+    fontFamily: 'var(--font-body)',
+    fontSize: 10,
+    fontWeight: 600,
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    color: 'var(--text-faint)',
+    textAlign: 'left',
+    padding: '4px 8px'
+  };
+  const td = {
+    fontFamily: 'var(--font-mono)',
+    fontSize: 11.5,
+    color: 'var(--ink-700)',
+    padding: '6px 8px',
+    borderTop: '1px solid var(--border-hairline)'
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 14,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 12,
+      overflowY: 'auto',
+      height: '100%',
+      boxSizing: 'border-box'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1.2fr 1fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "AI model routing",
+    icon: "cpu",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--text-muted)'
+      }
+    }, "blended \u20B90.11/story")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 9
+    }
+  }, d.models.map(m => /*#__PURE__*/React.createElement("div", {
+    key: m.name,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      padding: '8px 10px',
+      background: 'var(--surface-sunk)',
+      borderRadius: 8
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: m.ok
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12.5,
+      color: 'var(--text-strong)'
+    }
+  }, m.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)'
+    }
+  }, m.role)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: 'right'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--ink-900)'
+    }
+  }, m.share, "% \xB7 ", m.cost), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10,
+      color: m.p95 > 4 ? 'var(--warning)' : 'var(--text-faint)'
+    }
+  }, "p95 ", m.p95, "s")))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "MCP servers \xB7 Claude Code cowork",
+    icon: "plug-zap",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--success)',
+        fontWeight: 600
+      }
+    }, d.mcps.filter(m => m.on).length, "/", d.mcps.length, " connected")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  }, d.mcps.map(m => /*#__PURE__*/React.createElement("div", {
+    key: m.name,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      padding: '5px 0',
+      borderBottom: '1px solid var(--border-hairline)'
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: m.on
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 11.5,
+      color: 'var(--text-strong)',
+      width: 86,
+      flex: '0 0 auto'
+    }
+  }, m.name), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  }, m.use), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 9.5,
+      color: 'var(--gold-600)'
+    }
+  }, '★'.repeat(m.stars))))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Redis cache",
+    icon: "database-zap",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--success)',
+        fontWeight: 600
+      }
+    }, "hit 94.2% \xB7 41MB")
+  }, /*#__PURE__*/React.createElement("table", {
+    style: {
+      width: '100%',
+      borderCollapse: 'collapse'
+    }
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    style: th
+  }, "key"), /*#__PURE__*/React.createElement("th", {
+    style: th
+  }, "ttl"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "hits"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "size"))), /*#__PURE__*/React.createElement("tbody", null, d.redisKeys.map(k => /*#__PURE__*/React.createElement("tr", {
+    key: k.key
+  }, /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      fontWeight: 600,
+      color: 'var(--ink-900)'
+    }
+  }, k.key), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      color: 'var(--gold-700)'
+    }
+  }, k.ttl), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right'
+    }
+  }, k.hits), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right',
+      color: 'var(--text-faint)'
+    }
+  }, k.size))))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '8px 0 0',
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-faint)'
+    }
+  }, "Feed keys: ", /*#__PURE__*/React.createElement("code", {
+    style: {
+      fontFamily: 'var(--font-mono)'
+    }
+  }, "feed:<lang>:<region>:<section>"), " \xB7 30\u201360s TTL \xB7 live cricket 8s")), /*#__PURE__*/React.createElement(Panel, {
+    title: "Job queues \xB7 BullMQ on Redis",
+    icon: "layers"
+  }, /*#__PURE__*/React.createElement("table", {
+    style: {
+      width: '100%',
+      borderCollapse: 'collapse'
+    }
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    style: th
+  }, "queue"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "waiting"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "active"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "failed"), /*#__PURE__*/React.createElement("th", {
+    style: {
+      ...th,
+      textAlign: 'right'
+    }
+  }, "done 24h"), /*#__PURE__*/React.createElement("th", {
+    style: th
+  }))), /*#__PURE__*/React.createElement("tbody", null, d.queues.map(q => /*#__PURE__*/React.createElement("tr", {
+    key: q.name
+  }, /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      fontWeight: 600,
+      color: 'var(--ink-900)'
+    }
+  }, q.name), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right'
+    }
+  }, q.waiting), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right',
+      color: 'var(--info)'
+    }
+  }, q.active), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right',
+      color: q.failed ? 'var(--danger)' : 'var(--text-faint)',
+      fontWeight: q.failed ? 700 : 400
+    }
+  }, q.failed), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right',
+      color: 'var(--text-muted)'
+    }
+  }, q.done), /*#__PURE__*/React.createElement("td", {
+    style: {
+      ...td,
+      textAlign: 'right'
+    }
+  }, q.failed > 0 && /*#__PURE__*/React.createElement("button", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: 'var(--brand-strong)',
+      background: 'var(--red-50)',
+      border: 'none',
+      borderRadius: 999,
+      padding: '3px 9px',
+      cursor: 'pointer'
+    }
+  }, "Retry")))))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 12
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Postgres \xB7 Supabase",
+    icon: "database",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--text-muted)'
+      }
+    }, "primary + 2 replicas")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3,1fr)',
+      gap: 8
+    }
+  }, d.pg.map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.k,
+    style: {
+      padding: '8px 10px',
+      background: 'var(--surface-sunk)',
+      borderRadius: 8,
+      display: 'flex',
+      gap: 7,
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: p.ok
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--ink-900)'
+    }
+  }, p.v), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 9.5,
+      color: 'var(--text-faint)'
+    }
+  }, p.k)))))), /*#__PURE__*/React.createElement(Panel, {
+    title: "CDN / edge cache",
+    icon: "globe",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--text-muted)'
+      }
+    }, fmt(reqs, 'k'), " req/m")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
+  }, d.cdn.map(z => /*#__PURE__*/React.createElement("div", {
+    key: z.zone,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--text-strong)'
+    }
+  }, z.zone), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 90,
+      height: 6,
+      background: 'var(--ink-100)',
+      borderRadius: 999
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: z.hit + '%',
+      height: '100%',
+      background: z.hit > 90 ? 'var(--success)' : 'var(--warning)',
+      borderRadius: 999
+    }
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)',
+      width: 70,
+      textAlign: 'right'
+    }
+  }, z.hit, "% \xB7 ", z.reqs), /*#__PURE__*/React.createElement("button", {
+    onClick: () => setPurged(x => ({
+      ...x,
+      [z.zone]: true
+    })),
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: purged[z.zone] ? 'var(--success)' : 'var(--brand-strong)',
+      background: purged[z.zone] ? 'var(--success-soft)' : 'var(--red-50)',
+      border: 'none',
+      borderRadius: 999,
+      padding: '4px 10px',
+      cursor: 'pointer'
+    }
+  }, purged[z.zone] ? 'Purged ✓' : 'Purge')))))));
+}
+window.Infra = Infra;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/Infra.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/Newsroom.jsx
+try { (() => {
+// Newsroom hub: moderation queue + publish composer (drill-in).
+function Newsroom({
+  d
+}) {
+  const [items, setItems] = React.useState(d.queue);
+  const [sel, setSel] = React.useState(d.queue[0].id);
+  const cur = items.find(x => x.id === sel) || items[0];
+  const act = id => {
+    setItems(xs => xs.filter(x => x.id !== id));
+  };
+  const dr = d.draft;
+  const F = ({
+    label,
+    value,
+    mono,
+    sub
+  }) => /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 3
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 6,
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("label", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10,
+      fontWeight: 600,
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      color: 'var(--text-muted)'
+    }
+  }, label), /*#__PURE__*/React.createElement(Icon, {
+    name: "sparkles",
+    size: 10,
+    color: "var(--cat-tech)"
+  }), sub && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 9.5,
+      color: 'var(--text-faint)'
+    }
+  }, sub)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: mono ? 'var(--font-mono)' : 'var(--font-body)',
+      fontSize: mono ? 11.5 : 13,
+      lineHeight: 1.45,
+      color: 'var(--text-body)',
+      background: 'var(--white)',
+      border: '1px solid var(--border-strong)',
+      borderRadius: 8,
+      padding: '8px 10px'
+    }
+  }, value));
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'minmax(240px,320px) minmax(380px,1fr) minmax(220px,280px)',
+      height: '100%',
+      minHeight: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      borderRight: '1px solid var(--border-hairline)',
+      overflowY: 'auto',
+      background: 'var(--surface-card)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '9px 14px',
+      borderBottom: '1px solid var(--border-hairline)',
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12,
+      color: 'var(--text-strong)'
+    }
+  }, "Queue"), /*#__PURE__*/React.createElement(DS.Badge, {
+    tone: "count"
+  }, items.length), /*#__PURE__*/React.createElement("span", {
+    style: {
+      marginLeft: 'auto',
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-faint)'
+    }
+  }, "by AI confidence")), items.map(q => {
+    const on = cur && cur.id === q.id;
+    return /*#__PURE__*/React.createElement("button", {
+      key: q.id,
+      onClick: () => setSel(q.id),
+      style: {
+        display: 'block',
+        width: '100%',
+        textAlign: 'left',
+        padding: '10px 14px',
+        border: 'none',
+        borderBottom: '1px solid var(--border-hairline)',
+        borderLeft: on ? '3px solid var(--brand)' : '3px solid transparent',
+        background: on ? 'var(--red-50)' : 'transparent',
+        cursor: 'pointer'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: 6,
+        marginBottom: 4
+      }
+    }, /*#__PURE__*/React.createElement(DS.CategoryChip, {
+      category: q.category,
+      size: "sm"
+    }), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 9.5,
+        color: 'var(--text-faint)'
+      }
+    }, q.lang, " \xB7 ", q.source), /*#__PURE__*/React.createElement("span", {
+      style: {
+        marginLeft: 'auto',
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        fontWeight: 600,
+        color: q.conf < 80 ? 'var(--danger)' : 'var(--success)'
+      }
+    }, q.conf, "%")), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: 'var(--font-display)',
+        fontWeight: 600,
+        fontSize: 12.5,
+        lineHeight: 1.3,
+        color: 'var(--text-strong)'
+      }
+    }, q.headline));
+  }), !items.length && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 30,
+      textAlign: 'center',
+      color: 'var(--text-muted)',
+      fontFamily: 'var(--font-body)',
+      fontSize: 12.5
+    }
+  }, "Queue cleared")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      overflowY: 'auto',
+      padding: 18
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7,
+      marginBottom: 12
+    }
+  }, /*#__PURE__*/React.createElement(DS.Badge, {
+    tone: "breaking",
+    live: true
+  }, "Breaking"), /*#__PURE__*/React.createElement(DS.Badge, {
+    tone: "exclusive"
+  }, "AI draft"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'var(--text-muted)'
+    }
+  }, dr.lang, " \xB7 ", dr.source, " \xB7 conf ", dr.conf, "%"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      marginLeft: 'auto',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 5,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      fontWeight: 600,
+      color: 'var(--success)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "shield-check",
+    size: 13,
+    color: "var(--success)"
+  }), "Fact-check passed")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 10,
+      maxWidth: 660
+    }
+  }, /*#__PURE__*/React.createElement(F, {
+    label: "Headline",
+    value: dr.headline
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement(F, {
+    label: "Short headline",
+    value: dr.short,
+    sub: dr.short.length + ' ch'
+  }), /*#__PURE__*/React.createElement(F, {
+    label: "Slug",
+    value: dr.slug,
+    mono: true
+  })), /*#__PURE__*/React.createElement(F, {
+    label: "Summary",
+    value: dr.summary
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement(F, {
+    label: "SEO title",
+    value: dr.seoTitle,
+    sub: dr.seoTitle.length + '/60'
+  }), /*#__PURE__*/React.createElement(F, {
+    label: "Meta description",
+    value: dr.meta,
+    sub: dr.meta.length + '/160'
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 3
+    }
+  }, /*#__PURE__*/React.createElement("label", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10,
+      fontWeight: 600,
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      color: 'var(--text-muted)'
+    }
+  }, "Tags"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 5,
+      flexWrap: 'wrap'
+    }
+  }, dr.tags.map(t => /*#__PURE__*/React.createElement("span", {
+    key: t,
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      background: 'var(--ink-100)',
+      color: 'var(--ink-700)',
+      padding: '3px 9px',
+      borderRadius: 999
+    }
+  }, t)))), /*#__PURE__*/React.createElement(F, {
+    label: "Push notification",
+    value: dr.push
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8,
+      marginTop: 4
+    }
+  }, /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "primary",
+    size: "sm",
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: "send",
+      size: 14
+    }),
+    onClick: () => act(cur && cur.id)
+  }, "Publish now"), /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "secondary",
+    size: "sm",
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: "clock",
+      size: 14
+    })
+  }, "Schedule"), /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "ghost",
+    size: "sm",
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: "x",
+      size: 14
+    }),
+    onClick: () => act(cur && cur.id)
+  }, "Reject")))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      borderLeft: '1px solid var(--border-hairline)',
+      background: 'var(--surface-sunk)',
+      padding: 14,
+      overflowY: 'auto'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 6,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "smartphone",
+    size: 13,
+    color: "var(--text-muted)"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 11.5,
+      color: 'var(--text-strong)'
+    }
+  }, "Live preview")), /*#__PURE__*/React.createElement(DS.NewsCard, {
+    layout: "hero",
+    breaking: true,
+    headline: dr.headline,
+    summary: dr.summary,
+    source: dr.source,
+    location: "Vijayawada",
+    time: "now",
+    verified: true
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 10,
+      background: 'var(--white)',
+      border: '1px solid var(--border-hairline)',
+      borderRadius: 8,
+      padding: 10,
+      display: 'flex',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 28,
+      height: 28,
+      borderRadius: 7,
+      background: 'var(--brand)',
+      color: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: '0 0 auto',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 10
+    }
+  }, "t2"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 11,
+      color: 'var(--text-strong)'
+    }
+  }, "tap2news"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-muted)',
+      lineHeight: 1.4
+    }
+  }, dr.push)))));
+}
+window.Newsroom = Newsroom;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/Newsroom.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/PollsAdmin.jsx
+try { (() => {
+// Polls & engagement manager: create polls/quizzes, monitor live votes, close/feature.
+function PollsAdmin() {
+  const [polls, setPolls] = React.useState([{
+    id: 1,
+    q: 'కొత్త ఐటీ పాలసీతో మీ జిల్లాకు ఉద్యోగాలు వస్తాయా?',
+    cat: 'politics',
+    lang: 'తెలుగు',
+    votes: 12400,
+    status: 'live',
+    opts: [{
+      t: 'ఖచ్చితంగా వస్తాయి',
+      v: 46
+    }, {
+      t: 'చూడాలి',
+      v: 38
+    }, {
+      t: 'రావు',
+      v: 16
+    }]
+  }, {
+    id: 2,
+    q: 'హోం టెస్ట్ సిరీస్ ఎవరు గెలుస్తారు?',
+    cat: 'cricket',
+    lang: 'తెలుగు',
+    votes: 31200,
+    status: 'live',
+    opts: [{
+      t: 'ఇండియా',
+      v: 78
+    }, {
+      t: 'ఆస్ట్రేలియా',
+      v: 14
+    }, {
+      t: 'డ్రా',
+      v: 8
+    }]
+  }, {
+    id: 3,
+    q: 'Should metro timings extend past 11pm?',
+    cat: 'district',
+    lang: 'English',
+    votes: 5600,
+    status: 'closed',
+    opts: [{
+      t: 'Yes',
+      v: 71
+    }, {
+      t: 'No',
+      v: 29
+    }]
+  }]);
+  const [q, setQ] = React.useState('');
+  const [opts, setOpts] = React.useState(['', '']);
+  const [kind, setKind] = React.useState('poll');
+  const create = () => {
+    if (!q.trim() || opts.filter(o => o.trim()).length < 2) return;
+    setPolls(ps => [{
+      id: Date.now(),
+      q,
+      cat: 'politics',
+      lang: 'తెలుగు',
+      votes: 0,
+      status: 'live',
+      opts: opts.filter(o => o.trim()).map(t => ({
+        t,
+        v: 0
+      }))
+    }, ...ps]);
+    setQ('');
+    setOpts(['', '']);
+  };
+  const toggle = id => setPolls(ps => ps.map(p => p.id === id ? {
+    ...p,
+    status: p.status === 'live' ? 'closed' : 'live'
+  } : p));
+  const inp = {
+    fontFamily: 'var(--font-body)',
+    fontSize: 13,
+    color: 'var(--text-body)',
+    background: 'var(--white)',
+    border: '1px solid var(--border-strong)',
+    borderRadius: 8,
+    padding: '9px 11px',
+    width: '100%',
+    boxSizing: 'border-box',
+    outline: 'none'
+  };
+  const lbl = {
+    fontFamily: 'var(--font-body)',
+    fontSize: 10,
+    fontWeight: 600,
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    color: 'var(--text-muted)',
+    display: 'block',
+    marginBottom: 4
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'minmax(300px,380px) 1fr',
+      gap: 14,
+      padding: 16,
+      height: '100%',
+      boxSizing: 'border-box',
+      overflowY: 'auto'
+    }
+  }, /*#__PURE__*/React.createElement(Panel, {
+    title: "Create engagement",
+    icon: "plus-circle"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 6
+    }
+  }, [['poll', 'Poll'], ['quiz', 'Quiz'], ['survey', 'Survey']].map(([k, l]) => /*#__PURE__*/React.createElement("button", {
+    key: k,
+    onClick: () => setKind(k),
+    style: {
+      flex: 1,
+      padding: '7px 0',
+      borderRadius: 999,
+      border: '1px solid ' + (kind === k ? 'var(--brand)' : 'var(--border-strong)'),
+      background: kind === k ? 'var(--red-50)' : 'var(--white)',
+      color: kind === k ? 'var(--brand-strong)' : 'var(--ink-700)',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12,
+      cursor: 'pointer'
+    }
+  }, l))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Question"), /*#__PURE__*/React.createElement("textarea", {
+    rows: 2,
+    value: q,
+    onChange: e => setQ(e.target.value),
+    placeholder: "\u0C2E\u0C40 \u0C2A\u0C4D\u0C30\u0C36\u0C4D\u0C28\u2026",
+    style: {
+      ...inp,
+      resize: 'vertical'
+    }
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Options"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 6
+    }
+  }, opts.map((o, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      display: 'flex',
+      gap: 6
+    }
+  }, /*#__PURE__*/React.createElement("input", {
+    value: o,
+    onChange: e => setOpts(xs => xs.map((x, j) => j === i ? e.target.value : x)),
+    placeholder: 'Option ' + (i + 1) + (kind === 'quiz' && i === 0 ? ' (correct)' : ''),
+    style: inp
+  }), opts.length > 2 && /*#__PURE__*/React.createElement("button", {
+    onClick: () => setOpts(xs => xs.filter((_, j) => j !== i)),
+    style: {
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      color: 'var(--ink-400)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "x",
+    size: 14
+  })))), opts.length < 4 && /*#__PURE__*/React.createElement("button", {
+    onClick: () => setOpts(xs => [...xs, '']),
+    style: {
+      alignSelf: 'flex-start',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 4,
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--text-link)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "plus",
+    size: 12,
+    color: "var(--text-link)"
+  }), "Add option"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Category"), /*#__PURE__*/React.createElement("select", {
+    style: {
+      ...inp,
+      padding: '8px 10px'
+    }
+  }, /*#__PURE__*/React.createElement("option", null, "Politics"), /*#__PURE__*/React.createElement("option", null, "Cricket"), /*#__PURE__*/React.createElement("option", null, "Cinema"), /*#__PURE__*/React.createElement("option", null, "Health"), /*#__PURE__*/React.createElement("option", null, "District"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Language"), /*#__PURE__*/React.createElement("select", {
+    style: {
+      ...inp,
+      padding: '8px 10px'
+    }
+  }, /*#__PURE__*/React.createElement("option", null, "\u0C24\u0C46\u0C32\u0C41\u0C17\u0C41"), /*#__PURE__*/React.createElement("option", null, "\u0BA4\u0BAE\u0BBF\u0BB4\u0BCD"), /*#__PURE__*/React.createElement("option", null, "\u0939\u093F\u0928\u094D\u0926\u0940"), /*#__PURE__*/React.createElement("option", null, "\u0C95\u0CA8\u0CCD\u0CA8\u0CA1"), /*#__PURE__*/React.createElement("option", null, "English")))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Placement"), /*#__PURE__*/React.createElement("select", {
+    style: {
+      ...inp,
+      padding: '8px 10px'
+    }
+  }, /*#__PURE__*/React.createElement("option", null, "Feed \xB7 after story 2"), /*#__PURE__*/React.createElement("option", null, "Category tab \xB7 top"), /*#__PURE__*/React.createElement("option", null, "Article end"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: lbl
+  }, "Duration"), /*#__PURE__*/React.createElement("select", {
+    style: {
+      ...inp,
+      padding: '8px 10px'
+    }
+  }, /*#__PURE__*/React.createElement("option", null, "24 hours"), /*#__PURE__*/React.createElement("option", null, "3 days"), /*#__PURE__*/React.createElement("option", null, "1 week")))), /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "primary",
+    block: true,
+    onClick: create,
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: "send",
+      size: 14,
+      color: "#fff"
+    })
+  }, "Publish ", kind))), /*#__PURE__*/React.createElement(Panel, {
+    title: "Live & recent",
+    icon: "bar-chart-3",
+    right: /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10.5,
+        color: 'var(--text-muted)'
+      }
+    }, polls.filter(p => p.status === 'live').length, " live")
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 10
+    }
+  }, polls.map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.id,
+    style: {
+      padding: '10px 12px',
+      background: 'var(--surface-sunk)',
+      borderRadius: 8
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      marginBottom: 7
+    }
+  }, /*#__PURE__*/React.createElement(DS.CategoryChip, {
+    category: p.cat,
+    size: "sm"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-faint)'
+    }
+  }, p.lang, " \xB7 ", p.votes.toLocaleString('en-IN'), " votes"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      marginLeft: 'auto',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 5,
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      fontWeight: 700,
+      color: p.status === 'live' ? 'var(--success)' : 'var(--text-faint)'
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: p.status === 'live'
+  }), p.status), /*#__PURE__*/React.createElement("button", {
+    onClick: () => toggle(p.id),
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: 'var(--brand-strong)',
+      background: 'var(--red-50)',
+      border: 'none',
+      borderRadius: 999,
+      padding: '3px 9px',
+      cursor: 'pointer'
+    }
+  }, p.status === 'live' ? 'Close' : 'Reopen')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 13,
+      color: 'var(--text-strong)',
+      marginBottom: 7
+    }
+  }, p.q), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 4
+    }
+  }, p.opts.map(o => /*#__PURE__*/React.createElement("div", {
+    key: o.t,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 130,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'var(--text-body)',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  }, o.t), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      height: 6,
+      background: 'var(--ink-100)',
+      borderRadius: 999
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: o.v + '%',
+      height: '100%',
+      background: 'var(--brand)',
+      borderRadius: 999
+    }
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 32,
+      textAlign: 'right',
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      color: 'var(--ink-800)'
+    }
+  }, o.v, "%")))))))));
+}
+window.PollsAdmin = PollsAdmin;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/PollsAdmin.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/Shell.jsx
+try { (() => {
+// Admin v2 shell: Icon, live-data hooks, Spark, Panel, Sidebar, Topbar. Compact density.
+const DS = window.Ds2daynewsDesignSystem_0b44f3;
+function Icon({
+  name,
+  size = 16,
+  color = 'currentColor',
+  style = {}
+}) {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    if (ref.current && window.lucide) {
+      ref.current.innerHTML = '';
+      const el = document.createElement('i');
+      el.setAttribute('data-lucide', name);
+      ref.current.appendChild(el);
+      window.lucide.createIcons({
+        attrs: {
+          width: size,
+          height: size,
+          stroke: color,
+          'stroke-width': 2
+        },
+        nameAttr: 'data-lucide'
+      });
+    }
+  }, [name, size, color]);
+  return /*#__PURE__*/React.createElement("span", {
+    ref: ref,
+    style: {
+      display: 'inline-flex',
+      width: size,
+      height: size,
+      flex: '0 0 auto',
+      ...style
+    }
+  });
+}
+
+// Live random-walk number. returns [value, series]
+function useLive(base, vol = 0.03, ms = 2500, len = 24) {
+  const [series, setSeries] = React.useState(() => {
+    let v = base;
+    const out = [];
+    for (let i = 0; i < len; i++) {
+      v = v * (1 + (Math.random() - 0.5) * vol * 2);
+      out.push(v);
+    }
+    return out;
+  });
+  React.useEffect(() => {
+    const t = setInterval(() => setSeries(s => {
+      const nv = s[s.length - 1] * (1 + (Math.random() - 0.48) * vol);
+      return [...s.slice(1), nv];
+    }), ms + Math.random() * 800);
+    return () => clearInterval(t);
+  }, []);
+  return [series[series.length - 1], series];
+}
+function fmt(v, kind) {
+  if (kind === 'k') return (v / 1000).toFixed(1) + 'K';
+  if (kind === 'pct') return v.toFixed(1) + '%';
+  if (kind === 'ms') return Math.round(v) + 'ms';
+  if (kind === 'int') return Math.round(v).toLocaleString('en-IN');
+  if (kind === 'inr') return '₹' + (v / 100000).toFixed(2) + 'L';
+  return Math.round(v);
+}
+function Spark({
+  series,
+  color = 'var(--brand)',
+  w = 96,
+  h = 26,
+  fill = true
+}) {
+  const min = Math.min(...series),
+    max = Math.max(...series),
+    span = max - min || 1;
+  const pts = series.map((v, i) => `${i / (series.length - 1) * w},${h - 2 - (v - min) / span * (h - 6)}`);
+  return /*#__PURE__*/React.createElement("svg", {
+    width: w,
+    height: h,
+    style: {
+      display: 'block'
+    }
+  }, fill && /*#__PURE__*/React.createElement("polygon", {
+    points: `0,${h} ${pts.join(' ')} ${w},${h}`,
+    fill: color,
+    opacity: "0.10"
+  }), /*#__PURE__*/React.createElement("polyline", {
+    points: pts.join(' '),
+    fill: "none",
+    stroke: color,
+    strokeWidth: "1.6",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: w,
+    cy: pts[pts.length - 1].split(',')[1],
+    r: "2.4",
+    fill: color
+  }));
+}
+function Panel({
+  title,
+  icon,
+  right,
+  children,
+  pad = 12,
+  style = {},
+  onDrill
+}) {
+  return /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-hairline)',
+      borderRadius: 'var(--r-md)',
+      boxShadow: 'var(--shadow-card)',
+      display: 'flex',
+      flexDirection: 'column',
+      minWidth: 0,
+      ...style
+    }
+  }, title && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7,
+      padding: '9px 12px',
+      borderBottom: '1px solid var(--border-hairline)',
+      flex: '0 0 auto'
+    }
+  }, icon && /*#__PURE__*/React.createElement(Icon, {
+    name: icon,
+    size: 14,
+    color: "var(--ink-500)"
+  }), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12.5,
+      color: 'var(--text-strong)'
+    }
+  }, title), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), right, onDrill && /*#__PURE__*/React.createElement("button", {
+    onClick: onDrill,
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 3,
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      fontWeight: 600,
+      color: 'var(--text-link)'
+    }
+  }, "Open", /*#__PURE__*/React.createElement(Icon, {
+    name: "arrow-up-right",
+    size: 12,
+    color: "var(--text-link)"
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: pad,
+      flex: 1,
+      minHeight: 0
+    }
+  }, children));
+}
+function Dot({
+  ok
+}) {
+  return /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 7,
+      height: 7,
+      borderRadius: '50%',
+      flex: '0 0 auto',
+      background: ok ? 'var(--success)' : 'var(--warning)',
+      boxShadow: ok ? '0 0 0 3px var(--success-soft)' : '0 0 0 3px var(--warning-soft)'
+    }
+  });
+}
+function Sidebar({
+  hubs,
+  hub,
+  onHub,
+  user
+}) {
+  return /*#__PURE__*/React.createElement("aside", {
+    style: {
+      width: 190,
+      flex: '0 0 auto',
+      background: 'var(--ink-950)',
+      color: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '16px 16px 12px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 19,
+      letterSpacing: '-0.02em'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--red-400)'
+    }
+  }, "tap2"), "news"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 9,
+      letterSpacing: '0.1em',
+      textTransform: 'uppercase',
+      color: 'var(--ink-400)',
+      border: '1px solid var(--ink-700)',
+      borderRadius: 4,
+      padding: '1px 4px'
+    }
+  }, "Ops")), /*#__PURE__*/React.createElement("nav", {
+    style: {
+      flex: 1,
+      padding: '4px 10px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 2
+    }
+  }, hubs.map(h => {
+    const on = hub === h.id;
+    return /*#__PURE__*/React.createElement("button", {
+      key: h.id,
+      onClick: () => onHub(h.id),
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: 9,
+        padding: '8px 10px',
+        borderRadius: 8,
+        border: 'none',
+        cursor: 'pointer',
+        textAlign: 'left',
+        fontFamily: 'var(--font-body)',
+        fontWeight: on ? 700 : 500,
+        fontSize: 13,
+        color: on ? '#fff' : 'var(--ink-300)',
+        background: on ? 'var(--brand)' : 'transparent'
+      }
+    }, /*#__PURE__*/React.createElement(Icon, {
+      name: h.icon,
+      size: 16,
+      color: on ? '#fff' : 'var(--ink-400)'
+    }), /*#__PURE__*/React.createElement("span", {
+      style: {
+        flex: 1
+      }
+    }, h.label), h.badge != null && /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: 'var(--font-mono)',
+        fontSize: 10,
+        fontWeight: 600,
+        background: on ? 'rgba(255,255,255,.22)' : 'var(--brand)',
+        color: '#fff',
+        borderRadius: 999,
+        padding: '1px 6px'
+      }
+    }, h.badge));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '10px 12px',
+      borderTop: '1px solid var(--ink-800)',
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 28,
+      height: 28,
+      borderRadius: '50%',
+      background: 'var(--gold-500)',
+      color: 'var(--ink-950)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 11
+    }
+  }, user.initials), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontWeight: 600,
+      fontSize: 11.5
+    }
+  }, user.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10,
+      color: 'var(--ink-400)'
+    }
+  }, user.role))));
+}
+function Topbar({
+  title,
+  crumbs,
+  onBack,
+  actions
+}) {
+  const [now, setNow] = React.useState(new Date());
+  React.useEffect(() => {
+    const t = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(t);
+  }, []);
+  return /*#__PURE__*/React.createElement("header", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 12,
+      padding: '10px 20px',
+      borderBottom: '1px solid var(--border-hairline)',
+      background: 'var(--surface-card)',
+      flex: '0 0 auto'
+    }
+  }, onBack && /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    style: {
+      display: 'inline-flex',
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      color: 'var(--ink-700)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "arrow-left",
+    size: 17
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 0
+    }
+  }, crumbs && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 10.5,
+      color: 'var(--text-faint)'
+    }
+  }, crumbs), /*#__PURE__*/React.createElement("h1", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 16,
+      letterSpacing: '-0.01em',
+      color: 'var(--text-strong)'
+    }
+  }, title)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 6,
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: 'var(--success)'
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: true
+  }), " All systems live"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 11.5,
+      color: 'var(--text-muted)'
+    }
+  }, now.toLocaleTimeString('en-IN', {
+    hour12: false
+  }), " IST"), actions);
+}
+Object.assign(window, {
+  DS,
+  Icon,
+  useLive,
+  fmt,
+  Spark,
+  Panel,
+  Dot,
+  Sidebar,
+  Topbar
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/Shell.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/SourcesApis.jsx
+try { (() => {
+// Sources & APIs console — toggle every feed/API with live monthly-cost meter. Low-cost AI-first.
+function SourcesApis() {
+  const GROUPS = [{
+    name: 'News — free backbone',
+    items: [{
+      id: 'pubrss',
+      n: 'Publisher RSS (Eenadu, Sakshi, TV9, ABN, NTV…)',
+      d: 'P1 backbone · 1–2 min polls, faster than Google',
+      cost: 0,
+      on: true
+    }, {
+      id: 'gnews',
+      n: 'Google News RSS',
+      d: 'Per-category topic feeds',
+      cost: 0,
+      on: true
+    }, {
+      id: 'pib',
+      n: 'PIB + state govt press releases',
+      d: 'Official announcements first',
+      cost: 0,
+      on: true
+    }, {
+      id: 'gdelt',
+      n: 'GDELT 2.0',
+      d: '15-min event dumps · syndication counts',
+      cost: 0,
+      on: true
+    }, {
+      id: 'tg',
+      n: 'Telegram channel listeners',
+      d: 'Police/collector/publisher channels · push',
+      cost: 0,
+      on: true
+    }, {
+      id: 'yt',
+      n: 'YouTube Data API (TV channels)',
+      d: 'Breaking-banner title stream',
+      cost: 0,
+      on: true
+    }, {
+      id: 'rsshub',
+      n: 'RSSHub (self-hosted)',
+      d: 'RSS for feedless sites/X',
+      cost: 0,
+      on: false
+    }, {
+      id: 'newsdata',
+      n: 'NewsData.io free tier',
+      d: 'Backfill + coverage checks',
+      cost: 0,
+      on: false
+    }]
+  }, {
+    name: 'News — paid (enable only on proven gaps)',
+    items: [{
+      id: 'serpnews',
+      n: 'SerpAPI google_news',
+      d: 'Breaking-desk one-line lookups',
+      cost: 4200,
+      on: false
+    }, {
+      id: 'mediastack',
+      n: 'MediaStack paid',
+      d: 'SLA volume backfill',
+      cost: 2100,
+      on: false
+    }, {
+      id: 'newsapi',
+      n: 'NewsAPI.org business',
+      d: 'High-volume REST',
+      cost: 37000,
+      on: false
+    }, {
+      id: 'wire',
+      n: 'PTI / ANI wire subscription',
+      d: 'Wire-speed + licensed rewrite rights',
+      cost: 50000,
+      on: false
+    }]
+  }, {
+    name: 'Cricket',
+    items: [{
+      id: 'cricfree',
+      n: 'CricketData.org free (100 hits/day)',
+      d: 'Dev + off-season',
+      cost: 0,
+      on: true
+    }, {
+      id: 'cricpaid',
+      n: 'CricketData.org $12.99 tier',
+      d: 'Covers full IPL day at 8s cache',
+      cost: 1100,
+      on: false
+    }, {
+      id: 'cricbuzz',
+      n: 'Cricbuzz API (API.market)',
+      d: 'Commentary + match pages',
+      cost: 1700,
+      on: false
+    }, {
+      id: 'entity',
+      n: 'EntitySport / Roanuz',
+      d: 'Official push feeds — scale-up only',
+      cost: 13000,
+      on: false
+    }]
+  }, {
+    name: 'Jobs',
+    items: [{
+      id: 'govjobs',
+      n: 'Govt notifications (UPSC/SSC/RRB/APPSC/TSPSC)',
+      d: 'PDF → Gemini structured rows',
+      cost: 0,
+      on: true
+    }, {
+      id: 'adzuna',
+      n: 'Adzuna + Jooble + Careerjet APIs',
+      d: 'Private jobs, free keys',
+      cost: 0,
+      on: true
+    }, {
+      id: 'remote',
+      n: 'Remotive · RemoteOK · WWR',
+      d: 'Remote tab',
+      cost: 0,
+      on: true
+    }, {
+      id: 'freelancer',
+      n: 'Freelancer.com API',
+      d: 'Gig section · OAuth',
+      cost: 0,
+      on: true
+    }, {
+      id: 'jobposting',
+      n: 'JobPosting schema crawler',
+      d: 'Top AP/TS employer career pages',
+      cost: 0,
+      on: true
+    }, {
+      id: 'serpjobs',
+      n: 'SerpAPI google_jobs',
+      d: 'Gap filler · cached per district',
+      cost: 4200,
+      on: false
+    }, {
+      id: 'jsearch',
+      n: 'JSearch aggregator (Naukri/LinkedIn)',
+      d: 'Top-N per category/day, metered',
+      cost: 2100,
+      on: false
+    }]
+  }, {
+    name: 'Utilities (all free · cron + Redis)',
+    items: [{
+      id: 'meteo',
+      n: 'Open-Meteo + IMD weather/AQI',
+      d: '30-min per district centroid',
+      cost: 0,
+      on: true
+    }, {
+      id: 'gold',
+      n: 'Gold/silver rate scraper',
+      d: 'Hourly + district markup table',
+      cost: 0,
+      on: true
+    }, {
+      id: 'mkt',
+      n: 'Exchange delayed feeds (Sensex/Nifty)',
+      d: '1–5 min',
+      cost: 0,
+      on: true
+    }, {
+      id: 'panchang',
+      n: 'Local ephemeris panchang engine',
+      d: 'Computed — zero API',
+      cost: 0,
+      on: true
+    }, {
+      id: 'petrol',
+      n: 'Petrol/diesel daily rates',
+      d: 'State-wise public data',
+      cost: 0,
+      on: true
+    }]
+  }, {
+    name: 'AI models',
+    items: [{
+      id: 'flashlite',
+      n: 'gemini-2.5-flash-lite',
+      d: '<1,200-word rewrites · ₹0.05/story',
+      cost: 0,
+      on: true,
+      ai: true
+    }, {
+      id: 'flash',
+      n: 'gemini-2.5-flash',
+      d: '≥1,200-word rewrites · ₹0.09/story',
+      cost: 0,
+      on: true,
+      ai: true
+    }, {
+      id: 'fallback',
+      n: 'Fallback chain (deepseek → gpt-4o-mini → haiku)',
+      d: 'Only on 429/quota',
+      cost: 0,
+      on: true,
+      ai: true
+    }]
+  }];
+  const [state, setState] = React.useState(() => {
+    const s = {};
+    GROUPS.forEach(g => g.items.forEach(i => {
+      s[i.id] = i.on;
+    }));
+    return s;
+  });
+  const paid = GROUPS.flatMap(g => g.items).filter(i => state[i.id] && i.cost > 0);
+  const total = paid.reduce((a, i) => a + i.cost, 0);
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 14,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 12,
+      overflowY: 'auto',
+      height: '100%',
+      boxSizing: 'border-box'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 16,
+      padding: '12px 16px',
+      background: 'var(--ink-950)',
+      borderRadius: 'var(--r-md)',
+      color: '#fff'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "wallet",
+    size: 18,
+    color: "var(--red-400)"
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 18
+    }
+  }, "\u20B9", total.toLocaleString('en-IN'), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 12,
+      fontWeight: 500,
+      color: 'var(--ink-400)'
+    }
+  }, " /month fixed API spend")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      color: 'var(--ink-400)'
+    }
+  }, paid.length ? paid.map(p => p.n.split(' ')[0]).join(' · ') : 'Fully free stack — only per-story Gemini cost')), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      fontWeight: 600,
+      color: total === 0 ? 'var(--success)' : 'var(--gold-300)'
+    }
+  }, total === 0 ? '✓ Low-cost AI-first' : 'Paid gap-fillers active')), GROUPS.map(g => /*#__PURE__*/React.createElement(Panel, {
+    key: g.name,
+    title: g.name,
+    icon: "rss",
+    pad: 0
+  }, g.items.map((i, ix) => /*#__PURE__*/React.createElement("div", {
+    key: i.id,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      padding: '9px 14px',
+      borderTop: ix ? '1px solid var(--border-hairline)' : 'none'
+    }
+  }, /*#__PURE__*/React.createElement(Dot, {
+    ok: state[i.id]
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12.5,
+      color: 'var(--text-strong)'
+    }
+  }, i.n), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      color: 'var(--text-muted)',
+      marginLeft: 8
+    }
+  }, i.d)), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 10.5,
+      fontWeight: 600,
+      padding: '2px 8px',
+      borderRadius: 999,
+      background: i.cost === 0 ? 'var(--success-soft)' : 'var(--warning-soft)',
+      color: i.cost === 0 ? 'var(--success)' : 'var(--gold-700)'
+    }
+  }, i.ai ? 'per-story' : i.cost === 0 ? 'FREE' : '₹' + i.cost.toLocaleString('en-IN') + '/mo'), /*#__PURE__*/React.createElement("button", {
+    onClick: () => setState(s => ({
+      ...s,
+      [i.id]: !s[i.id]
+    })),
+    style: {
+      width: 40,
+      height: 22,
+      borderRadius: 999,
+      border: 'none',
+      cursor: 'pointer',
+      position: 'relative',
+      background: state[i.id] ? 'var(--brand)' : 'var(--ink-200)',
+      transition: 'background var(--dur-fast)',
+      flex: '0 0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      top: 2,
+      left: state[i.id] ? 20 : 2,
+      width: 18,
+      height: 18,
+      borderRadius: '50%',
+      background: '#fff',
+      transition: 'left var(--dur-fast) var(--ease-standard)',
+      boxShadow: '0 1px 2px rgba(0,0,0,.2)'
+    }
+  })))))));
+}
+window.SourcesApis = SourcesApis;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/SourcesApis.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/admin_v2/data.js
+try { (() => {
+// tap2news Admin v2 — command center seed data.
+window.AD2 = {
+  user: {
+    name: 'Priya Rao',
+    role: 'Managing Editor',
+    initials: 'PR'
+  },
+  hubs: [{
+    id: 'command',
+    icon: 'gauge',
+    label: 'Command'
+  }, {
+    id: 'newsroom',
+    icon: 'pen-line',
+    label: 'Newsroom',
+    badge: 8
+  }, {
+    id: 'infra',
+    icon: 'server',
+    label: 'Infra & AI'
+  }, {
+    id: 'sources',
+    icon: 'rss',
+    label: 'Sources & APIs'
+  }, {
+    id: 'growth',
+    icon: 'trending-up',
+    label: 'Growth'
+  }],
+  queue: [{
+    id: 1,
+    headline: 'తీర జిల్లాలకు భారీ వర్ష హెచ్చరిక; వారాంతంలో గాలివానలు',
+    category: 'breaking',
+    lang: 'te',
+    source: 'TV9',
+    conf: 96
+  }, {
+    id: 2,
+    headline: 'Cabinet clears new IT policy; targets 200,000 jobs',
+    category: 'politics',
+    lang: 'en',
+    source: 'PTI',
+    conf: 91
+  }, {
+    id: 3,
+    headline: 'டாலிவுட் நடிகரின் அடுத்த படம் பொங்கலுக்கு',
+    category: 'cinema',
+    lang: 'ta',
+    source: 'Dinamalar',
+    conf: 88
+  }, {
+    id: 4,
+    headline: 'APPSC Group-II: 1,200 vacancies, apply by month end',
+    category: 'jobs',
+    lang: 'en',
+    source: 'Desk',
+    conf: 99
+  }, {
+    id: 5,
+    headline: 'ನಗರದಲ್ಲಿ ಸೈಬರ್ ವಂಚನೆ ಜಾಲ ಬಂಧನ; ₹2 ಕೋಟಿ ವಶ',
+    category: 'crime',
+    lang: 'kn',
+    source: 'Prajavani',
+    conf: 74
+  }],
+  draft: {
+    headline: 'తీర జిల్లాలకు భారీ వర్ష హెచ్చరిక; వారాంతంలో గాలివానలు',
+    short: 'తీర జిల్లాలకు వర్ష హెచ్చరిక',
+    summary: 'IMD ప్రకారం రాబోయే 48 గంటల్లో బలమైన గాలులు, స్థానిక వరదల ముప్పు. మత్స్యకారులు సముద్రంలోకి వెళ్లవద్దని సూచన.',
+    seoTitle: 'AP coastal districts rain alert — IMD warning | tap2news',
+    slug: 'ap-coastal-rain-alert-weekend-imd',
+    meta: 'IMD issues heavy rain alert for Andhra Pradesh coastal districts. Squally winds, local flooding likely.',
+    tags: ['Weather', 'IMD', 'Andhra Pradesh', 'Rain alert'],
+    push: 'Heavy rain alert for coastal AP this weekend — stay safe. Updates on tap2news.',
+    source: 'TV9',
+    category: 'breaking',
+    lang: 'Telugu',
+    conf: 96
+  },
+  models: [{
+    name: 'Gemini 2.0 Flash',
+    role: 'Rewrite + classify',
+    share: 62,
+    cost: '₹0.09/story',
+    p95: 1.9,
+    ok: true
+  }, {
+    name: 'Claude Sonnet',
+    role: 'Fact-check · long-form',
+    share: 22,
+    cost: '₹0.31/story',
+    p95: 3.2,
+    ok: true
+  }, {
+    name: 'GPT-4o mini',
+    role: 'Headlines · push copy',
+    share: 11,
+    cost: '₹0.05/story',
+    p95: 1.1,
+    ok: true
+  }, {
+    name: 'DeepSeek V3',
+    role: 'Fallback · batch archive',
+    share: 5,
+    cost: '₹0.02/story',
+    p95: 4.8,
+    ok: false
+  }],
+  mcps: [{
+    name: 'Context7',
+    use: 'Live docs — Next.js, Supabase, Tailwind',
+    stars: 5,
+    on: true
+  }, {
+    name: 'Filesystem',
+    use: 'Read/write project code',
+    stars: 5,
+    on: true
+  }, {
+    name: 'GitHub',
+    use: 'Commits, PRs, issues on tap2news repo',
+    stars: 5,
+    on: true
+  }, {
+    name: 'Playwright',
+    use: 'E2E: login, search, UI screenshots',
+    stars: 5,
+    on: true
+  }, {
+    name: 'Supabase',
+    use: 'Tables, SQL, RLS, storage, auth',
+    stars: 5,
+    on: true
+  }, {
+    name: 'Fetch',
+    use: 'Read article URLs → markdown',
+    stars: 4,
+    on: true
+  }, {
+    name: 'PostgreSQL',
+    use: 'Query tuning, indexes, debugging',
+    stars: 4,
+    on: true
+  }, {
+    name: 'Brave Search',
+    use: 'Breaking verification, fact sources',
+    stars: 4,
+    on: false
+  }],
+  redisKeys: [{
+    key: 'feed:te:hyd:mynews',
+    ttl: '42s',
+    hits: '18.2K/m',
+    size: '214KB'
+  }, {
+    key: 'feed:hi:lko:politics',
+    ttl: '31s',
+    hits: '9.8K/m',
+    size: '186KB'
+  }, {
+    key: 'gold:rates:in',
+    ttl: '9m',
+    hits: '6.1K/m',
+    size: '2KB'
+  }, {
+    key: 'cricket:live:ind-aus',
+    ttl: '8s',
+    hits: '22.4K/m',
+    size: '11KB'
+  }, {
+    key: 'trends:ta:chennai',
+    ttl: '4m',
+    hits: '3.2K/m',
+    size: '96KB'
+  }],
+  queues: [{
+    name: 'ingest-rss',
+    waiting: 34,
+    active: 6,
+    failed: 2,
+    done: '48.2K'
+  }, {
+    name: 'ai-rewrite',
+    waiting: 12,
+    active: 8,
+    failed: 1,
+    done: '31.7K'
+  }, {
+    name: 'push-fanout',
+    waiting: 0,
+    active: 2,
+    failed: 0,
+    done: '1.4M'
+  }, {
+    name: 'thumb-gen',
+    waiting: 7,
+    active: 3,
+    failed: 4,
+    done: '29.9K'
+  }, {
+    name: 'social-syndicate',
+    waiting: 3,
+    active: 1,
+    failed: 0,
+    done: '12.3K'
+  }],
+  pg: [{
+    k: 'Replication lag',
+    v: '0.4s',
+    ok: true
+  }, {
+    k: 'Connections',
+    v: '212 / 500',
+    ok: true
+  }, {
+    k: 'Cache hit ratio',
+    v: '99.1%',
+    ok: true
+  }, {
+    k: 'Slowest query',
+    v: 'get_feed 84ms',
+    ok: true
+  }, {
+    k: 'Table bloat (articles)',
+    v: '6%',
+    ok: true
+  }, {
+    k: 'WAL size',
+    v: '1.2GB',
+    ok: false
+  }],
+  cdn: [{
+    zone: 'feed-api (in-south)',
+    hit: 94,
+    reqs: '212K/m'
+  }, {
+    zone: 'images (r2)',
+    hit: 98,
+    reqs: '480K/m'
+  }, {
+    zone: 'article pages',
+    hit: 88,
+    reqs: '96K/m'
+  }],
+  revenue: [{
+    src: 'AdSense / Ad Manager',
+    v: 46,
+    amt: '₹4.61L'
+  }, {
+    src: 'Sponsored stories',
+    v: 22,
+    amt: '₹2.20L'
+  }, {
+    src: 'tap2news Plus',
+    v: 17,
+    amt: '₹1.71L'
+  }, {
+    src: 'E-paper',
+    v: 9,
+    amt: '₹0.90L'
+  }, {
+    src: 'Local ads',
+    v: 6,
+    amt: '₹0.61L'
+  }],
+  topStories: [{
+    t: 'వర్ష హెచ్చరిక — తీర జిల్లాలు',
+    v: '412K',
+    cat: 'breaking'
+  }, {
+    t: 'IT policy: 2L jobs',
+    v: '284K',
+    cat: 'politics'
+  }, {
+    t: 'సంక్రాంతి సినిమా వార్',
+    v: '221K',
+    cat: 'cinema'
+  }, {
+    t: 'APPSC 1,200 posts',
+    v: '198K',
+    cat: 'jobs'
+  }],
+  langSplit: [{
+    l: 'తెలుగు',
+    pct: 38,
+    c: 'var(--cat-politics)'
+  }, {
+    l: 'हिन्दी',
+    pct: 27,
+    c: 'var(--brand)'
+  }, {
+    l: 'தமிழ்',
+    pct: 16,
+    c: 'var(--cat-sports)'
+  }, {
+    l: 'ಕನ್ನಡ',
+    pct: 11,
+    c: 'var(--cat-cinema)'
+  }, {
+    l: 'Other',
+    pct: 8,
+    c: 'var(--cat-jobs)'
+  }]
+};
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/admin_v2/data.js", error: String((e && e.message) || e) }); }
 
 // ui_kits/app/AppShell.jsx
 try { (() => {
@@ -4442,7 +7955,8 @@ function Icon({
 // Sticky app header: wordmark + location + language pill.
 function AppHeader({
   lang,
-  onLangTap
+  onLangTap,
+  onLocTap
 }) {
   return /*#__PURE__*/React.createElement("header", {
     style: {
@@ -4453,6 +7967,11 @@ function AppHeader({
       borderBottom: '1px solid var(--border-hairline)'
     }
   }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: 3,
+      background: 'linear-gradient(90deg, var(--brand), var(--red-400), var(--gold-500))'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -4471,11 +7990,55 @@ function AppHeader({
     style: {
       color: 'var(--brand)'
     }
-  }, "2day"), "news"), /*#__PURE__*/React.createElement("div", {
+  }, "tap2"), "news"), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1
     }
   }), /*#__PURE__*/React.createElement("button", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 36,
+      height: 36,
+      borderRadius: '50%',
+      border: '1px solid var(--border-strong)',
+      background: 'var(--white)',
+      cursor: 'pointer',
+      color: 'var(--ink-700)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "search",
+    size: 17
+  })), /*#__PURE__*/React.createElement("button", {
+    style: {
+      position: 'relative',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 36,
+      height: 36,
+      borderRadius: '50%',
+      border: '1px solid var(--border-strong)',
+      background: 'var(--white)',
+      cursor: 'pointer',
+      color: 'var(--ink-700)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "bell",
+    size: 17
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      top: 6,
+      right: 7,
+      width: 8,
+      height: 8,
+      borderRadius: '50%',
+      background: 'var(--brand)',
+      border: '2px solid var(--white)'
+    }
+  })), /*#__PURE__*/React.createElement("button", {
     onClick: onLangTap,
     style: {
       display: 'inline-flex',
@@ -4502,6 +8065,7 @@ function AppHeader({
     size: 14,
     color: "var(--ink-400)"
   }))), /*#__PURE__*/React.createElement("div", {
+    onClick: onLocTap,
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -4509,7 +8073,8 @@ function AppHeader({
       padding: '0 var(--gutter) 10px',
       color: 'var(--text-muted)',
       fontFamily: 'var(--font-body)',
-      fontSize: 12.5
+      fontSize: 12.5,
+      cursor: onLocTap ? 'pointer' : 'default'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "map-pin",
@@ -4531,6 +8096,12 @@ function AppHeader({
 function DataRail({
   rail
 }) {
+  const ICONS = {
+    gold: 'coins',
+    market: 'indian-rupee',
+    weather: 'cloud-sun',
+    cricket: 'trophy'
+  };
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4543,6 +8114,11 @@ function DataRail({
   }, rail.map((d, i) => /*#__PURE__*/React.createElement(DS.DataTile, _extends({
     key: i
   }, d, {
+    icon: /*#__PURE__*/React.createElement(Icon, {
+      name: ICONS[d.kind] || 'activity',
+      size: 17,
+      color: "currentColor"
+    }),
     style: {
       flex: '0 0 auto'
     }
@@ -4552,7 +8128,8 @@ function DataRail({
 // Bottom tab bar.
 function BottomNav({
   tab,
-  onTab
+  onTab,
+  onQuickRead = () => {}
 }) {
   const items = [{
     id: 'feed',
@@ -4571,17 +8148,11 @@ function BottomNav({
     icon: 'bookmark',
     label: 'Saved'
   }];
-  return /*#__PURE__*/React.createElement("nav", {
-    style: {
-      display: 'flex',
-      borderTop: '1px solid var(--border-hairline)',
-      background: 'var(--surface-card)',
-      paddingBottom: 6
-    }
-  }, items.map(it => {
+  const Btn = ({
+    it
+  }) => {
     const on = tab === it.id;
     return /*#__PURE__*/React.createElement("button", {
-      key: it.id,
       onClick: () => onTab(it.id),
       style: {
         flex: 1,
@@ -4589,23 +8160,98 @@ function BottomNav({
         flexDirection: 'column',
         alignItems: 'center',
         gap: 3,
-        padding: '10px 0',
+        padding: '8px 0 10px',
         background: 'none',
         border: 'none',
         cursor: 'pointer',
         color: on ? 'var(--brand)' : 'var(--ink-400)'
       }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 52,
+        height: 30,
+        borderRadius: 999,
+        background: on ? 'var(--red-50)' : 'transparent',
+        transition: 'background var(--dur-fast)'
+      }
     }, /*#__PURE__*/React.createElement(Icon, {
       name: it.icon,
-      size: 22,
+      size: 21,
       color: on ? 'var(--brand)' : 'var(--ink-400)'
-    }), /*#__PURE__*/React.createElement("span", {
+    })), /*#__PURE__*/React.createElement("span", {
       style: {
         fontFamily: 'var(--font-display)',
         fontWeight: on ? 700 : 500,
         fontSize: 10.5
       }
     }, it.label));
+  };
+  return /*#__PURE__*/React.createElement("nav", {
+    style: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      borderTop: '1px solid var(--border-hairline)',
+      background: 'var(--surface-card)',
+      paddingBottom: 6,
+      position: 'relative'
+    }
+  }, /*#__PURE__*/React.createElement(Btn, {
+    it: items[0]
+  }), /*#__PURE__*/React.createElement(Btn, {
+    it: items[1]
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: '0 0 74px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 3,
+      paddingBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onQuickRead,
+    style: {
+      width: 54,
+      height: 54,
+      marginTop: -26,
+      borderRadius: '50%',
+      border: '4px solid var(--surface-card)',
+      cursor: 'pointer',
+      background: 'linear-gradient(160deg, var(--red-400), var(--brand-deep))',
+      color: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      boxShadow: 'var(--shadow-brand)',
+      transition: 'transform var(--dur-fast) var(--ease-standard)'
+    },
+    onMouseDown: e => {
+      e.currentTarget.style.transform = 'scale(.92)';
+    },
+    onMouseUp: e => {
+      e.currentTarget.style.transform = 'scale(1)';
+    },
+    onMouseLeave: e => {
+      e.currentTarget.style.transform = 'scale(1)';
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "zap",
+    size: 24,
+    color: "#fff"
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 10,
+      color: 'var(--brand-strong)'
+    }
+  }, "\u0C15\u0C4D\u0C35\u0C3F\u0C15\u0C4D \u0C30\u0C40\u0C21\u0C4D")), /*#__PURE__*/React.createElement(Btn, {
+    it: items[2]
+  }), /*#__PURE__*/React.createElement(Btn, {
+    it: items[3]
   }));
 }
 Object.assign(window, {
@@ -4692,7 +8338,7 @@ function ArticleScreen({
       fontWeight: 800,
       fontSize: 34
     }
-  }, "2N"), /*#__PURE__*/React.createElement("div", {
+  }, "T2"), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: 'var(--gutter)',
       display: 'flex',
@@ -4764,6 +8410,477 @@ function ArticleScreen({
 }
 window.ArticleScreen = ArticleScreen;
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/app/ArticleScreen.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/app/EngageCards.jsx
+try { (() => {
+// Engagement modules interleaved into the feed: poll, health quiz, viral card, follow suggestions.
+
+// One-tap poll with animated results.
+function PollCard({
+  poll
+}) {
+  const [voted, setVoted] = React.useState(null);
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-hairline)',
+      borderRadius: 'var(--r-card)',
+      boxShadow: 'var(--shadow-card)',
+      padding: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 26,
+      height: 26,
+      borderRadius: 8,
+      background: 'var(--red-50)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "bar-chart-3",
+    size: 14,
+    color: "var(--brand)"
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 11,
+      letterSpacing: '0.07em',
+      textTransform: 'uppercase',
+      color: 'var(--brand-strong)'
+    }
+  }, "\u0C2A\u0C4B\u0C32\u0C4D"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'var(--text-faint)'
+    }
+  }, poll.votes, " \u0C13\u0C1F\u0C4D\u0C32\u0C41")), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: '0 0 12px',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 16,
+      lineHeight: 1.3,
+      color: 'var(--text-strong)'
+    }
+  }, poll.q), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
+  }, poll.options.map((o, i) => /*#__PURE__*/React.createElement("button", {
+    key: i,
+    onClick: () => setVoted(i),
+    style: {
+      position: 'relative',
+      overflow: 'hidden',
+      textAlign: 'left',
+      padding: '10px 13px',
+      borderRadius: 'var(--r-md)',
+      border: '1px solid ' + (voted === i ? 'var(--brand)' : 'var(--border-strong)'),
+      background: 'var(--white)',
+      cursor: 'pointer',
+      fontFamily: 'var(--font-body)',
+      fontSize: 13.5,
+      color: 'var(--text-strong)'
+    }
+  }, voted != null && /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      inset: 0,
+      width: o.v + '%',
+      background: voted === i ? 'var(--red-50)' : 'var(--ink-50)',
+      transition: 'width .5s var(--ease-out)'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'space-between',
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: voted === i ? 700 : 500
+    }
+  }, o.t), voted != null && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontWeight: 600,
+      fontSize: 12.5,
+      color: voted === i ? 'var(--brand-strong)' : 'var(--text-muted)'
+    }
+  }, o.v, "%"))))), voted != null && /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '10px 0 0',
+      fontFamily: 'var(--font-body)',
+      fontSize: 12,
+      color: 'var(--text-faint)'
+    }
+  }, "\u0C2E\u0C40 \u0C13\u0C1F\u0C41 \u0C28\u0C2E\u0C4B\u0C26\u0C48\u0C02\u0C26\u0C3F \xB7 \u0C2B\u0C32\u0C3F\u0C24\u0C3E\u0C32\u0C41 \u0C32\u0C48\u0C35\u0C4D"));
+}
+
+// Health question with tap-to-reveal answer.
+function QuizCard({
+  quiz
+}) {
+  const [pick, setPick] = React.useState(null);
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-hairline)',
+      borderRadius: 'var(--r-card)',
+      boxShadow: 'var(--shadow-card)',
+      padding: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 26,
+      height: 26,
+      borderRadius: 8,
+      background: 'color-mix(in srgb, var(--cat-health) 14%, transparent)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "heart-pulse",
+    size: 14,
+    color: "var(--cat-health)"
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 11,
+      letterSpacing: '0.07em',
+      textTransform: 'uppercase',
+      color: 'var(--cat-health)'
+    }
+  }, quiz.tag, " \u0C2A\u0C4D\u0C30\u0C36\u0C4D\u0C28")), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: '0 0 12px',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 16,
+      lineHeight: 1.3,
+      color: 'var(--text-strong)'
+    }
+  }, quiz.q), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8,
+      flexWrap: 'wrap'
+    }
+  }, quiz.options.map((o, i) => {
+    const state = pick == null ? null : i === quiz.answer ? 'right' : i === pick ? 'wrong' : null;
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: () => setPick(i),
+      style: {
+        padding: '9px 14px',
+        borderRadius: 999,
+        cursor: 'pointer',
+        fontFamily: 'var(--font-body)',
+        fontWeight: 600,
+        fontSize: 13,
+        border: '1px solid ' + (state === 'right' ? 'var(--success)' : state === 'wrong' ? 'var(--danger)' : 'var(--border-strong)'),
+        background: state === 'right' ? 'var(--success-soft)' : state === 'wrong' ? 'var(--danger-soft)' : 'var(--white)',
+        color: state === 'right' ? 'var(--success)' : state === 'wrong' ? 'var(--danger)' : 'var(--text-strong)'
+      }
+    }, o);
+  })), pick != null && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8,
+      marginTop: 12,
+      padding: '10px 12px',
+      background: 'var(--success-soft)',
+      borderRadius: 'var(--r-md)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "check-circle-2",
+    size: 15,
+    color: "var(--success)",
+    style: {
+      flex: '0 0 auto',
+      marginTop: 1
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-body)',
+      fontSize: 12.5,
+      lineHeight: 1.5,
+      color: 'var(--ink-800)'
+    }
+  }, quiz.fact)));
+}
+
+// Viral trending card — dark, view counter, share CTA.
+function ViralCard({
+  viral,
+  onOpen = () => {}
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: onOpen,
+    style: {
+      position: 'relative',
+      overflow: 'hidden',
+      borderRadius: 'var(--r-card)',
+      cursor: 'pointer',
+      background: 'linear-gradient(135deg, color-mix(in srgb, var(--cat-shorts) 38%, var(--ink-900)), var(--ink-950))',
+      padding: 16,
+      color: '#fff'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 5,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 10.5,
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase',
+      background: 'var(--cat-shorts)',
+      padding: '4px 9px',
+      borderRadius: 999
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "flame",
+    size: 12,
+    color: "#fff"
+  }), "\u0C35\u0C48\u0C30\u0C32\u0C4D"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'rgba(255,255,255,.7)'
+    }
+  }, viral.time)), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: '0 0 12px',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 17,
+      lineHeight: 1.28,
+      letterSpacing: '-0.01em'
+    }
+  }, viral.headline), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 14,
+      fontFamily: 'var(--font-mono)',
+      fontSize: 12
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 5
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "eye",
+    size: 14,
+    color: "rgba(255,255,255,.8)"
+  }), viral.views), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 5
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "share-2",
+    size: 13,
+    color: "rgba(255,255,255,.8)"
+  }), viral.shares), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 6,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 12.5,
+      background: 'rgba(255,255,255,.14)',
+      padding: '7px 12px',
+      borderRadius: 999
+    }
+  }, "\u0C1A\u0C42\u0C21\u0C02\u0C21\u0C3F ", /*#__PURE__*/React.createElement(Icon, {
+    name: "arrow-right",
+    size: 13,
+    color: "#fff"
+  }))));
+}
+
+// Follow-topic suggestions.
+function SuggestCard({
+  cats
+}) {
+  const [on, setOn] = React.useState({});
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: 'var(--surface-sunk)',
+      border: '1px dashed var(--border-strong)',
+      borderRadius: 'var(--r-card)',
+      padding: 14
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 7,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "sparkles",
+    size: 14,
+    color: "var(--cat-tech)"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 700,
+      fontSize: 13,
+      color: 'var(--text-strong)'
+    }
+  }, "\u0C2E\u0C40\u0C15\u0C4B\u0C38\u0C02 \u0C38\u0C42\u0C1A\u0C28\u0C32\u0C41"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      color: 'var(--text-faint)'
+    }
+  }, "\xB7 \u0C2B\u0C3E\u0C32\u0C4B \u0C05\u0C35\u0C4D\u0C35\u0C02\u0C21\u0C3F")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 7,
+      flexWrap: 'wrap'
+    }
+  }, cats.map(c => /*#__PURE__*/React.createElement(DS.CategoryChip, {
+    key: c,
+    category: c,
+    active: !!on[c],
+    onClick: () => setOn(x => ({
+      ...x,
+      [c]: !x[c]
+    }))
+  }))));
+}
+
+// Reaction bar attached beneath every story card — like, comment, share, save.
+function ActionBar({
+  likes = 128,
+  comments = 12
+}) {
+  const [liked, setLiked] = React.useState(false);
+  const [saved, setSaved] = React.useState(false);
+  const btn = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 5,
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    fontFamily: 'var(--font-mono)',
+    fontSize: 11.5,
+    fontWeight: 600,
+    padding: '4px 6px'
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 6,
+      marginTop: -10,
+      padding: '8px 10px',
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-hairline)',
+      borderTop: 'none',
+      borderRadius: '0 0 var(--r-card) var(--r-card)'
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: () => setLiked(!liked),
+    style: {
+      ...btn,
+      color: liked ? 'var(--brand)' : 'var(--text-muted)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "thumbs-up",
+    size: 15,
+    color: liked ? 'var(--brand)' : 'var(--ink-400)'
+  }), likes + (liked ? 1 : 0)), /*#__PURE__*/React.createElement("button", {
+    style: {
+      ...btn,
+      color: 'var(--text-muted)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "message-circle",
+    size: 15,
+    color: "var(--ink-400)"
+  }), comments), /*#__PURE__*/React.createElement("button", {
+    style: {
+      ...btn,
+      color: 'var(--text-muted)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "share-2",
+    size: 14,
+    color: "var(--ink-400)"
+  }), "\u0C37\u0C47\u0C30\u0C4D"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: () => setSaved(!saved),
+    style: {
+      ...btn,
+      color: saved ? 'var(--gold-600)' : 'var(--text-muted)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "bookmark",
+    size: 15,
+    color: saved ? 'var(--gold-600)' : 'var(--ink-400)'
+  }), saved ? 'సేవ్ అయింది' : 'సేవ్'));
+}
+Object.assign(window, {
+  PollCard,
+  QuizCard,
+  ViralCard,
+  SuggestCard,
+  ActionBar
+});
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/app/EngageCards.jsx", error: String((e && e.message) || e) }); }
 
 // ui_kits/app/ExploreScreen.jsx
 try { (() => {
@@ -4857,10 +8974,22 @@ try { (() => {
 // Main feed screen: breaking ticker → data rail → section tabs → story feed.
 function FeedScreen({
   data,
-  onOpen
+  onOpen,
+  onQuickRead = () => {},
+  loc = {
+    on: false,
+    place: ''
+  }
 }) {
-  const [sec, setSec] = React.useState('breaking');
-  const stories = sec === 'breaking' ? data.stories : data.stories.filter(s => s.category === sec).length ? data.stories.filter(s => s.category === sec) : data.stories;
+  const [sec, setSec] = React.useState('mynews');
+  const pick = c => {
+    if (c === 'shorts') {
+      onQuickRead();
+      return;
+    }
+    setSec(c);
+  };
+  const stories = sec === 'mynews' ? data.stories : data.stories.filter(s => s.category === sec).length ? data.stories.filter(s => s.category === sec) : data.stories;
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(DS.BreakingTicker, {
     label: "Breaking",
     items: data.breaking
@@ -4868,32 +8997,414 @@ function FeedScreen({
     rail: data.rail
   }), /*#__PURE__*/React.createElement(DS.SectionTabs, {
     value: sec,
-    onChange: setSec,
+    onChange: pick,
     items: data.sections
-  }), /*#__PURE__*/React.createElement("div", {
+  }), sec === 'mynews' && data.featured && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 'var(--gutter) var(--gutter) 4px'
+    }
+  }, /*#__PURE__*/React.createElement(DS.FeaturedCarousel, {
+    items: data.featured,
+    autoPlay: true,
+    onOpen: s => onOpen({
+      ...s,
+      source: 'tap2news',
+      location: s.region,
+      breaking: s.category === 'breaking',
+      body: ['ఈ కథనం పూర్తి వివరాలు యాప్‌లో అందుబాటులో ఉన్నాయి. వాస్తవాలు మూలం నుండి ధృవీకరించబడ్డాయి.']
+    })
+  })), sec === 'mynews' && loc.on && /*#__PURE__*/React.createElement("div", {
+    style: {
+      margin: '4px var(--gutter) 0',
+      padding: 12,
+      background: 'var(--surface-sunk)',
+      borderRadius: 'var(--r-card)',
+      border: '1px solid var(--border-hairline)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 6,
+      marginBottom: 10
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "map-pin",
+    size: 14,
+    color: "var(--brand)"
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 14,
+      color: 'var(--text-strong)'
+    }
+  }, "\u0C2E\u0C40 \u0C26\u0C17\u0C4D\u0C17\u0C30 \xB7 ", loc.place), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 4,
+      marginLeft: 'auto',
+      fontFamily: 'var(--font-body)',
+      fontSize: 11,
+      fontWeight: 600,
+      color: 'var(--success)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 6,
+      height: 6,
+      borderRadius: '50%',
+      background: 'var(--success)'
+    }
+  }), "GPS \u0C06\u0C28\u0C4D")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
+  }, data.local.map(s => /*#__PURE__*/React.createElement(DS.NewsCard, {
+    key: s.id,
+    layout: "compact",
+    category: s.category,
+    headline: s.headline,
+    source: s.source,
+    time: s.time,
+    verified: s.verified,
+    location: loc.place,
+    onClick: () => onOpen({
+      ...s,
+      location: loc.place,
+      body: ['పూర్తి వివరాలు త్వరలో అందుబాటులో ఉంటాయి.']
+    })
+  })))), /*#__PURE__*/React.createElement("div", {
+    key: sec,
     style: {
       display: 'flex',
       flexDirection: 'column',
       gap: 'var(--stack-gap)',
       padding: 'var(--gutter)'
     }
-  }, stories.map(s => /*#__PURE__*/React.createElement(DS.NewsCard, {
-    key: s.id,
-    layout: s.layout,
+  }, sec !== 'mynews' && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      padding: '2px 2px 6px'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 4,
+      height: 18,
+      borderRadius: 999,
+      background: DS.CATEGORY_COLORS[sec] || 'var(--brand)'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 17,
+      letterSpacing: '-0.01em',
+      color: 'var(--text-strong)'
+    }
+  }, (data.sections.find(x => x.category === sec) || {}).label || sec), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: 12,
+      color: 'var(--text-faint)'
+    }
+  }, "\xB7 \u0C24\u0C3E\u0C1C\u0C3E \u0C15\u0C25\u0C28\u0C3E\u0C32\u0C41")), stories.map((s, idx) => {
+    const eng = idx === 0 && sec !== 'mynews' && data.engage[sec];
+    return /*#__PURE__*/React.createElement(React.Fragment, {
+      key: s.id
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "fx-card",
+      style: {
+        animationDelay: Math.min(idx * 45, 300) + 'ms'
+      }
+    }, /*#__PURE__*/React.createElement(DS.NewsCard, {
+      layout: s.layout,
+      category: s.category,
+      breaking: s.breaking,
+      headline: s.headline,
+      summary: s.summary,
+      source: s.source,
+      location: s.location,
+      time: s.time,
+      verified: s.verified,
+      aiRewritten: s.aiRewritten,
+      onClick: () => onOpen(s),
+      style: {
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0
+      }
+    }), /*#__PURE__*/React.createElement(ActionBar, {
+      likes: 80 + s.id * 37 % 400,
+      comments: 4 + s.id * 13 % 60
+    })), eng && eng.type === 'poll' && /*#__PURE__*/React.createElement(PollCard, {
+      poll: eng.poll
+    }), eng && eng.type === 'quiz' && /*#__PURE__*/React.createElement(QuizCard, {
+      quiz: eng.quiz
+    }), sec === 'mynews' && idx === 1 && /*#__PURE__*/React.createElement(PollCard, {
+      poll: data.poll
+    }), sec === 'mynews' && idx === 2 && /*#__PURE__*/React.createElement(ViralCard, {
+      viral: data.viral,
+      onOpen: onQuickRead
+    }), sec === 'mynews' && idx === 3 && /*#__PURE__*/React.createElement(QuizCard, {
+      quiz: data.quiz
+    }), sec === 'mynews' && idx === 4 && /*#__PURE__*/React.createElement(SuggestCard, {
+      cats: data.suggest
+    }));
+  })));
+}
+window.FeedScreen = FeedScreen;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/app/FeedScreen.jsx", error: String((e && e.message) || e) }); }
+
+// ui_kits/app/SwipeReader.jsx
+try { (() => {
+// Full-screen swipe reader — 60-word story cards, swipe/scroll vertically for next.
+function SwipeReader({
+  stories = [],
+  onClose,
+  onOpenFull
+}) {
+  const [i, setI] = React.useState(0);
+  const n = stories.length;
+  const touch = React.useRef(0);
+  const busy = React.useRef(false);
+  const go = d => {
+    if (busy.current) return;
+    busy.current = true;
+    setI(x => Math.max(0, Math.min(n - 1, x + d)));
+    setTimeout(() => {
+      busy.current = false;
+    }, 350);
+  };
+  const s = stories[i] || {};
+  const color = DS.CATEGORY_COLORS[s.category] || 'var(--brand)';
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      inset: 0,
+      zIndex: 50,
+      background: 'var(--ink-950)',
+      display: 'flex',
+      flexDirection: 'column',
+      overflow: 'hidden'
+    },
+    onWheel: e => go(e.deltaY > 0 ? 1 : -1),
+    onTouchStart: e => {
+      touch.current = e.touches[0].clientY;
+    },
+    onTouchEnd: e => {
+      const dy = touch.current - e.changedTouches[0].clientY;
+      if (Math.abs(dy) > 40) go(dy > 0 ? 1 : -1);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      padding: '14px 16px',
+      color: '#fff',
+      flex: '0 0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    style: {
+      display: 'flex',
+      width: 34,
+      height: 34,
+      borderRadius: '50%',
+      border: 'none',
+      cursor: 'pointer',
+      background: 'rgba(255,255,255,.12)',
+      color: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "x",
+    size: 18,
+    color: "#fff"
+  })), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 15
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--red-400)'
+    }
+  }, "\u0C15\u0C4D\u0C35\u0C3F\u0C15\u0C4D"), " \u0C30\u0C40\u0C21\u0C4D"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-mono)',
+      fontSize: 12,
+      color: 'rgba(255,255,255,.6)'
+    }
+  }, i + 1, "/", n)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 4,
+      padding: '0 16px 12px',
+      flex: '0 0 auto'
+    }
+  }, stories.map((_, k) => /*#__PURE__*/React.createElement("span", {
+    key: k,
+    style: {
+      flex: 1,
+      height: 3,
+      borderRadius: 999,
+      background: k <= i ? 'var(--brand)' : 'rgba(255,255,255,.18)',
+      transition: 'background var(--dur-base)'
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minHeight: 0,
+      padding: '0 14px 14px',
+      display: 'flex'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      flex: 1,
+      background: 'var(--surface-card)',
+      borderRadius: 18,
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      animation: 'qr-in .32s var(--ease-out)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: 150,
+      flex: '0 0 auto',
+      background: `linear-gradient(135deg, color-mix(in srgb, ${color} 40%, var(--ink-800)), var(--ink-900))`,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'rgba(255,255,255,.18)',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 44
+    }
+  }, "T2"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '16px 18px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 10,
+      flex: 1,
+      minHeight: 0,
+      overflowY: 'auto'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8,
+      alignItems: 'center'
+    }
+  }, s.breaking ? /*#__PURE__*/React.createElement(DS.Badge, {
+    tone: "breaking",
+    live: true
+  }, "Breaking") : /*#__PURE__*/React.createElement(DS.CategoryChip, {
     category: s.category,
-    breaking: s.breaking,
-    headline: s.headline,
-    summary: s.summary,
+    size: "sm"
+  })), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-display)',
+      fontWeight: 800,
+      fontSize: 20,
+      lineHeight: 1.22,
+      letterSpacing: '-0.01em',
+      color: 'var(--text-strong)'
+    }
+  }, s.headline), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      fontFamily: 'var(--font-body)',
+      fontSize: 14.5,
+      lineHeight: 1.6,
+      color: 'var(--text-body)'
+    }
+  }, s.summary || (s.body || [])[0]), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement(DS.SourceStamp, {
     source: s.source,
     location: s.location,
     time: s.time,
     verified: s.verified,
-    aiRewritten: s.aiRewritten,
-    onClick: () => onOpen(s)
-  }))));
+    aiRewritten: s.aiRewritten
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 8,
+      alignItems: 'center',
+      paddingTop: 4,
+      borderTop: '1px solid var(--border-hairline)'
+    }
+  }, /*#__PURE__*/React.createElement(DS.Button, {
+    variant: "soft",
+    size: "sm",
+    onClick: () => onOpenFull(s)
+  }, "\u0C2A\u0C42\u0C30\u0C4D\u0C24\u0C3F \u0C15\u0C25\u0C28\u0C02"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }), /*#__PURE__*/React.createElement("button", {
+    style: {
+      display: 'flex',
+      width: 34,
+      height: 34,
+      borderRadius: '50%',
+      border: '1px solid var(--border-strong)',
+      background: 'var(--white)',
+      cursor: 'pointer',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'var(--ink-600)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "bookmark",
+    size: 16
+  })), /*#__PURE__*/React.createElement("button", {
+    style: {
+      display: 'flex',
+      width: 34,
+      height: 34,
+      borderRadius: '50%',
+      border: '1px solid var(--border-strong)',
+      background: 'var(--white)',
+      cursor: 'pointer',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'var(--ink-600)'
+    }
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "share-2",
+    size: 16
+  })))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: 'center',
+      paddingBottom: 12,
+      color: 'rgba(255,255,255,.55)',
+      fontFamily: 'var(--font-body)',
+      fontSize: 11.5,
+      flex: '0 0 auto'
+    }
+  }, i < n - 1 ? '↑ స్వైప్ చేయండి — తదుపరి వార్త' : 'అన్నీ చదివేశారు'), /*#__PURE__*/React.createElement("style", null, '@keyframes qr-in{from{transform:translateY(26px);opacity:.4}to{transform:translateY(0);opacity:1}}'));
 }
-window.FeedScreen = FeedScreen;
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/app/FeedScreen.jsx", error: String((e && e.message) || e) }); }
+window.SwipeReader = SwipeReader;
+})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/app/SwipeReader.jsx", error: String((e && e.message) || e) }); }
 
 // ui_kits/app/UtilityScreen.jsx
 try { (() => {
@@ -5044,7 +9555,7 @@ window.UtilityScreen = UtilityScreen;
 
 // ui_kits/app/data.js
 try { (() => {
-// Sample content for the 2daynews app UI kit. Telugu-first hyperlocal feed (geo-fenced to AP/Telangana).
+// Sample content for the tap2news app UI kit. Telugu-first hyperlocal feed (geo-fenced to AP/Telangana).
 window.DN_DATA = {
   language: {
     code: 'te',
@@ -5074,7 +9585,89 @@ window.DN_DATA = {
     value: '286/4',
     sub: '48.2 ov'
   }],
-  sections: ['breaking', 'politics', 'cinema', 'sports', 'jobs', 'crime', 'business', 'weather', 'gold'],
+  sections: [{
+    category: 'mynews',
+    label: 'మీ వార్తలు'
+  }, {
+    category: 'politics',
+    label: 'రాజకీయాలు'
+  }, {
+    category: 'cinema',
+    label: 'సినిమా'
+  }, {
+    category: 'shorts',
+    label: 'వైరల్ షార్ట్స్'
+  }, {
+    category: 'sports',
+    label: 'క్రికెట్'
+  }, {
+    category: 'jobs',
+    label: 'ఉద్యోగాలు'
+  }, {
+    category: 'finance',
+    label: 'ఫైనాన్స్'
+  }, {
+    category: 'astrology',
+    label: 'జాతకం'
+  }, {
+    category: 'health',
+    label: 'ఆరోగ్యం'
+  }, {
+    category: 'business',
+    label: 'బిజినెస్'
+  }, {
+    category: 'cooking',
+    label: 'వంటలు'
+  }],
+  featured: [{
+    region: 'Telangana',
+    category: 'crime',
+    headline: 'Gooty: సైబర్ క్రైమ్స్, పోక్సో చట్టాలపై స్టూడెంట్స్‌కు పోలీస్ క్లాస్!',
+    time: '11:37 PM',
+    read: '1 min read'
+  }, {
+    region: 'Andhra Pradesh',
+    category: 'politics',
+    headline: 'పోలవరం ప్రాజెక్టును సందర్శించిన సీఎం చంద్రబాబు',
+    time: '9:50 PM',
+    read: '2 min read'
+  }, {
+    region: 'National',
+    category: 'breaking',
+    headline: 'కేబినెట్‌లో కొత్త ఐటీ పాలసీకి ఆమోదం — 2 లక్షల ఉద్యోగాల లక్ష్యం',
+    time: '8:20 PM',
+    read: '3 min read'
+  }, {
+    region: 'Hyderabad',
+    category: 'business',
+    headline: 'హైదరాబాద్‌లో కొత్త ఐటీ పార్క్‌కు శంకుస్థాపన',
+    time: '7:05 PM',
+    read: '2 min read'
+  }, {
+    region: 'Tollywood',
+    category: 'cinema',
+    headline: 'సంక్రాంతికి భారీ పోటీ — మూడు పెద్ద సినిమాలు రిలీజ్',
+    time: '6:40 PM',
+    read: '1 min read'
+  }, {
+    region: 'Sports',
+    category: 'sports',
+    headline: 'హోం టెస్ట్ సిరీస్‌కు భారత జట్టు ప్రకటన; కొత్త ఆటగాడికి చోటు',
+    time: '5:15 PM',
+    read: '2 min read'
+  }, {
+    region: 'Andhra Pradesh',
+    category: 'jobs',
+    headline: 'APPSC గ్రూప్-II నోటిఫికేషన్ విడుదల — 1,200 ఖాళీలు',
+    time: '4:00 PM',
+    read: '1 min read'
+  }, {
+    region: 'Weather',
+    category: 'weather',
+    headline: 'తీర జిల్లాలకు భారీ వర్ష హెచ్చరిక; వారాంతంలో గాలివానలు',
+    time: '2:30 PM',
+    read: '2 min read'
+  }],
   stories: [{
     id: 1,
     category: 'breaking',
@@ -5104,7 +9697,7 @@ window.DN_DATA = {
     layout: 'row',
     headline: 'APPSC గ్రూప్-II నోటిఫికేషన్ విడుదల — 1,200 ఖాళీలు',
     summary: 'ఆన్‌లైన్ దరఖాస్తులు ఈ నెలాఖరు వరకు; పరీక్ష మార్చిలో నిర్వహణ.',
-    source: '2daynews',
+    source: 'tap2news',
     location: 'AP',
     time: '2 hr',
     verified: true,
@@ -5181,7 +9774,145 @@ window.DN_DATA = {
     nakshatra: 'Uttara',
     rahu: '1:30–3:00 PM',
     lucky: '7 · Red'
-  }
+  },
+  poll: {
+    q: 'కొత్త ఐటీ పాలసీతో మీ జిల్లాకు ఉద్యోగాలు వస్తాయా?',
+    options: [{
+      t: 'ఖచ్చితంగా వస్తాయి',
+      v: 46
+    }, {
+      t: 'చూడాలి',
+      v: 38
+    }, {
+      t: 'రావు',
+      v: 16
+    }],
+    votes: '12.4K'
+  },
+  quiz: {
+    tag: 'ఆరోగ్యం',
+    q: 'రోజుకు ఎంత నీరు తాగాలి?',
+    options: ['1 లీటర్', '2–3 లీటర్లు', '5 లీటర్లు'],
+    answer: 1,
+    fact: 'వైద్యుల ప్రకారం పెద్దలు రోజుకు 2–3 లీటర్ల నీరు తాగాలి — వేసవిలో ఇంకా ఎక్కువ.'
+  },
+  viral: {
+    headline: 'వైరల్: గోదావరి వరదలో యువకుడి సాహసం — 3 గంటల్లో 2M వ్యూస్',
+    views: '2.1M',
+    shares: '48K',
+    time: '3 hr'
+  },
+  suggest: ['cinema', 'jobs', 'astrology', 'health', 'sports'],
+  engage: {
+    politics: {
+      type: 'poll',
+      poll: {
+        q: 'కొత్త ఐటీ పాలసీతో మీ జిల్లాకు ఉద్యోగాలు వస్తాయా?',
+        options: [{
+          t: 'ఖచ్చితంగా వస్తాయి',
+          v: 46
+        }, {
+          t: 'చూడాలి',
+          v: 38
+        }, {
+          t: 'రావు',
+          v: 16
+        }],
+        votes: '12.4K'
+      }
+    },
+    sports: {
+      type: 'poll',
+      poll: {
+        q: 'హోం టెస్ట్ సిరీస్ ఎవరు గెలుస్తారు?',
+        options: [{
+          t: 'ఇండియా',
+          v: 78
+        }, {
+          t: 'ఆస్ట్రేలియా',
+          v: 14
+        }, {
+          t: 'డ్రా',
+          v: 8
+        }],
+        votes: '31.2K'
+      }
+    },
+    jobs: {
+      type: 'poll',
+      poll: {
+        q: 'మీరు ఏ ఉద్యోగాలకు ప్రాధాన్యం ఇస్తారు?',
+        options: [{
+          t: 'ప్రభుత్వ',
+          v: 64
+        }, {
+          t: 'ప్రైవేట్',
+          v: 22
+        }, {
+          t: 'సొంత వ్యాపారం',
+          v: 14
+        }],
+        votes: '8.9K'
+      }
+    },
+    cinema: {
+      type: 'quiz',
+      quiz: {
+        tag: 'సినిమా',
+        q: 'తొలి తెలుగు టాకీ చిత్రం ఏది?',
+        options: ['భక్త ప్రహ్లాద', 'మాయాబజార్', 'పాతాళ భైరవి'],
+        answer: 0,
+        fact: '1932లో విడుదలైన "భక్త ప్రహ్లాద" తొలి తెలుగు టాకీ చిత్రం.'
+      }
+    },
+    health: {
+      type: 'quiz',
+      quiz: {
+        tag: 'ఆరోగ్యం',
+        q: 'రోజుకు ఎంత నీరు తాగాలి?',
+        options: ['1 లీటర్', '2–3 లీటర్లు', '5 లీటర్లు'],
+        answer: 1,
+        fact: 'వైద్యుల ప్రకారం పెద్దలు రోజుకు 2–3 లీటర్ల నీరు తాగాలి — వేసవిలో ఇంకా ఎక్కువ.'
+      }
+    },
+    crime: {
+      type: 'poll',
+      poll: {
+        q: 'మీ ప్రాంతంలో రాత్రి భద్రత ఎలా ఉంది?',
+        options: [{
+          t: 'బాగుంది',
+          v: 41
+        }, {
+          t: 'పర్వాలేదు',
+          v: 35
+        }, {
+          t: 'బాగోలేదు',
+          v: 24
+        }],
+        votes: '5.6K'
+      }
+    }
+  },
+  local: [{
+    id: 'l1',
+    category: 'crime',
+    headline: 'బెంజ్ సర్కిల్ వద్ద ట్రాఫిక్ మళ్లింపు — ఫ్లైఓవర్ పనులు',
+    source: 'City desk',
+    time: '25 min'
+  }, {
+    id: 'l2',
+    category: 'weather',
+    headline: 'నగరంలో సాయంత్రం భారీ వర్షం అవకాశం; AQI 82',
+    source: 'IMD',
+    time: '40 min',
+    verified: true
+  }, {
+    id: 'l3',
+    category: 'jobs',
+    headline: 'ఆటోనగర్‌లో ఉద్యోగ మేళా — 600 పోస్టులు, రేపు ఉదయం 10కి',
+    source: 'tap2news',
+    time: '1 hr'
+  }]
 };
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/app/data.js", error: String((e && e.message) || e) }); }
 
@@ -5295,7 +10026,7 @@ function Features({
       textTransform: 'uppercase',
       color: 'var(--brand-strong)'
     }
-  }, "Why 2daynews"), /*#__PURE__*/React.createElement("h2", {
+  }, "Why tap2news"), /*#__PURE__*/React.createElement("h2", {
     style: {
       margin: '10px 0 0',
       fontFamily: 'var(--font-display)',
@@ -5504,7 +10235,7 @@ function Footer({
     style: {
       color: 'var(--red-400)'
     }
-  }, "2day"), "news"), /*#__PURE__*/React.createElement("p", {
+  }, "tap2"), "news"), /*#__PURE__*/React.createElement("p", {
     style: {
       margin: '12px 0 0',
       fontFamily: 'var(--font-body)',
@@ -5550,7 +10281,7 @@ function Footer({
       fontFamily: 'var(--font-body)',
       fontSize: 12.5
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 2daynews. All rights reserved."), /*#__PURE__*/React.createElement("span", null, "Made in India \xB7 12 languages")));
+  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 tap2news. All rights reserved."), /*#__PURE__*/React.createElement("span", null, "Made in India \xB7 12 languages")));
 }
 Object.assign(window, {
   LangStrip,
@@ -5636,7 +10367,7 @@ function NavBar({
     style: {
       color: 'var(--brand)'
     }
-  }, "2day"), "news"), /*#__PURE__*/React.createElement("nav", {
+  }, "tap2"), "news"), /*#__PURE__*/React.createElement("nav", {
     style: {
       display: 'flex',
       gap: 22
@@ -5838,7 +10569,7 @@ Object.assign(window, {
 
 // ui_kits/web/data.js
 try { (() => {
-// Content for the 2daynews marketing site.
+// Content for the tap2news marketing site.
 window.WEB_DATA = {
   nav: ['Product', 'Languages', 'For Publishers', 'Advertise', 'About'],
   hero: {
@@ -5918,7 +10649,7 @@ window.WEB_DATA = {
     category: 'jobs',
     layout: 'row',
     headline: 'APPSC releases 1,200 Group-II vacancies; apply by month end',
-    source: '2daynews',
+    source: 'tap2news',
     location: 'AP',
     time: '2 hr',
     aiRewritten: true
@@ -5940,6 +10671,8 @@ window.WEB_DATA = {
   publisherStats: [['+38%', 'avg. reach uplift'], ['0', 'setup cost'], ['24hr', 'onboarding']]
 };
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/web/data.js", error: String((e && e.message) || e) }); }
+
+__ds_ns.FeaturedCarousel = __ds_scope.FeaturedCarousel;
 
 __ds_ns.NewsCard = __ds_scope.NewsCard;
 
